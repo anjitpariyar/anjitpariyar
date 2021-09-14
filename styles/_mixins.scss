@@ -1,0 +1,90 @@
+/*
+Flexer
+*/
+@mixin flexer($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+/*
+  Border Radius
+*/
+@mixin border-radius {
+  border-radius: 10px;
+
+  @include xl {
+    border-radius: $border-radius;
+  }
+}
+@mixin border-radius--sm {
+  border-radius: 6px;
+
+  @include xl {
+    border-radius: $border-radius;
+  }
+}
+
+@mixin image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@mixin common-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin scrollbar {
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  &::-webkit-scrollbar {
+    background: transparent; /* make scrollbar transparent */
+    -webkit-appearance: none;
+    width: 0;
+    height: 0;
+  }
+  & > * {
+    scroll-snap-align: start;
+  }
+}
+
+@mixin scrollbar-thin {
+  scrollbar-width: thin;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--black33--20);
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--black33--20);
+  }
+}
+
+@mixin box-shadow {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+@mixin lineclamp($line) {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}

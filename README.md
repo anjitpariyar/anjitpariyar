@@ -1,34 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center"><a href="https://anjitpatiyar.github.io"><img width="80%" src="\https://res.cloudinary.com/dem2xvk2e/image/upload/v1628006237/samples/ig_cyi6pc.png" /></a></p>
 
-## Getting Started
+<br />
 
-First, run the development server:
+I'm a FrontEnd developer from Nepal 🇳🇵. Animating a site is my thing .
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+**About me**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 💼 FrontEnd Developer at [Sunbi](https://thesunbi.com/)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- ❤️ I am enjoying making it. may be people will enjoy using it.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- 💬 see my chat web app [here](https://chat-25704.web.app/)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+**Languages and Tools:**
 
-## Learn More
+<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>
+<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"></code>
+<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"></code>
+<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"></code>
+<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png"></code>
 
-To learn more about Next.js, take a look at the following resources:
+| <a href="https://github.com/anjitpariyar/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=anjitpariyar&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Anjit's github stats" /></a> | <a href="https://github.com/anjitpariyar/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=anjitpariyar&layout=compact&theme=buefy&hide_border=true" /></a> |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Top Repositories
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<a href="https://github.com/anjitpariyar/github-readme-stats">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=anjitpariyar&repo=github-readme-stats&theme=buefy" />
+</a>
+<a href="https://github.com/anjitpariyar/anjitpariyar.github.io">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=anjitpariyar&repo=anjitpariyar.github.io&theme=buefy" />
+</a>
 
-## Deploy on Vercel
+<br />
+<br />
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<a href="https://www.instagram.com/limbo_anj/" target="\_blank">
+<img align="right" alt="Anjit pariyar | Instagram" width="21px"  xlink:href="https://scontent.fktm8-1.fna.fbcdn.net/v/t1.6435-1/p320x320/119660613_3310727812346373_4690271930229887716_n.jpg?_nc_cat=1&ccb=1-5&_nc_sid=1eb0c7&_nc_ohc=3evXIEI20mwAX8PV6Ld&_nc_ht=scontent.fktm8-1.fna&oh=5cea23f149488a2afcb6576cdc853faa&oe=61667005" />
+</a>

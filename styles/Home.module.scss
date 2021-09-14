@@ -1,18 +1,35 @@
 @use "./spiltter.scss" as *;
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 63vh;
+.commonPadding {
+  padding: 5rem 0;
+}
+.thin {
+  font-weight: lighter;
 }
 
-.main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.screen {
+  .lottieWrapper {
+    margin-bottom: -12em;
+    .monitor {
+      svg {
+        & > g > g > g:first-child > path:first-child {
+          fill: transparent;
+        }
+        & > g > g > g:not(:first-child) > path {
+          // fill: transparent;
+          // stroke: var(--dark);
+          // stroke-width: 2px;
+          fill: var(--dark);
+        }
+      }
+    }
+    .eyeBall {
+      svg > g > g:first-child > g > path,
+      svg > g > g:nth-child(3) > g > path {
+        stroke: var(--dark);
+        fill: transparent;
+        stroke-width: 4px;
+      }
+    }
+  }
 }

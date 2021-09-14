@@ -28,8 +28,11 @@ a {
 :root {
   --primary--color: brown;
   --secondary--color: purple;
-  --dark: #333;
+  --dark: #232323;
   --grey: #838383;
   --white--grey: #f2f2f2;
   --white: #fff;
+}
+body {
+  color: var(--dark);
 }

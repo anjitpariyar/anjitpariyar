@@ -1,7 +1,22 @@
 .container {
-  padding: 0 0.5rem;
+  // padding: 0 0.5rem;
+  max-width: 1320px;
+  margin: auto;
 }
 
 .bgGrey {
   background-color: var(--white--grey);
+}
+.titleLg {
+  font-size: 12.75vw;
+  line-height: 1;
+}
+.textCenter {
+  text-align: center;
+}
+
+.commonFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

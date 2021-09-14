@@ -1,0 +1,28 @@
+@use "../styles/spiltter.scss" as *;
+
+.header {
+  width: 100%;
+  text-align: center;
+  .nav {
+    @include flexer(space-between, stretch);
+    .navLink {
+      list-style: none;
+      a {
+        display: block;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        padding: 0.6em;
+        font-weight: 600;
+      }
+    }
+  }
+  .brand {
+    svg {
+      height: 3.2em;
+      width: auto;
+    }
+  }
+}

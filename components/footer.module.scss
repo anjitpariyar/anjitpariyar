@@ -1,6 +1,6 @@
-@use "../../styles/spiltter.scss";
+@use "../styles/spiltter.scss" as *;
 
-.header {
+.footer {
   padding: 2em 0;
   width: 100%;
   text-align: center;
