@@ -1,4 +1,4 @@
-<p align="center"><a href="https://anjitpatiyar.github.io"><img width="80%" src="\https://res.cloudinary.com/dem2xvk2e/image/upload/v1628006237/samples/ig_cyi6pc.png" /></a></p>
+<p align="center"><a href="https://anjitpatiyar.github.io"><img width="80%" src="https://res.cloudinary.com/dem2xvk2e/image/upload/v1628006237/samples/ig_cyi6pc.png" /></a></p>
 
 <br />
 
