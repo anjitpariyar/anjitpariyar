@@ -1,5 +1,4 @@
-<p><a href="https://digitalghumti.com/"><video poster="https://instagram.fktm8-1.fna.fbcdn.net/v/t51.2885-15/e35/222223835_242961977475438_6993071529302971171_n.jpg?_nc_ht=instagram.fktm8-1.fna.fbcdn.net&amp;_nc_cat=106&amp;_nc_ohc=H9W8J51ycZkAX9VV5Vo&amp;edm=AP_V10EBAAAA&amp;ccb=7-4&amp;oh=5146719618fe0f38b26e867a2e62a0d6&amp;oe=6142BE12&amp;_nc_sid=4f375e" preload="none" type="video/mp4" src="blob:https://www.instagram.com/64c28ec5-423f-6c44-8070-b9ba93facc1c" loop="">
- <source src="https://dms.licdn.com/playlist/C4D05AQHNdCaCi0jH2Q/mp4-720p-30fp-crf28/0/1627214450206?e=1631710800&v=beta&t=2TK6OTaSHQ9UHAEXfphtdxgmRuePcwMwXAeYPEWLg6I" type="video/mp4"></video></a></p>
+<p><a href="https://digitalghumti.com/"><img src="https://res.cloudinary.com/dem2xvk2e/image/upload/v1631633660/animation_640_ktk8ht21_l7zm5y.gif" alt="anjit pariyar project"/></a></p>
 
 <br />
 
@@ -20,6 +19,10 @@ I'm a FrontEnd developer from Nepal 🇳🇵. Animating a site is my thing .
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"></code>
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"></code>
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png"></code>
+
+|
+
+![](https://komarev.com/ghpvc/?username=anjitpariyar&color=4D4AF7)
 
 | <a href="https://github.com/anjitpariyar/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=anjitpariyar&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Anjit's github stats" /></a> | <a href="https://github.com/anjitpariyar/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=anjitpariyar&layout=compact&theme=buefy&hide_border=true" /></a> |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
