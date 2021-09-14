@@ -23,6 +23,11 @@ I'm a FrontEnd developer from Nepal 🇳🇵. Animating a site is my thing .
 | <a href="https://github.com/anjitpariyar/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=anjitpariyar&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Anjit's github stats" /></a> | <a href="https://github.com/anjitpariyar/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=anjitpariyar&layout=compact&theme=buefy&hide_border=true" /></a> |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
+[![anjitpariyar's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=anjitpariyar)](https://github.com/anjitpariyar/github-readme-stats)
+
+<br />
+<br />
+
 #### Top Repositories
 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=anjitpariyar&repo=github-readme-stats)](https://github.com/anjitpariyar/github-readme-stats)
@@ -31,5 +36,5 @@ I'm a FrontEnd developer from Nepal 🇳🇵. Animating a site is my thing .
 <br />
 
 <a href="https://www.instagram.com/limbo_anj/" target="\_blank">
-<img align="right" alt="Anjit pariyar | Instagram" width="21px"  src="https://instagram.fktm8-1.fna.fbcdn.net/v/t51.2885-19/s320x320/203019087_3969530746500786_7930596639916235962_n.jpg?_nc_ht=instagram.fktm8-1.fna.fbcdn.net&_nc_ohc=FtyLeoqmVmgAX8wq3Xw&edm=ABfd0MgBAAAA&ccb=7-4&oh=003e474cc162f840ff897a9d19a6ab5b&oe=6146DB33&_nc_sid=7bff83" />
+<img align="right" alt="Anjit pariyar | Instagram" width="30px"  src="https://instagram.fktm8-1.fna.fbcdn.net/v/t51.2885-19/s320x320/203019087_3969530746500786_7930596639916235962_n.jpg?_nc_ht=instagram.fktm8-1.fna.fbcdn.net&_nc_ohc=FtyLeoqmVmgAX8wq3Xw&edm=ABfd0MgBAAAA&ccb=7-4&oh=003e474cc162f840ff897a9d19a6ab5b&oe=6146DB33&_nc_sid=7bff83" />
 </a>
