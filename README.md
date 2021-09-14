@@ -25,16 +25,11 @@ I'm a FrontEnd developer from Nepal 🇳🇵. Animating a site is my thing .
 
 #### Top Repositories
 
-<a href="https://github.com/anjitpariyar/github-readme-stats">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=anjitpariyar&repo=github-readme-stats&theme=buefy" />
-</a>
-<a href="https://github.com/anjitpariyar/anjitpariyar.github.io">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=anjitpariyar&repo=anjitpariyar.github.io&theme=buefy" />
-</a>
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=anjitpariyar&repo=github-readme-stats)](https://github.com/anjitpariyar/github-readme-stats)
 
 <br />
 <br />
 
 <a href="https://www.instagram.com/limbo_anj/" target="\_blank">
-<img align="right" alt="Anjit pariyar | Instagram" width="21px"  xlink:href="https://scontent.fktm8-1.fna.fbcdn.net/v/t1.6435-1/p320x320/119660613_3310727812346373_4690271930229887716_n.jpg?_nc_cat=1&ccb=1-5&_nc_sid=1eb0c7&_nc_ohc=3evXIEI20mwAX8PV6Ld&_nc_ht=scontent.fktm8-1.fna&oh=5cea23f149488a2afcb6576cdc853faa&oe=61667005" />
+<img align="right" alt="Anjit pariyar | Instagram" width="21px"  src="https://instagram.fktm8-1.fna.fbcdn.net/v/t51.2885-19/s320x320/203019087_3969530746500786_7930596639916235962_n.jpg?_nc_ht=instagram.fktm8-1.fna.fbcdn.net&_nc_ohc=FtyLeoqmVmgAX8wq3Xw&edm=ABfd0MgBAAAA&ccb=7-4&oh=003e474cc162f840ff897a9d19a6ab5b&oe=6146DB33&_nc_sid=7bff83" />
 </a>
