@@ -20,12 +20,12 @@ I'm a FrontEnd developer from Nepal 🇳🇵. Animating a site is my thing .
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"></code>
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png"></code>
 
-|
-
-![](https://komarev.com/ghpvc/?username=anjitpariyar&color=4D4AF7)
-
 | <a href="https://github.com/anjitpariyar/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=anjitpariyar&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Anjit's github stats" /></a> | <a href="https://github.com/anjitpariyar/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=anjitpariyar&layout=compact&theme=buefy&hide_border=true" /></a> |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+<br />
+<br />
+![](https://komarev.com/ghpvc/?username=anjitpariyar&color=4D4AF7)
 
 [![anjitpariyar's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=anjitpariyar)](https://github.com/anjitpariyar/github-readme-stats)
 
