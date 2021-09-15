@@ -41,5 +41,5 @@ I'm a FrontEnd developer from Nepal 🇳🇵. Animating a site is my thing .
 <br />
 
 <a href="https://www.instagram.com/limbo_anj/" target="\_blank">
-<img align="right" alt="Anjit pariyar | Instagram" width="30px"  src="https://instagram.fktm8-1.fna.fbcdn.net/v/t51.2885-19/s320x320/203019087_3969530746500786_7930596639916235962_n.jpg?_nc_ht=instagram.fktm8-1.fna.fbcdn.net&_nc_ohc=FtyLeoqmVmgAX8wq3Xw&edm=ABfd0MgBAAAA&ccb=7-4&oh=003e474cc162f840ff897a9d19a6ab5b&oe=6146DB33&_nc_sid=7bff83" />
+<img align="left" alt="Anjit pariyar | Instagram" width="30px"  src="https://instagram.fktm8-1.fna.fbcdn.net/v/t51.2885-19/s320x320/203019087_3969530746500786_7930596639916235962_n.jpg?_nc_ht=instagram.fktm8-1.fna.fbcdn.net&_nc_ohc=FtyLeoqmVmgAX8wq3Xw&edm=ABfd0MgBAAAA&ccb=7-4&oh=003e474cc162f840ff897a9d19a6ab5b&oe=6146DB33&_nc_sid=7bff83" /> @limbo_anj
 </a>
