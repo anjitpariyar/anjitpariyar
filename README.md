@@ -25,16 +25,17 @@ I'm a FrontEnd developer from Nepal 🇳🇵. Animating a site is my thing .
 
 <br />
 <br />
-![](https://komarev.com/ghpvc/?username=anjitpariyar&color=4D4AF7)
 
-[![anjitpariyar's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=anjitpariyar)](https://github.com/anjitpariyar/github-readme-stats)
+![](https://komarev.com/ghpvc/?username=your-github-username&color=dc143c)
+
+<!-- [![anjitpariyar's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=anjitpariyar)](https://github.com/anjitpariyar/github-readme-stats) -->
 
 <br />
 <br />
 
-#### Top Repositories
+<!-- #### Top Repositories
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=anjitpariyar&repo=github-readme-stats)](https://github.com/anjitpariyar/github-readme-stats)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=anjitpariyar&repo=github-readme-stats)](https://github.com/anjitpariyar/github-readme-stats) -->
 
 <br />
 <br />
