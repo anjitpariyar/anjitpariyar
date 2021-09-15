@@ -1,0 +1,87 @@
+@use "../../styles/spiltter.scss" as *;
+
+.commonPadding {
+  padding-top: 5rem;
+}
+.thin {
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.screen {
+  .lottieWrapper {
+    margin-bottom: -12em;
+    .monitor {
+      svg {
+        & > g > g > g:first-child > path:first-child {
+          fill: transparent;
+        }
+        & > g > g > g:not(:first-child) > path {
+          // fill: transparent;
+          // stroke: var(--dark);
+          // stroke-width: 2px;
+          fill: var(--dark);
+        }
+      }
+    }
+    .eyeBall {
+      svg > g > g:first-child > g > path,
+      svg > g > g:nth-child(3) > g > path {
+        stroke: var(--dark);
+        fill: transparent;
+        stroke-width: 4px;
+      }
+    }
+  }
+  .titleLg {
+    .flex {
+      @include flexer(center, center);
+    }
+    small {
+      font-size: 36px;
+      font-weight: 600;
+      padding: 0 0.5em;
+    }
+  }
+}
+
+.enjoy {
+  margin-top: -15em;
+  .lottieWrapper {
+    margin: 0 2.5em;
+    & > div {
+      overflow: visible;
+    }
+  }
+  svg {
+    overflow: visible;
+  }
+  svg > g {
+    & > g:nth-child(7),
+    & > g:nth-child(3),
+    & > g:nth-child(2) {
+      path {
+        fill: transparent;
+        stroke: var(--dark);
+      }
+    }
+    & > g:nth-child(4) {
+      path {
+        fill: var(--white);
+        stroke: var(--dark);
+      }
+    }
+  }
+  .title {
+    font-weight: 600;
+    span {
+      font-weight: 400;
+      font-style: italic;
+    }
+    small {
+      font-size: 0.55em;
+      transform: translateY(-10px);
+      display: inline-block;
+    }
+  }
+}

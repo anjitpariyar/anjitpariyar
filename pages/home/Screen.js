@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 
-import styles from "../../styles/Home.module.scss";
+import styles from "./Home.module.scss";
 import * as animationData from "../../json/computer.json";
 import * as animationData2 from "../../json/eye.json";
 import Lottie from "react-lottie";
@@ -80,6 +80,14 @@ const Screen = () => {
           <br />
           Frontend <br />
           Developer
+          <br />
+          <span className={styles.flex}>
+            (
+            <small>
+              And <br /> I
+            </small>
+            Believe )
+          </span>
         </h1>
       </div>
     </section>

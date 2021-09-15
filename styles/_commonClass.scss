@@ -7,6 +7,9 @@
 .bgGrey {
   background-color: var(--white--grey);
 }
+.title {
+  font-size: 2.8em;
+}
 .titleLg {
   font-size: 12.75vw;
   line-height: 1;
@@ -19,4 +22,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.mrAuto {
+  margin-right: auto;
+}
+.mlAuto {
+  margin-left: auto;
 }

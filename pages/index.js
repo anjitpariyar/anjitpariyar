@@ -1,8 +1,9 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.scss";
+import styles from "./home/Home.module.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Screen from "./home/Screen";
+import Enjoy from "./home/Enjoy";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <Screen />
+        <Enjoy />
       </main>
 
       <Footer />

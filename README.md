@@ -1,4 +1,4 @@
-<p><a href="https://digitalghumti.com/"><img src="https://res.cloudinary.com/dem2xvk2e/image/upload/v1631633660/animation_640_ktk8ht21_l7zm5y.gif" alt="anjit pariyar project" style="width:200px"/></a></p>
+<p><a href="https://digitalghumti.com/"><img src="https://res.cloudinary.com/dem2xvk2e/image/upload/v1631633660/animation_640_ktk8ht21_l7zm5y.gif" alt="anjit pariyar project" style="width:300px"/></a></p>
 
 <br />
 
