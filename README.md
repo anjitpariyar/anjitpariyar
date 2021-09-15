@@ -26,7 +26,7 @@ I'm a FrontEnd developer from Nepal 🇳🇵. Animating a site is my thing .
 <br />
 <br />
 
-![](https://komarev.com/ghpvc/?username=your-github-username&color=dc143c)
+![](https://komarev.com/ghpvc/?username=anjitpariyar&color=E66EB2)
 
 <!-- [![anjitpariyar's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=anjitpariyar)](https://github.com/anjitpariyar/github-readme-stats) -->
 
