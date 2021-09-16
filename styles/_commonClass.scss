@@ -14,10 +14,15 @@
   font-size: 12.75vw;
   line-height: 1;
 }
+.titleMd {
+  font-size: 3em;
+}
 .textCenter {
   text-align: center;
 }
-
+.textWhite {
+  color: var(--white);
+}
 .commonFlex {
   display: flex;
   justify-content: space-between;

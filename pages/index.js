@@ -3,7 +3,10 @@ import styles from "./home/Home.module.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Screen from "./home/Screen";
+import Project from "./home/Project";
 import Enjoy from "./home/Enjoy";
+import Fall from "./home/Fall";
+import Program from "./home/Program";
 
 export default function Home() {
   return (
@@ -18,6 +21,9 @@ export default function Home() {
       <main className={styles.main}>
         <Screen />
         <Enjoy />
+        <Project />
+        <Fall />
+        <Program />
       </main>
 
       <Footer />

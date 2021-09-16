@@ -18,8 +18,11 @@ const Enjoy = () => {
         <div className={styles.lottieWrapper + " " + styles.commonFlex}>
           <aside className={styles.mlAuto}>
             <h1 className={styles.title + " " + styles.textCenter}>
-              <span>(IF)</span> <br />I enjoy <br />
-              <small>Creating a Web.</small>
+              <span>
+                {"{"} IF {"}"}
+              </span>{" "}
+              <br />I enjoy <br />
+              <small>Creating a Web. </small>
             </h1>
           </aside>
           <aside className={styles.monitor}>
@@ -29,10 +32,12 @@ const Enjoy = () => {
           </aside>
           <aside className={styles.mrAuto}>
             <h1 className={styles.title + " " + styles.textCenter}>
-              <span>(Maybe)</span>
+              <span>
+                {"{"} true {"}"}{" "}
+              </span>
               <br />
               You will enjoy <br />
-              <small>Using it.</small>
+              <small>Using it. </small>
             </h1>
           </aside>
         </div>

@@ -46,7 +46,7 @@
 }
 
 .enjoy {
-  margin-top: -15em;
+  margin-top: -12em;
   .lottieWrapper {
     margin: 0 2.5em;
     & > div {
@@ -83,5 +83,70 @@
       transform: translateY(-10px);
       display: inline-block;
     }
+  }
+  aside {
+    min-width: 25%;
+  }
+}
+
+.project {
+  position: relative;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4em;
+  }
+  article {
+    &,
+    .imageWrapper {
+      border: 2px solid var(--dark);
+    }
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    padding-right: 0;
+    justify-content: flex-end;
+    .imageWrapper {
+      border-right: 0;
+    }
+
+    .title {
+      margin-bottom: 5em;
+    }
+  }
+
+  .link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    // transform: translate(-50%, -50%);
+    animation: rotate 5s linear 0s infinite forwards;
+  }
+  .title {
+    font-size: 1.5em;
+  }
+}
+
+.project {
+  .imageWrapper {
+    position: relative;
+    display: block;
+    .textWrapper {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 12%;
+    }
+  }
+}
+
+.program {
+  @include scrollbar;
+  .titleLg {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 0.6em;
+    animation: ticker 30s linear 2s infinite forwards;
   }
 }
