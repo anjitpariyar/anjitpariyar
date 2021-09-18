@@ -1,5 +1,6 @@
 import styles from "./Home.module.scss";
 import { useRef, useState, useEffect } from "react";
+
 const Program = () => {
   const texts = [
     "HTML 5",
@@ -20,13 +21,20 @@ const Program = () => {
   useEffect(() => {
     if (header?.current) {
       setWidth(header?.current?.scrollWidth - header?.current?.clientWidth);
-      console.log(header?.current);
     }
   }, []);
 
   return (
     <section className={styles.program}>
-      <div className={styles.commonPadding + " " + styles.container}>
+      <div
+        className={
+          styles.commonPadding +
+          " " +
+          styles.container +
+          " " +
+          styles.paddingBottom
+        }
+      >
         <h1
           className={styles.titleLg}
           style={{ "--width": "-" + width + "px" }}

@@ -1,0 +1,19 @@
+@use "../styles/spiltter.scss" as *;
+.projectCard {
+  &,
+  .imageWrapper {
+    border: 2px solid var(--dark);
+  }
+  display: flex;
+  flex-direction: column;
+  padding: 3em;
+  padding-right: 0;
+  justify-content: flex-end;
+  .imageWrapper {
+    border-right: 0;
+  }
+
+  .title {
+    margin-bottom: 3em;
+  }
+}

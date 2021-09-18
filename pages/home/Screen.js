@@ -41,6 +41,7 @@ const Screen = () => {
               height={200}
               width={270}
               ref={lottie1}
+              isClickToPauseDisabled={true}
               eventListeners={[
                 {
                   eventName: "complete",
@@ -60,6 +61,7 @@ const Screen = () => {
               height={250}
               width={250}
               ref={lottie2}
+              isClickToPauseDisabled={true}
               eventListeners={[
                 {
                   eventName: "complete",
@@ -76,7 +78,7 @@ const Screen = () => {
           <br />
           Pariyar
           <br />
-          <span className={styles.thin}>(N.01 – SS21)</span>
+          <span className={styles.thin}>(2 Yrs Exp)</span>
           <br />
           Frontend <br />
           Developer

@@ -1,14 +1,35 @@
 import Head from "next/head";
+import { useRef } from "react";
 import styles from "./home/Home.module.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Banner from "../components/Banner";
 import Screen from "./home/Screen";
 import Project from "./home/Project";
 import Enjoy from "./home/Enjoy";
-import Fall from "./home/Fall";
 import Program from "./home/Program";
-
+import FallImage from "/public/banner/fall.png";
+import ChatImage from "/public/banner/chat.png";
+import { useRouter } from "next/router";
 export default function Home() {
+  const containerRef = useRef(null);
+  const { asPath } = useRouter();
+
+  const butterfly = {
+    link: "https://anjitpariyar.github.io/everythingFall/",
+    image: FallImage,
+    title: "EverythingFall",
+    white: true,
+    description: "Are you Ready for Html Canvas ?",
+  };
+  const chat = {
+    link: "https://chat-25704.web.app/",
+    image: ChatImage,
+    title:
+      "chat anonymously <br/>  None will know who you are but  don't kill anyone",
+    white: true,
+    description: "Chat Now",
+  };
   return (
     <>
       <Head>
@@ -17,15 +38,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-
-      <main className={styles.main}>
+      <main className={styles.main} data-scroll-container ref={containerRef}>
         <Screen />
         <Enjoy />
         <Project />
-        <Fall />
+        <Banner {...butterfly} />
         <Program />
+        <div className={styles.chat}>
+          <Banner {...chat} />
+        </div>
       </main>
-
       <Footer />
     </>
   );

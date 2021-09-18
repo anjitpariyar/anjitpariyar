@@ -27,7 +27,12 @@ const Enjoy = () => {
           </aside>
           <aside className={styles.monitor}>
             <div className={styles.lottieWrapper}>
-              <Lottie options={defaultOptions} height={600} width={400} />
+              <Lottie
+                options={defaultOptions}
+                height={600}
+                width={400}
+                isClickToPauseDisabled={true}
+              />
             </div>
           </aside>
           <aside className={styles.mrAuto}>

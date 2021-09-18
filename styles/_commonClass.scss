@@ -3,9 +3,18 @@
   max-width: 1320px;
   margin: auto;
 }
-
+.commonPadding {
+  padding-top: 5rem;
+}
+.paddingBottom {
+  padding-bottom: 5rem;
+}
 .bgGrey {
   background-color: var(--white--grey);
+}
+
+.titleSm {
+  font-size: 1.8em;
 }
 .title {
   font-size: 2.8em;
@@ -33,4 +42,7 @@
 }
 .mlAuto {
   margin-left: auto;
+}
+.bgDark {
+  background-color: #211e1d;
 }

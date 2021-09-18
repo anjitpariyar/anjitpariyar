@@ -1,44 +1,73 @@
+import { useState } from "react";
 import styles from "./Home.module.scss";
 import Image from "next/image";
 import Hb from "/public/projects/hb.png";
 import Dg from "/public/projects/dg.png";
 import Link from "next/link";
 import Title from "../../components/Title";
+import ProjectCard from "../../components/ProjectCard";
+import { motion } from "framer-motion";
 
 const Project = () => {
-  return (
-    <section className={styles.project}>
-      <div className={styles.container + " " + styles.commonPadding}>
-        <div className={styles.grid}>
-          <article>
-            <Link href="/">
-              <a>
-                <h2 className={styles.title}>Hamrobazar</h2>
-                <div className={styles.imageWrapper}>
-                  <Image src={Hb} alt="Picture of the author" />
-                </div>
-              </a>
-            </Link>
-          </article>
-          <article>
-            <Link href="/">
-              <a>
-                <h2 className={styles.title}>Digital Ghumti</h2>
+  const [mouse, setMouse] = useState({ x: "", y: "" });
+  const [hover, setHover] = useState(false);
+  const moveMe = (e) => {
+    setMouse((prevState) => ({
+      ...prevState,
+      x: e.clientX - 150,
+    }));
+    setMouse((prevState) => ({
+      ...prevState,
+      y: e.clientY - 150,
+    }));
+  };
+  const hoverState = (state) => {
+    setHover(state);
+  };
+  const projectList = [
+    {
+      link: "/",
+      title: "Hamrobazar",
+      image: Hb,
+    },
+    {
+      link: "/",
+      title: "Digital Ghumti",
+      image: Dg,
+    },
+  ];
 
-                <div className={styles.imageWrapper}>
-                  <Image src={Dg} alt="Picture of the author" />
-                </div>
-              </a>
-            </Link>
-          </article>
-          <div className={styles.link}>
+  return (
+    <section className={styles.project} onMouseMove={(e) => moveMe(e)}>
+      <div
+        className={
+          styles.container +
+          " " +
+          styles.commonPadding +
+          " " +
+          styles.paddingBottom
+        }
+      >
+        <div className={styles.grid}>
+          {projectList.map((elem, index) => {
+            return (
+              <ProjectCard key={index} {...elem} hoverState={hoverState} />
+            );
+          })}
+
+          <motion.div
+            className={styles.link + " " + (hover ? styles.active : " ")}
+            style={{
+              transform: "translate(" + mouse.x + "px," + mouse.y + "px)",
+            }}
+          >
             <Title
-              text="→ View → View → View → View → View → View "
+              text="view now . view now . view now . view now . "
               arc={360}
               radius={150}
               className={styles.title}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

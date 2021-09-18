@@ -10,7 +10,8 @@ const Title = ({ text, arc, radius, className }) => {
     textAlign: "center",
     marginBottom: "0.5em",
     position: "relative",
-    height: `${radius / 1.5}px`,
+    height: `${radius * 2}px`,
+    width: `${radius * 2}px`,
   };
 
   return (

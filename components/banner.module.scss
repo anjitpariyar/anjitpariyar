@@ -1,0 +1,18 @@
+@use "../styles/spiltter.scss" as *;
+
+.banner {
+  background-color: var(--dark);
+  .imageWrapper {
+    position: relative;
+    display: block;
+    & > div {
+      display: block !important;
+    }
+    .textWrapper {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 12%;
+    }
+  }
+}
