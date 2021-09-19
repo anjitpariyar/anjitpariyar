@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import styles from "./Home.module.scss";
 import * as animationData from "../../json/computer.json";
@@ -7,9 +7,11 @@ import Lottie from "react-lottie";
 import { gsap } from "gsap";
 
 const Screen = () => {
+  // lottie ref
   const lottie1 = useRef(null);
   const lottie2 = useRef(null);
 
+  //lottie default options
   const defaultOptions = {
     loop: false,
     autoplay: false,
@@ -26,13 +28,18 @@ const Screen = () => {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
+  //playing animation on hover
   const MouseEnter = () => {
     lottie1?.current?.play();
   };
   const MouseEnter2 = () => {
     lottie2?.current?.play();
   };
+
+  //text reveal
   const header = useRef(null);
+
   useEffect(() => {
     if (header?.current) {
       let t1 = gsap.timeline();
@@ -45,11 +52,30 @@ const Screen = () => {
     }
   }, []);
 
+  // two lottie aniamtion parallax effect
+
+  const [posY, setPosY] = useState(0);
+
+  useEffect(() => {
+    if (posY < 1000) {
+      window.addEventListener("scroll", () => {
+        setPosY(window.scrollY);
+      });
+    }
+    return () => {
+      window.removeEventListener("scroll", () => {});
+    };
+  }, [posY]);
+
   return (
     <section className={styles.screen}>
       <div className={styles.container + " " + styles.commonPadding}>
         <div className={styles.lottieWrapper + " " + styles.commonFlex}>
-          <article className={styles.monitor} onMouseEnter={() => MouseEnter()}>
+          <article
+            className={styles.monitor}
+            onMouseEnter={() => MouseEnter()}
+            style={{ transform: "translateY(" + posY * 0.5 + "px)" }}
+          >
             <Lottie
               options={defaultOptions}
               height={200}
@@ -69,6 +95,7 @@ const Screen = () => {
           <article
             className={styles.eyeBall}
             onMouseEnter={() => MouseEnter2()}
+            style={{ transform: "translateY(" + posY * 0.3 + "px)" }}
           >
             <Lottie
               options={defaultOptions2}
