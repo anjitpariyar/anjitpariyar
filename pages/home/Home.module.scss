@@ -39,6 +39,12 @@
       font-weight: 600;
       padding: 0 0.5em;
     }
+    span {
+      position: relative;
+      transform: translateY(200px);
+      opacity: 0;
+      display: inline-block;
+    }
   }
 }
 
@@ -71,7 +77,7 @@
   }
   .title {
     font-weight: 600;
-    span {
+    .thin {
       font-weight: 400;
       font-style: italic;
     }
@@ -80,7 +86,14 @@
       transform: translateY(-10px);
       display: inline-block;
     }
+    & > * {
+      position: relative;
+      transform: translateY(200px);
+      opacity: 0;
+      display: inline-block;
+    }
   }
+
   aside {
     min-width: 25%;
   }
@@ -97,10 +110,11 @@
   }
 
   .link {
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0%;
     pointer-events: none;
+    transform: translate(-50%, -50%);
     //
     transition: transform 0.2s cubic-bezier(0.85, 0.03, 0.27, 1.55),
       opacity 0.3s ease-in;
@@ -110,7 +124,7 @@
     }
     &.active {
       opacity: 1;
-      transition: transform 0.1s linear, opacity 0.3s ease-in;
+      transition: transform 0.2s linear, opacity 0.3s ease-in;
     }
   }
   .title {
@@ -129,6 +143,17 @@
     white-space: nowrap;
     gap: 0.6em;
     animation: ticker 30s linear 2s infinite forwards;
+    animation-play-state: paused;
+    span {
+      position: relative;
+      opacity: 0;
+      transform: translateY(200px);
+    }
+  }
+  &.active {
+    .titleLg {
+      animation-play-state: running;
+    }
   }
 }
 

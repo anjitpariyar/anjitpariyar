@@ -1,9 +1,7 @@
 import { useState } from "react";
 import styles from "./Home.module.scss";
-import Image from "next/image";
 import Hb from "/public/projects/hb.png";
 import Dg from "/public/projects/dg.png";
-import Link from "next/link";
 import Title from "../../components/Title";
 import ProjectCard from "../../components/ProjectCard";
 import { motion } from "framer-motion";
@@ -29,11 +27,13 @@ const Project = () => {
       link: "/",
       title: "Hamrobazar",
       image: Hb,
+      bg: "#232323",
     },
     {
       link: "/",
       title: "Digital Ghumti",
       image: Dg,
+      bg: "#00a8e5",
     },
   ];
 

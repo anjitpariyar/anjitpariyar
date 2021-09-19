@@ -1,9 +1,10 @@
-import { useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 import styles from "./Home.module.scss";
 import * as animationData from "../../json/computer.json";
 import * as animationData2 from "../../json/eye.json";
 import Lottie from "react-lottie";
+import { gsap } from "gsap";
 
 const Screen = () => {
   const lottie1 = useRef(null);
@@ -31,6 +32,19 @@ const Screen = () => {
   const MouseEnter2 = () => {
     lottie2?.current?.play();
   };
+  const header = useRef(null);
+  useEffect(() => {
+    if (header?.current) {
+      let t1 = gsap.timeline();
+      t1.staggerTo(
+        [...header?.current?.children],
+        1,
+        { y: 0, opacity: 1, ease: "power4.out" },
+        0.2
+      );
+    }
+  }, []);
+
   return (
     <section className={styles.screen}>
       <div className={styles.container + " " + styles.commonPadding}>
@@ -73,15 +87,18 @@ const Screen = () => {
             />
           </article>
         </div>
-        <h1 className={styles.titleLg + " " + styles.textCenter}>
-          Anjit
+        <h1 className={styles.titleLg + " " + styles.textCenter} ref={header}>
+          <span>Anjit</span>
           <br />
-          Pariyar
+          <span>Pariyar</span>
+
           <br />
           <span className={styles.thin}>(2 Yrs Exp)</span>
           <br />
-          Frontend <br />
-          Developer
+          <span>Frontend </span>
+          <br />
+          <span>Developer</span>
+
           <br />
           <span className={styles.flex}>
             (

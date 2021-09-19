@@ -5,6 +5,17 @@
   .imageWrapper {
     position: relative;
     display: block;
+    position: relative;
+    overflow: hidden;
+    .reveal {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-blend-mode: hard-light;
+      z-index: 1;
+    }
     & > div {
       display: block !important;
     }
