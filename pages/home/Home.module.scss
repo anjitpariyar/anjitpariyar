@@ -147,7 +147,8 @@
     span {
       position: relative;
       opacity: 0;
-      transform: translateY(200px);
+      transform: translateY(-200px);
+      @include transition;
     }
   }
   &.active {

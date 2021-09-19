@@ -1,12 +1,16 @@
 @use "../styles/spiltter.scss" as *;
 
 .banner {
-  background-color: var(--dark);
   .imageWrapper {
     position: relative;
     display: block;
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
+    img {
+      background-color: var(--dark);
+    }
+
     .reveal {
       position: absolute;
       height: 100%;

@@ -45,7 +45,7 @@ const Program = () => {
       t1.staggerTo(
         [...header?.current?.children],
         1,
-        { y: -100, opacity: 1 },
+        { y: 200, opacity: 1 },
         0.3
       );
     }

@@ -1,7 +1,8 @@
 import Image from "next/image";
 import styles from "./banner.module.scss";
 import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useInView } from "react-intersection-observer";
 
 const Banner = ({
@@ -14,27 +15,54 @@ const Banner = ({
   bgImage,
 }) => {
   const { ref, inView } = useInView({
-    threshold: 0.7,
+    threshold: 0.5,
   });
-  console.log(bgImage);
 
   const reveal = useRef(null);
+  const imageMove = useRef(null);
+
   useEffect(() => {
     if (inView && reveal?.current) {
       let t1 = gsap.timeline();
-      t1.staggerTo(
-        reveal?.current,
-        1,
-        { x: reveal?.current.clientWidth, ease: "power4.out" },
-        0.2
-      );
+      t1.to(reveal?.current, 2, {
+        y: reveal?.current.clientHeight,
+        ease: "power4.out",
+      });
     }
   }, [inView]);
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.fromTo(
+      imageMove?.current.firstChild,
+      { y: -200 },
+      {
+        scrollTrigger: {
+          trigger: imageMove?.current,
+          start: "top center",
+          end: "bottom top",
+          scrub: true,
+        },
+        y: 200,
+        ease: "none",
+      }
+    );
+  }, []);
   return (
     <section className={styles.banner} ref={ref}>
-      <a className={styles.imageWrapper} href={link} target="_blank">
+      <a
+        className={styles.imageWrapper}
+        href={link}
+        target="_blank"
+        ref={imageMove}
+      >
         {image && (
-          <Image src={image} alt="Picture of the author" placeholder="blur" />
+          <Image
+            src={image}
+            alt="Picture of the author"
+            placeholder="blur"
+            layout="fill"
+            objectFit="cover"
+          />
         )}
         <div
           className={styles.reveal}

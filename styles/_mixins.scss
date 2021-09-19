@@ -88,3 +88,8 @@ Flexer
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+
+// transition
+@mixin transition {
+  transition: 0.3s linear;
+}
