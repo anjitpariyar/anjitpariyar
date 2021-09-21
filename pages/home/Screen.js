@@ -57,6 +57,7 @@ const Screen = () => {
   const [posY, setPosY] = useState(0);
 
   useEffect(() => {
+    console.log(posY);
     if (posY < 1000) {
       window.addEventListener("scroll", () => {
         setPosY(window.scrollY);
@@ -74,7 +75,10 @@ const Screen = () => {
           <article
             className={styles.monitor}
             onMouseEnter={() => MouseEnter()}
-            style={{ transform: "translateY(" + posY * 0.5 + "px)" }}
+            style={{
+              transform: "translateY(" + posY * 0.4 + "px)",
+              opacity: 1 - posY * 0.002,
+            }}
           >
             <Lottie
               options={defaultOptions}
@@ -95,7 +99,10 @@ const Screen = () => {
           <article
             className={styles.eyeBall}
             onMouseEnter={() => MouseEnter2()}
-            style={{ transform: "translateY(" + posY * 0.3 + "px)" }}
+            style={{
+              transform: "translateY(" + posY * 0.6 + "px)",
+              opacity: 1 - posY * 0.002,
+            }}
           >
             <Lottie
               options={defaultOptions2}

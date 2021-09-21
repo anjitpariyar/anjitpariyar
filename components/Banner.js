@@ -34,7 +34,7 @@ const Banner = ({
     gsap.registerPlugin(ScrollTrigger);
     gsap.fromTo(
       imageMove?.current.firstChild,
-      { y: -200 },
+      { y: -200, scale: 1 },
       {
         scrollTrigger: {
           trigger: imageMove?.current,
@@ -43,6 +43,7 @@ const Banner = ({
           scrub: true,
         },
         y: 200,
+        scale: 1.3,
         ease: "none",
       }
     );
