@@ -1,13 +1,25 @@
+@use "./responsive" as *;
 .container {
   // padding: 0 0.5rem;
   max-width: 1320px;
   margin: auto;
+  @include sm {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+  }
 }
 .commonPadding {
   padding-top: 5rem;
+  @include sm {
+    padding-top: 2em;
+  }
 }
 .paddingBottom {
   padding-bottom: 5rem;
+  @include sm {
+    padding-bottom: 2em;
+  }
 }
 .bgGrey {
   background-color: var(--white--grey);
@@ -15,9 +27,15 @@
 
 .titleSm {
   font-size: 1.8em;
+  @include sm {
+    font-size: 1.3em;
+  }
 }
 .title {
   font-size: 2.8em;
+  @include sm {
+    font-size: 1.5em;
+  }
 }
 .titleLg {
   font-size: 12.75vw;
@@ -25,6 +43,9 @@
 }
 .titleMd {
   font-size: 3em;
+  @include sm {
+    font-size: 1.8em;
+  }
 }
 .textCenter {
   text-align: center;
@@ -45,4 +66,16 @@
 }
 .bgDark {
   background-color: #211e1d;
+}
+
+.mobileOnly {
+  display: none !important;
+  @include sm {
+    display: flex !important;
+  }
+}
+.desktopOnly {
+  @include sm {
+    display: none !important;
+  }
 }

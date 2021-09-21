@@ -50,7 +50,7 @@ const Footer = () => {
           </Link>
         </h1>
       </div>
-      <div className={styles2.header}>
+      <div className={styles2.header + " " + styles2.footer}>
         <div className={styles2.container}>
           <nav className={styles2.nav}>
             <li className={styles2.navLink}>

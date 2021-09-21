@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <nav className={styles.nav}>
+        <nav className={styles.nav + " " + styles.desktopOnly}>
           <li className={styles.navLink + " " + styles.brand}>
             <Link href="/">
               <a>
@@ -32,6 +32,21 @@ const Header = () => {
           <li className={styles.navLink}>
             <a href="https://www.instagram.com/limbo_anj/" target="_blank">
               Insatgram
+            </a>
+          </li>
+        </nav>
+        <nav className={styles.nav + " " + styles.mobileOnly}>
+          <li className={styles.navLink + " " + styles.brand}>
+            <Link href="/">
+              <a>
+                <Logo />
+              </a>
+            </Link>
+          </li>
+
+          <li className={styles.navLink}>
+            <a href="#!" target="_blank">
+              =
             </a>
           </li>
         </nav>

@@ -9,6 +9,10 @@
   padding: 3em;
   padding-right: 0;
   justify-content: flex-end;
+  @include sm {
+    padding: 1em;
+    padding-right: 0;
+  }
   .imageWrapper {
     border-right: 0;
     position: relative;
@@ -24,5 +28,8 @@
 
   .title {
     margin-bottom: 3em;
+    @include sm {
+      margin-bottom: 2em;
+    }
   }
 }

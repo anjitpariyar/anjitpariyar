@@ -10,6 +10,9 @@
   flex-direction: column;
   .titleLg {
     overflow: hidden;
+    @include sm {
+      font-size: 5em;
+    }
     span {
       display: inline-block;
       transform: translateY(200px);
@@ -17,6 +20,9 @@
     }
     .empty {
       width: 60px;
+      @include sm {
+        width: 30px;
+      }
     }
   }
 }
