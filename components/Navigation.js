@@ -9,9 +9,7 @@ const Navigation = ({ show, toggleNavigation }) => {
   const nav = useRef(null);
 
   useEffect(() => {
-    //     if(show){}
     let t1 = gsap.timeline();
-    //     console.log([...nav?.current.querySelectorAll("nav a")]);
     if (show) {
       t1.to(nav?.current, {
         y: "-100vh",
