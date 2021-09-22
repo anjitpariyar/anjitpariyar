@@ -11,9 +11,9 @@
     @include sm {
       margin-bottom: 0;
     }
-    article {
-      transition: 0.1s linear;
-    }
+    // article {
+    //   // transition: 0.15s ease-in;
+    // }
     .monitor {
       & > div {
         @include sm {
@@ -37,7 +37,7 @@
       & > div {
         @include sm {
           width: 180px !important;
-          height: 110px !important;
+          height: 120px !important;
         }
       }
       svg > g > g:first-child > g > path,
@@ -164,6 +164,7 @@
       position: absolute;
       transform: none !important;
       left: -150px;
+      opacity: 1;
     }
     .title {
       animation: rotate 10s linear 0s infinite forwards;
@@ -195,6 +196,9 @@
       opacity: 0;
       transform: translateY(-200px);
       @include transition;
+      @include sm {
+        transform: translateY(-50px);
+      }
     }
   }
   &.active {

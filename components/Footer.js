@@ -16,6 +16,7 @@ const Footer = () => {
   useEffect(() => {
     if (inView && reveal?.current) {
       let t1 = gsap.timeline();
+
       t1.staggerTo(
         [...reveal?.current.children],
         1,

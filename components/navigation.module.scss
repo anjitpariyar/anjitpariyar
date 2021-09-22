@@ -1,0 +1,30 @@
+@use "../styles/spiltter.scss" as *;
+
+.navigation {
+  background-color: var(--dark);
+  color: var(--white);
+  position: fixed;
+  z-index: 99;
+  height: 100vh;
+  top: 100vh;
+  left: 0;
+  width: 100%;
+  .nav {
+    flex-direction: column;
+
+    .navLink {
+      font-size: 1.8em;
+      height: 100px;
+      overflow: hidden;
+      a {
+        transform: translateY(100px);
+        opacity: 0;
+      }
+    }
+    .cross {
+      position: absolute;
+      top: 3px;
+      right: 0;
+    }
+  }
+}

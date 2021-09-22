@@ -23,7 +23,16 @@
     svg {
       height: 3.2em;
       width: auto;
+      @include sm {
+        height: 2.5em;
+      }
     }
+  }
+}
+.hamburger {
+  svg {
+    height: 28px;
+    width: auto;
   }
 }
 

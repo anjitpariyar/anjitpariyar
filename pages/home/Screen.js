@@ -57,7 +57,6 @@ const Screen = () => {
   const [posY, setPosY] = useState(0);
 
   useEffect(() => {
-    console.log(posY);
     if (posY < 1000) {
       window.addEventListener("scroll", () => {
         setPosY(window.scrollY);
