@@ -25,4 +25,12 @@
       }
     }
   }
+  header li:first-child svg {
+    path:first-child {
+      fill: var(--white);
+    }
+    path:last-child {
+      fill: #211e1d;
+    }
+  }
 }
