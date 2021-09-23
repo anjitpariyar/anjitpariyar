@@ -15,7 +15,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {show && <Component {...pageProps} />}
-
       <Preloader />
     </>
   );

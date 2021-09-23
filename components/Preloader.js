@@ -2,6 +2,7 @@ import styles from "./preloader.module.scss";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Logo from "../svg/Logo";
+import { motion } from "framer-motion";
 
 const Preloader = () => {
   const pre = useRef(null);
@@ -12,13 +13,15 @@ const Preloader = () => {
       y: "-100vh",
       duration: 1.4,
       ease: "ease",
-      delay: 3,
+      delay: 4,
     });
   }, []);
 
   return (
     <div className={styles.preloader} ref={pre}>
-      <Logo className={styles.brand} />
+      <motion.a layoutId="brandId_001">
+        <Logo className={styles.brand} />
+      </motion.a>
     </div>
   );
 };

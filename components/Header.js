@@ -4,6 +4,7 @@ import Logo from "../svg/Logo";
 import Hamburger from "../svg/Hamburger";
 import Navigation from "./Navigation";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Header = () => {
   //trigger point for navigation hide and show
@@ -19,9 +20,9 @@ const Header = () => {
           <nav className={styles.nav + " " + styles.desktopOnly}>
             <li className={styles.navLink + " " + styles.brand}>
               <Link href="/">
-                <a>
+                <motion.a layoutId="brandId_001">
                   <Logo />
-                </a>
+                </motion.a>
               </Link>
             </li>
             <li className={styles.navLink}>
