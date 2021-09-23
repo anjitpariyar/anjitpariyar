@@ -6,6 +6,16 @@
     transform: rotate(360deg);
   }
 }
+@keyframes strokeReveal {
+  0% {
+    stroke-width: 512px;
+    stroke-dashoffset: 70px;
+  }
+  100% {
+    stroke-width: 0px;
+    stroke-dashoffset: 1000px;
+  }
+}
 @keyframes ticker {
   0% {
     transform: translateX(0);

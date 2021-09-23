@@ -1,0 +1,30 @@
+@use "../styles/spiltter.scss" as *;
+
+.preloader {
+  background-color: var(--dark);
+  color: var(--white);
+  position: fixed;
+  z-index: 999;
+  height: 100vh;
+  top: 0vh;
+  left: 0;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  svg {
+    height: 20vh;
+    width: auto;
+    animation: rotate 2s cubic-bezier(0.55, 0.06, 0.68, 0.19) 0s infinite
+      forwards;
+    path:first-child {
+      fill: var(--white);
+      stroke: var(--dark);
+      stroke-dasharray: 50;
+      stroke-dashoffset: 70px;
+      animation: strokeReveal 3s linear 0s 1 forwards;
+    }
+    path:last-child {
+      fill: var(--dark);
+    }
+  }
+}
