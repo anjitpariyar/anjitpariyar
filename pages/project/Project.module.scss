@@ -1,0 +1,86 @@
+@use "../../styles/spiltter.scss" as *;
+
+.project {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4em;
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1em;
+    }
+  }
+
+  .link {
+    position: fixed;
+    top: 0px;
+    left: 0%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+
+    transition: transform 0.2s cubic-bezier(0.85, 0.03, 0.27, 1.55),
+      opacity 0.3s ease-in;
+    opacity: 0;
+    @include sm {
+      position: absolute;
+      transform: none !important;
+      left: -150px;
+      opacity: 1;
+    }
+    .title {
+      animation: rotate 10s linear 0s infinite forwards;
+    }
+    &.active {
+      opacity: 1;
+      transition: transform 0.2s linear, opacity 0.3s ease-in;
+    }
+  }
+  .title {
+    font-size: 1em;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+  }
+}
+
+.program {
+  @include scrollbar;
+  .titleLg {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 0.6em;
+    animation: ticker 30s linear 2s infinite forwards;
+    animation-play-state: paused;
+    span {
+      position: relative;
+      opacity: 0;
+      transform: translateY(-200px);
+      @include transition;
+      @include sm {
+        transform: translateY(-50px);
+      }
+    }
+  }
+  &.active {
+    .titleLg {
+      animation-play-state: running;
+    }
+  }
+}
+
+.chat {
+  a {
+    div:last-child > div {
+      transform: translateY(-50%);
+      left: 46% !important;
+      top: 15em !important;
+      @include sm {
+        left: 1em !important;
+      }
+    }
+  }
+}

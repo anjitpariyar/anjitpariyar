@@ -3,12 +3,16 @@
   &,
   .imageWrapper {
     border: 2px solid var(--dark);
+    & > div {
+      display: block !important;
+    }
   }
   display: flex;
   flex-direction: column;
   padding: 3em;
   padding-right: 0;
   justify-content: flex-end;
+
   @include sm {
     padding: 1em;
     padding-right: 0;
@@ -28,8 +32,14 @@
 
   .title {
     margin-bottom: 3em;
+    @include transition;
     @include sm {
       margin-bottom: 2em;
+    }
+  }
+  &:hover {
+    .title {
+      font-style: italic;
     }
   }
 }

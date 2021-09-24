@@ -30,9 +30,21 @@ a {
   --secondary--color: purple;
   --dark: #232323;
   --grey: #838383;
-  --white--grey: #f2f2f2;
+  --white--grey: #f2ede4;
   --white: #fff;
 }
 body {
   color: var(--dark);
+  background-color: var(--white--grey);
+}
+
+.page-entry {
+  position: fixed;
+  z-index: 99;
+  background-color: var(--white);
+  top: 100vh;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
 }
