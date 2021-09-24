@@ -12,6 +12,8 @@ I'm a FrontEnd developer from Nepal 🇳🇵. Animating a site is my thing .
 
 - 💬 see my chat web app [here](https://chat-25704.web.app/)
 
+- 🖥️ portfolio comming soon [here](https://anjitpariyar.github.io/)
+
 **Languages and Tools:**
 
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>
