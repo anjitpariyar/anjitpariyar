@@ -23,7 +23,7 @@ export default function About() {
       <Footer />
       <style global jsx>{`
         body {
-          background-color: var(--primary--color);
+          background-color: #f28241;
         }
       `}</style>
     </>
