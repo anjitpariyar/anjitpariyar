@@ -1,0 +1,53 @@
+@use "../../styles/spiltter.scss" as *;
+
+.screen {
+  .titleLg {
+    small {
+      font-size: 36px;
+      padding: 0 0.5em;
+    }
+    span {
+      position: relative;
+      transform: translateY(200px);
+      opacity: 0;
+      display: inline-block;
+    }
+  }
+}
+.textWrapper {
+  max-width: 800px;
+  margin: auto;
+  .titleMd {
+    text-indent: 120px;
+  }
+}
+
+.photoGrid {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 960px;
+    margin: auto;
+    gap: 4em;
+    .titleSm {
+      width: max-content;
+      &.left {
+        margin-left: auto;
+      }
+    }
+    img {
+      mix-blend-mode: luminosity;
+    }
+  }
+}
+
+.photoCycle {
+  .textWrapper {
+    height: 600px;
+    position: relative;
+    img {
+      object-position: bottom;
+      mix-blend-mode: multiply;
+    }
+  }
+}

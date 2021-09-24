@@ -20,13 +20,15 @@ const Header = () => {
           <nav className={styles.nav + " " + styles.desktopOnly}>
             <li className={styles.navLink + " " + styles.brand}>
               <Link href="/">
-                <motion.a layoutId="brandId_001">
-                  <Logo />
-                </motion.a>
+                <a>
+                  <motion.span layoutId="brandId_001">
+                    <Logo />
+                  </motion.span>
+                </a>
               </Link>
             </li>
             <li className={styles.navLink}>
-              <Link href="/">
+              <Link href="/about">
                 <a>About</a>
               </Link>
             </li>

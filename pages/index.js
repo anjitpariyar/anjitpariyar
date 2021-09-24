@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import styles from "./home/Home.module.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";

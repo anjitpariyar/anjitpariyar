@@ -53,6 +53,7 @@
 .textWhite {
   color: var(--white);
 }
+
 .commonFlex {
   display: flex;
   justify-content: space-between;
@@ -74,6 +75,7 @@
     display: flex !important;
   }
 }
+
 .desktopOnly {
   @include sm {
     display: none !important;
