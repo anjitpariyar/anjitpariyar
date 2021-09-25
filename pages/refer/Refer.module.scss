@@ -1,0 +1,40 @@
+@use "../../styles/spiltter.scss" as *;
+.screen {
+  .titleLg {
+    span {
+      position: relative;
+      transform: translateY(200px);
+      opacity: 0;
+      display: inline-block;
+    }
+  }
+}
+
+.refer {
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      border-top: 2px solid var(--dark);
+      text-transform: uppercase;
+      @include transition;
+      &:last-child {
+        border-bottom: 2px solid var(--dark);
+      }
+      @include sm {
+        font-size: 1.1em;
+      }
+    }
+    .container {
+      display: flex;
+      padding: 1.5em 0;
+      span:first-child {
+        width: 400px;
+        @include sm {
+          width: 140px;
+          min-width: 140px;
+        }
+      }
+    }
+  }
+}

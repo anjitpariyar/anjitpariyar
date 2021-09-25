@@ -14,13 +14,6 @@
     }
   }
 }
-.textWrapper {
-  max-width: 800px;
-  margin: auto;
-  .titleMd {
-    text-indent: 120px;
-  }
-}
 
 .photoGrid {
   .grid {
@@ -29,10 +22,19 @@
     max-width: 960px;
     margin: auto;
     gap: 4em;
+    @include sm {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
     .titleSm {
       width: max-content;
       &.left {
         margin-left: auto;
+        @include sm {
+          position: relative;
+          z-index: 2;
+          margin-bottom: -1em;
+        }
       }
     }
     img {

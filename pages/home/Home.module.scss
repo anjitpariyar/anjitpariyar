@@ -220,3 +220,25 @@
     }
   }
 }
+
+// 404 page
+.pageNotFound {
+  img {
+    max-height: 500px;
+  }
+  .textWrapper {
+    .titleSm {
+      margin: 2em 0;
+      text-indent: 120px;
+    }
+  }
+  .btn {
+    height: 70px;
+    border: 2px solid var(--white);
+    font-size: 1.3em;
+    border-radius: 6px;
+    padding: 0 1em;
+    display: grid;
+    place-items: center;
+  }
+}

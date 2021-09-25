@@ -85,3 +85,11 @@
     display: none !important;
   }
 }
+
+.textWrapper {
+  max-width: 800px;
+  margin: auto;
+  .titleMd {
+    text-indent: 120px;
+  }
+}

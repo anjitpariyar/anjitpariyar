@@ -1,6 +1,8 @@
 import styles from "./Contact.module.scss";
 import { useForm } from "react-hook-form";
 
+// Initializing a client
+
 const Form = () => {
   const {
     register,
@@ -9,6 +11,8 @@ const Form = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => console.log(data);
+  console.log("env", process.env.REACT_APP_NOTION_WORKPLACE_ID);
+
   return (
     <section className={styles.contactForm}>
       <div className={styles.container + " " + styles.commonPadding}>

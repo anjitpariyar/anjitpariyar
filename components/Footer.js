@@ -55,7 +55,7 @@ const Footer = () => {
         <div className={styles2.container}>
           <nav className={styles2.nav}>
             <li className={styles2.navLink}>
-              <Link href="/">
+              <Link href="/refer">
                 <a>All Reference</a>
               </Link>
             </li>
