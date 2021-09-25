@@ -23,17 +23,8 @@ export default function Contact() {
       <Footer />
       <style global jsx>{`
         body {
-          background-color: var(--dark);
-          color: var(--white);
+          background-color: #f2b366;
         }
-
-        header li:first-child svg {
-          path:first-child 
-            fill: var(--white);
-        }
-        header li:first-child svg path:last-child {
-            fill: #211e1d;
-          }
       `}</style>
     </>
   );

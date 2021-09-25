@@ -9,10 +9,10 @@
   .formBtn {
     height: 70px;
     background-color: transparent;
-    border: 2px solid var(--white);
+    border: 2px solid var(--dark);
     border-radius: 8px;
     margin-bottom: 4em;
-    color: var(--white);
+    color: var(--dark);
     padding: 1em;
     width: 100%;
     outline: none;
@@ -20,7 +20,7 @@
     @include transition;
     &:focus,
     &:focus-within {
-      border-color: #f28241;
+      background-color: #f28241;
     }
   }
   .formBtn {
@@ -44,10 +44,10 @@
     list-style: none;
     padding: 0;
     li {
-      border-top: 2px solid var(--white);
+      border-top: 2px solid var(--dark);
       text-transform: uppercase;
       &:last-child {
-        border-bottom: 2px solid var(--white);
+        border-bottom: 2px solid var(--dark);
       }
     }
     .container {

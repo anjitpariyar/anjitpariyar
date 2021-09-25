@@ -26,27 +26,49 @@ const Refer = () => {
             </a>
           </li>
           <li className={styles.titleSm}>
-            <a className={styles.container} href="#" target="_blank">
+            <a
+              className={styles.container}
+              href="https://www.instagram.com/limbo_anj/"
+              target="_blank"
+            >
               <span>instagram</span>
               <span>@limbo_anj</span>
             </a>
           </li>
           <li className={styles.titleSm}>
-            <a className={styles.container} href="#!">
+            <a
+              className={styles.container}
+              href="https://github.com/anjitpariyar"
+            >
               <span>github</span>
-              <span>anjitpariyar</span>
+              <span>anjit pariyar</span>
             </a>
           </li>
           <li className={styles.titleSm}>
-            <a className={styles.container} href="#!">
+            <a
+              className={styles.container}
+              href="https://dribbble.com/limbo_anj"
+            >
               <span>Dribble</span>
-              <span>anjitpariyar</span>
+              <span>Anjit pariyar</span>
             </a>
           </li>
           <li className={styles.titleSm}>
-            <a className={styles.container} href="#!">
+            <a
+              className={styles.container}
+              href="https://www.linkedin.com/in/anjit-pariyar-b46131178/"
+            >
               <span>LinkedIn</span>
-              <span>anjitpariyar</span>
+              <span>anjit pariyar</span>
+            </a>
+          </li>
+          <li className={styles.titleSm}>
+            <a
+              className={styles.container}
+              href="https://anjitpariyar.medium.com/"
+            >
+              <span>Medium</span>
+              <span>@anjitpariyar</span>
             </a>
           </li>
         </ul>
