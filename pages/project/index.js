@@ -33,6 +33,8 @@ export default function Project() {
     <>
       <Head>
         <title>Projects - Anjit Pariyar - Frontend Developer</title>
+        <meta name="theme-color" content="#f2913d" />
+        <meta name="msapplication-TileColor" content="#f2913d" />
       </Head>
 
       <Header />
