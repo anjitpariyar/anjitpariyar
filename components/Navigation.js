@@ -63,12 +63,12 @@ const Navigation = ({ show, toggleNavigation }) => {
             </a>
           </li>
           <li className={styles.navLink + " " + styles2.navLink}>
-            <Link href="/">
+            <Link href="/about">
               <a>About</a>
             </Link>
           </li>
           <li className={styles.navLink + " " + styles2.navLink}>
-            <Link href="/">
+            <Link href="/project">
               <a>Project</a>
             </Link>
           </li>
