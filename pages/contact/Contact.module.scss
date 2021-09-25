@@ -1,4 +1,14 @@
 @use "../../styles/spiltter.scss" as *;
+.screen {
+  .titleLg {
+    span {
+      position: relative;
+      transform: translateY(200px);
+      opacity: 0;
+      display: inline-block;
+    }
+  }
+}
 .contactForm {
   .formRow {
     display: grid;
@@ -46,6 +56,8 @@
     li {
       border-top: 2px solid var(--dark);
       text-transform: uppercase;
+      background-color: #f2b366;
+      @include transition;
       &:last-child {
         border-bottom: 2px solid var(--dark);
       }

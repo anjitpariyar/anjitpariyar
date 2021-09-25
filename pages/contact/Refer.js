@@ -1,10 +1,32 @@
 import styles from "./Contact.module.scss";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useInView } from "react-intersection-observer";
 
 const Refer = () => {
+  const imageMove = useRef(null);
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.fromTo(
+      [...imageMove?.current.children],
+      { y: -100, stagger: 0.3 },
+      {
+        scrollTrigger: {
+          trigger: imageMove?.current,
+          start: "top center",
+          end: "bottom top",
+          scrub: true,
+        },
+        y: 100,
+        stagger: 0.3,
+      }
+    );
+  }, []);
   return (
     <section className={styles.refer}>
       <div className={styles.commonPadding + " " + styles.paddingBottom}>
-        <ul>
+        <ul ref={imageMove}>
           <li className={styles.titleSm}>
             <div className={styles.container}>
               <span>City</span> <span>Kathmandu, Nepal</span>
