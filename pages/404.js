@@ -15,7 +15,15 @@ export default function Custom404() {
       </Head>
       <Header />
       <main className={styles.pageNotFound} ref={containerRef}>
-        <div className={styles.container + " " + styles.commonPadding}>
+        <div
+          className={
+            styles.container +
+            " " +
+            styles.commonPadding +
+            " " +
+            styles.paddingBottom
+          }
+        >
           <div className={styles.textWrapper + " " + styles.textCenter}>
             <img src={"https://i.imgur.com/QIxIKBH.png"} alt="404" />
             <h2 className={styles.titleSm}>

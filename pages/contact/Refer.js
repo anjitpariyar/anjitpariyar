@@ -61,6 +61,7 @@ const Refer = () => {
             <a
               className={styles.container}
               href="https://github.com/anjitpariyar"
+              target="_blank"
             >
               <span>github</span>
               <span>anjit pariyar</span>
@@ -70,6 +71,7 @@ const Refer = () => {
             <a
               className={styles.container}
               href="https://dribbble.com/limbo_anj"
+              target="_blank"
             >
               <span>Dribble</span>
               <span>Anjit pariyar</span>
@@ -79,6 +81,7 @@ const Refer = () => {
             <a
               className={styles.container}
               href="https://www.linkedin.com/in/anjit-pariyar-b46131178/"
+              target="_blank"
             >
               <span>LinkedIn</span>
               <span>anjit pariyar</span>
@@ -88,6 +91,7 @@ const Refer = () => {
             <a
               className={styles.container}
               href="https://anjitpariyar.medium.com/"
+              target="_blank"
             >
               <span>Medium</span>
               <span>@anjitpariyar</span>

@@ -24,14 +24,14 @@ const Reference = () => {
               className={styles.container}
               target="_blank"
             >
-              <span>eye animationo</span>
+              <span>eye animation</span>
               <span>zakmotion</span>
             </a>
           </li>
           <li className={styles.titleSm}>
             <a
               className={styles.container}
-              href="mailto:anjitpariyar@gmail.com"
+              href="https://lottiefiles.com/cn36vzezli"
               target="_blank"
             >
               <span>Screen Animation</span>
@@ -41,47 +41,71 @@ const Reference = () => {
           <li className={styles.titleSm}>
             <a
               className={styles.container}
-              href="https://www.instagram.com/limbo_anj/"
+              href="https://lottiefiles.com/cn36vzezli"
               target="_blank"
             >
-              <span>instagram</span>
-              <span>@limbo_anj</span>
+              <span>robot animation</span>
+              <span>Tomas</span>
             </a>
           </li>
           <li className={styles.titleSm}>
             <a
               className={styles.container}
-              href="https://github.com/anjitpariyar"
+              href="https://www.instagram.com/siobhan_sands_creative/"
+              target="_blank"
             >
-              <span>github</span>
-              <span>anjit pariyar</span>
+              <span>butterfly illustration</span>
+              <span>Siobhan Sands</span>
             </a>
           </li>
           <li className={styles.titleSm}>
             <a
               className={styles.container}
-              href="https://dribbble.com/limbo_anj"
+              href="https://unsplash.com/@scottwebb"
+              target="_blank"
             >
-              <span>Dribble</span>
-              <span>Anjit pariyar</span>
+              <span>Concret Background</span>
+              <span>@scottwebb</span>
             </a>
           </li>
           <li className={styles.titleSm}>
             <a
               className={styles.container}
-              href="https://www.linkedin.com/in/anjit-pariyar-b46131178/"
+              href="https://absurd.design/chapter1.html"
+              target="_blank"
             >
-              <span>LinkedIn</span>
-              <span>anjit pariyar</span>
+              <span>Chat illustration</span>
+              <span>absurd.design</span>
             </a>
           </li>
           <li className={styles.titleSm}>
             <a
               className={styles.container}
-              href="https://anjitpariyar.medium.com/"
+              href="https://color.adobe.com/trends/Graphic-design"
+              target="_blank"
             >
-              <span>Medium</span>
-              <span>@anjitpariyar</span>
+              <span>Color Pallate</span>
+              <span>Adobe color</span>
+            </a>
+          </li>
+          <li className={styles.titleSm}>
+            <a
+              className={styles.container}
+              href="https://growwwkit.com/"
+              target="_blank"
+            >
+              <span>About us pack</span>
+              <span>growwwkit</span>
+            </a>
+          </li>
+          <li className={styles.titleSm}>
+            <a
+              className={styles.container}
+              href="https://www.kapwing.com/404-illustrations"
+              target="_blank"
+            >
+              <span>Ghost illustration</span>
+              <span>404 illustrations</span>
             </a>
           </li>
         </ul>
