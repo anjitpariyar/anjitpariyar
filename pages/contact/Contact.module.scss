@@ -1,0 +1,61 @@
+@use "../../styles/spiltter.scss" as *;
+.contactForm {
+  .formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4em;
+  }
+  .input,
+  .formBtn {
+    height: 70px;
+    background-color: transparent;
+    border: 2px solid var(--white);
+    border-radius: 8px;
+    margin-bottom: 4em;
+    color: var(--white);
+    padding: 1em;
+    width: 100%;
+    outline: none;
+    box-shadow: none;
+    @include transition;
+    &:focus,
+    &:focus-within {
+      border-color: #f28241;
+    }
+  }
+  .formBtn {
+    width: calc(50% - 2em);
+    cursor: pointer;
+    &:hover {
+      background-color: #f28241;
+      //  color: var(--dark);
+    }
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  textarea.input {
+    height: 170px;
+  }
+}
+
+.refer {
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      border-top: 2px solid var(--white);
+      text-transform: uppercase;
+      &:last-child {
+        border-bottom: 2px solid var(--white);
+      }
+    }
+    .container {
+      display: flex;
+      padding: 1.5em 0;
+      span:first-child {
+        width: 400px;
+      }
+    }
+  }
+}

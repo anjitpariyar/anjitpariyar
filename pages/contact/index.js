@@ -2,6 +2,11 @@ import Header from "../../components/Header";
 import Head from "next/head";
 import Footer from "../../components/Footer";
 
+// importing parts
+import Screen from "./Screen";
+import Form from "./Form";
+import Refer from "./Refer";
+
 export default function Contact() {
   return (
     <>
@@ -10,13 +15,26 @@ export default function Contact() {
       </Head>
 
       <Header />
-      <main>Contact</main>
+      <main>
+        <Screen />
+        <Form />
+        <Refer />
+      </main>
       <Footer />
-      {/* <style global jsx>{`
+      <style global jsx>{`
         body {
-          background-color: #f2913d;
+          background-color: var(--dark);
+          color: var(--white);
         }
-      `}</style> */}
+
+        header li:first-child svg {
+          path:first-child 
+            fill: var(--white);
+        }
+        header li:first-child svg path:last-child {
+            fill: #211e1d;
+          }
+      `}</style>
     </>
   );
 }
