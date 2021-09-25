@@ -39,7 +39,7 @@ const Footer = () => {
       <div className={styles.container}>
         <h1 className={styles.titleLg}>
           <Link href="/">
-            <a ref={reveal}>
+            <a ref={reveal} href="mailto:anjitpariyar@gmail.com">
               <span>H</span>
               <span>i</span>
               <span>r</span>
