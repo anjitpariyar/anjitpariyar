@@ -3,7 +3,7 @@ import styles from "./Project.module.scss";
 import Hb from "/public/projects/hb.png";
 import Dg from "/public/projects/dg.png";
 import Fb from "/public/projects/fb.png";
-import Mentee from "/public/projects/Mentee.png";
+import Mentee from "/public/projects/mentee.png";
 
 import Title from "../../components/Title";
 import ProjectCard from "../../components/ProjectCard";
