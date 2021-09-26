@@ -37,9 +37,9 @@ const Screen = () => {
     <section className={styles.screen}>
       <div className={styles.container + " " + styles.commonPadding}>
         <h1 className={styles.titleLg + " " + styles.textCenter} ref={header}>
-          <span>Anything to </span>
+          <span>Text is just the </span>
           <br />
-          <span className={styles.thin}>share ?</span>
+          <span className={styles.thin}>beginning</span>
         </h1>
       </div>
     </section>

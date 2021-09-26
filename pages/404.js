@@ -3,6 +3,7 @@ import { useRef } from "react";
 import styles from "./home/Home.module.scss";
 import Header from "../components/Header";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Custom404() {
   const containerRef = useRef(null);
@@ -25,7 +26,14 @@ export default function Custom404() {
           }
         >
           <div className={styles.textWrapper + " " + styles.textCenter}>
-            <img src={"https://i.imgur.com/QIxIKBH.png"} alt="404" />
+            <div className={styles.imageWrapper}>
+              <Image
+                src={"https://i.imgur.com/QIxIKBH.png"}
+                alt="404"
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
             <h2 className={styles.titleSm}>
               Once alive and now dead, this ghost appears to have some
               unfinished business. Could it be with you? Or the treasure hidden

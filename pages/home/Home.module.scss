@@ -223,8 +223,9 @@
 
 // 404 page
 .pageNotFound {
-  img {
-    max-height: 500px;
+  .imageWrapper {
+    height: 400px;
+    position: relative;
   }
   .textWrapper {
     .titleSm {
