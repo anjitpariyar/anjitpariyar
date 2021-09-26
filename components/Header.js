@@ -103,6 +103,20 @@ Creating a Web."
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#f2ede4" />
         <meta name="msapplication-TileColor" content="#f2ede4" />
+        <meta
+          property="og:title"
+          content="Anjit Pariyar - Frontend Developer"
+        />
+        <meta
+          property="og:description"
+          content="Anjit Pariyar is a 2 Years Experience Frontend Developer. And  I enjoy
+Creating a Web."
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dem2xvk2e/image/upload/v1632627087/img1_m5v3bc.jpg"
+        />
+        <meta property="og:type" content="website" />
       </Head>
       <header className={styles.header}>
         <div className={styles.container}>
