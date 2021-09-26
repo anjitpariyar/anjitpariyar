@@ -6,9 +6,9 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { useInView } from "react-intersection-observer";
 
-const ProjectCard = ({ link, title, image, hoverState, bg }) => {
+const ProjectCard = ({ link, title, image, hoverState, bg, internal }) => {
   const { ref, inView } = useInView({
-    threshold: 1,
+    threshold: 0.8,
   });
 
   const reveal = useRef(null);
@@ -30,8 +30,27 @@ const ProjectCard = ({ link, title, image, hoverState, bg }) => {
       onMouseLeave={() => hoverState(false)}
       ref={ref}
     >
-      <Link href={link}>
-        <a className={styles.projectCard}>
+      {internal ? (
+        <Link href={link + "?image=" + image.src}>
+          <a className={styles.projectCard}>
+            <h2 className={styles.title}>{title}</h2>
+            <div className={styles.imageWrapper}>
+              <Image src={image} alt="Picture of the author" />
+              <div
+                className={styles.reveal}
+                style={{ backgroundColor: bg }}
+                ref={reveal}
+              ></div>
+            </div>
+          </a>
+        </Link>
+      ) : (
+        <a
+          className={styles.projectCard}
+          href={link}
+          target="_blank"
+          rel="noreferrer"
+        >
           <h2 className={styles.title}>{title}</h2>
           <div className={styles.imageWrapper}>
             <Image src={image} alt="Picture of the author" />
@@ -42,7 +61,7 @@ const ProjectCard = ({ link, title, image, hoverState, bg }) => {
             ></div>
           </div>
         </a>
-      </Link>
+      )}
     </article>
   );
 };

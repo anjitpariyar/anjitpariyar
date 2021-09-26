@@ -27,25 +27,26 @@ const ProjectList = () => {
   };
   const projectList = [
     {
-      link: "/",
+      link: "/project/hamrobazar",
       title: "Hamrobazar",
       image: Hb,
       bg: "#232323",
+      internal: true,
     },
     {
-      link: "/",
+      link: "https://digitalghumti.com/",
       title: "Digital Ghumti",
       image: Dg,
       bg: "#00a8e5",
     },
     {
-      link: "/",
+      link: "https://fanbucket.com/login",
       title: "Fanbucket",
       image: Fb,
       bg: "#fe4545",
     },
     {
-      link: "/",
+      link: "https://gomentee.com/",
       title: "Mentee",
       image: Mentee,
       bg: "#f26522",

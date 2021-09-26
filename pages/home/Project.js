@@ -24,13 +24,14 @@ const Project = () => {
   };
   const projectList = [
     {
-      link: "/",
+      link: "/project/hamrobazar",
       title: "Hamrobazar",
       image: Hb,
       bg: "#232323",
+      internal: true,
     },
     {
-      link: "/",
+      link: "https://digitalghumti.com/",
       title: "Digital Ghumti",
       image: Dg,
       bg: "#00a8e5",
