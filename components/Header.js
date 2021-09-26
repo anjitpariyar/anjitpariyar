@@ -29,7 +29,7 @@ Creating a Web."
         <meta name="author" content="Anjit pariyar" />
         <meta name="copyright" content="Anjit pariyar" />
         <meta name="robots" content="follow" />
-        <meta http-equiv="cache-control" content="no-cache" />
+        <meta httpEquiv="cache-control" content="no-cache" />
         <link
           rel="apple-touch-icon"
           sizes="57x57"
@@ -146,7 +146,11 @@ Creating a Web."
               </Link>
             </li>
             <li className={styles.navLink}>
-              <a href="https://www.instagram.com/limbo_anj/" target="_blank">
+              <a
+                href="https://www.instagram.com/limbo_anj/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Insatgram
               </a>
             </li>

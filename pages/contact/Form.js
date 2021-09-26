@@ -11,7 +11,7 @@ const Form = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => console.log(data);
-  console.log("env", process.env.REACT_APP_NOTION_WORKPLACE_ID);
+  // console.log("env", process.env.REACT_APP_NOTION_WORKPLACE_ID);
 
   return (
     <section className={styles.contactForm}>
