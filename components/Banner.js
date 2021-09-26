@@ -55,6 +55,7 @@ const Banner = ({
         href={link}
         target="_blank"
         ref={imageMove}
+        rel="noreferrer"
       >
         {image && (
           <Image

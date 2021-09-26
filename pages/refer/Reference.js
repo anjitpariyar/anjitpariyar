@@ -13,6 +13,7 @@ const Reference = () => {
               href="https://postfamiliar.com"
               className={styles.container}
               target="_blank"
+              rel="noreferrer"
             >
               <span>Whole Website</span>
               <span>Post Familiar</span>
@@ -23,6 +24,7 @@ const Reference = () => {
               href="https://www.zakmotion.com/"
               className={styles.container}
               target="_blank"
+              rel="noreferrer"
             >
               <span>eye animation</span>
               <span>zakmotion</span>
@@ -33,6 +35,7 @@ const Reference = () => {
               className={styles.container}
               href="https://lottiefiles.com/cn36vzezli"
               target="_blank"
+              rel="noreferrer"
             >
               <span>Screen Animation</span>
               <span>lee</span>
@@ -43,6 +46,7 @@ const Reference = () => {
               className={styles.container}
               href="https://lottiefiles.com/cn36vzezli"
               target="_blank"
+              rel="noreferrer"
             >
               <span>robot animation</span>
               <span>Tomas</span>
@@ -53,6 +57,7 @@ const Reference = () => {
               className={styles.container}
               href="https://www.instagram.com/siobhan_sands_creative/"
               target="_blank"
+              rel="noreferrer"
             >
               <span>butterfly illustration</span>
               <span>Siobhan Sands</span>
@@ -63,6 +68,7 @@ const Reference = () => {
               className={styles.container}
               href="https://unsplash.com/@scottwebb"
               target="_blank"
+              rel="noreferrer"
             >
               <span>Concret Background</span>
               <span>@scottwebb</span>
@@ -73,6 +79,7 @@ const Reference = () => {
               className={styles.container}
               href="https://absurd.design/chapter1.html"
               target="_blank"
+              rel="noreferrer"
             >
               <span>Chat illustration</span>
               <span>absurd.design</span>
@@ -83,6 +90,7 @@ const Reference = () => {
               className={styles.container}
               href="https://color.adobe.com/trends/Graphic-design"
               target="_blank"
+              rel="noreferrer"
             >
               <span>Color Pallate</span>
               <span>Adobe color</span>
@@ -93,6 +101,7 @@ const Reference = () => {
               className={styles.container}
               href="https://growwwkit.com/"
               target="_blank"
+              rel="noreferrer"
             >
               <span>About us pack</span>
               <span>growwwkit</span>
@@ -103,6 +112,7 @@ const Reference = () => {
               className={styles.container}
               href="https://www.kapwing.com/404-illustrations"
               target="_blank"
+              rel="noreferrer"
             >
               <span>Ghost illustration</span>
               <span>404 illustrations</span>

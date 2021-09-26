@@ -64,7 +64,11 @@ const Footer = () => {
               <a>Anjit Pariyar &copy;{new Date().getFullYear()}</a>
             </li>
             <li className={styles2.navLink}>
-              <a href="https://github.com/anjitpariyar" target="_blank">
+              <a
+                href="https://github.com/anjitpariyar"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Github
               </a>
             </li>

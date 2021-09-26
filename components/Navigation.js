@@ -78,7 +78,11 @@ const Navigation = ({ show, toggleNavigation }) => {
             </Link>
           </li>
           <li className={styles.navLink + " " + styles2.navLink}>
-            <a href="https://www.instagram.com/limbo_anj/" target="_blank">
+            <a
+              href="https://www.instagram.com/limbo_anj/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Insatgram
             </a>
           </li>

@@ -52,6 +52,7 @@ const Refer = () => {
               className={styles.container}
               href="https://www.instagram.com/limbo_anj/"
               target="_blank"
+              rel="noreferrer"
             >
               <span>instagram</span>
               <span>@limbo_anj</span>
@@ -62,6 +63,7 @@ const Refer = () => {
               className={styles.container}
               href="https://github.com/anjitpariyar"
               target="_blank"
+              rel="noreferrer"
             >
               <span>github</span>
               <span>anjit pariyar</span>
@@ -72,6 +74,7 @@ const Refer = () => {
               className={styles.container}
               href="https://dribbble.com/limbo_anj"
               target="_blank"
+              rel="noreferrer"
             >
               <span>Dribble</span>
               <span>Anjit pariyar</span>
@@ -82,6 +85,7 @@ const Refer = () => {
               className={styles.container}
               href="https://www.linkedin.com/in/anjit-pariyar-b46131178/"
               target="_blank"
+              rel="noreferrer"
             >
               <span>LinkedIn</span>
               <span>anjit pariyar</span>
@@ -92,6 +96,7 @@ const Refer = () => {
               className={styles.container}
               href="https://anjitpariyar.medium.com/"
               target="_blank"
+              rel="noreferrer"
             >
               <span>Medium</span>
               <span>@anjitpariyar</span>
