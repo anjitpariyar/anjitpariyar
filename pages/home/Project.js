@@ -63,7 +63,7 @@ const Project = () => {
             }}
           >
             <Title
-              text="view now . view now . view now . view now . "
+              text="visit now . visit now . visit now . visit now . "
               arc={360}
               radius={150}
               className={styles.title}

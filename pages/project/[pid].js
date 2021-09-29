@@ -6,6 +6,7 @@ import styles2 from "./Project.module.scss";
 import Header from "../../components/Header";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 const Post = () => {
   const router = useRouter();
   const { pid, image } = router.query;
@@ -29,9 +30,12 @@ const Post = () => {
           }
         >
           <div className={styles.textWrapper + " " + styles.textCenter}>
-            <div className={styles.imageWrapper}>
+            <motion.div
+              className={styles.imageWrapper}
+              layoutId={pid?.toLowerCase() + "01"}
+            >
               <Image src={image} alt="404" layout="fill" objectFit="contain" />
-            </div>
+            </motion.div>
             <h2 className={styles.titleSm}>{pid} is launching soon.</h2>
             <Link href="/project">
               <a className={styles.btn}>Back to project</a>

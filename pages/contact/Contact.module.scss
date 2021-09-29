@@ -13,7 +13,7 @@
   .formRow {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4em;
+    gap: 2em;
     @include sm {
       grid-template-columns: 1fr;
       gap: 0;
@@ -25,7 +25,7 @@
     background-color: transparent;
     border: 2px solid var(--dark);
     border-radius: 8px;
-    margin-bottom: 4em;
+    margin-bottom: 3em;
     color: var(--dark);
     padding: 1em;
     width: 100%;
@@ -54,6 +54,7 @@
   }
   ::placeholder {
     opacity: 1;
+    color: var(--dark);
   }
   textarea.input {
     height: 170px;
@@ -68,6 +69,8 @@
       border-top: 2px solid var(--dark);
       text-transform: uppercase;
       background-color: #f2b366;
+      word-break: anywhere;
+      word-wrap: anywhere;
       @include transition;
       &:last-child {
         border-bottom: 2px solid var(--dark);
@@ -88,4 +91,8 @@
       }
     }
   }
+}
+
+.toast {
+  background-color: #f2b366;
 }

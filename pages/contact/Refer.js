@@ -2,7 +2,6 @@ import styles from "./Contact.module.scss";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useInView } from "react-intersection-observer";
 
 const Refer = () => {
   const imageMove = useRef(null);

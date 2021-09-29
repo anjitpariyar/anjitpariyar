@@ -38,17 +38,17 @@ const Footer = () => {
       <Header />
       <div className={styles.container}>
         <h1 className={styles.titleLg}>
-          <Link href="/">
-            <a ref={reveal} href="mailto:anjitpariyar@gmail.com">
-              <span>H</span>
-              <span>i</span>
-              <span>r</span>
-              <span>e</span>
-              <span className={styles.empty}>{"  "}</span>
-              <span>m</span>
-              <span>e</span>
-            </a>
-          </Link>
+          <a ref={reveal} href="mailto:anjitpariyar@gmail.com">
+            <span>P</span>
+            <span>r</span>
+            <span>o</span>
+            <span>j</span>
+            {/* <span className={styles.empty}>{"  "}</span> */}
+            <span>e</span>
+            <span>c</span>
+            <span>t</span>
+            <span>?</span>
+          </a>
         </h1>
       </div>
       <div className={styles2.header + " " + styles2.footer}>

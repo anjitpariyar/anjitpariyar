@@ -117,6 +117,10 @@ Creating a Web."
           content="https://res.cloudinary.com/dem2xvk2e/image/upload/v1632627087/img1_m5v3bc.jpg"
         />
         <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://anjitpariyar.github.io/"
+        ></meta>
       </Head>
       <header className={styles.header}>
         <div className={styles.container}>
