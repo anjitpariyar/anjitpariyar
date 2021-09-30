@@ -2,7 +2,14 @@ import styles from "./Contact.module.scss";
 import { useForm } from "react-hook-form";
 import { db } from "../../firebase/clientApp";
 import { useEffect, useState, useRef } from "react";
-import { collection, addDoc } from "firebase/firestore";
+import {
+  collection,
+  addDoc,
+  doc,
+  onSnapshot,
+  query,
+  QuerySnapshot,
+} from "firebase/firestore";
 import Cross from "/svg/Cross";
 import { gsap } from "gsap/dist/gsap";
 
@@ -33,6 +40,12 @@ const Form = () => {
         opacity: 1,
         duration: 1.5,
         ease: "power4.out",
+      });
+    });
+    const q = query(collection(db, "data"));
+    const unsub = onSnapshot(q, (querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        console.log(doc.data());
       });
     });
   };
