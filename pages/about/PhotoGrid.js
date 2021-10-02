@@ -19,10 +19,27 @@ const PhotoGrid = () => {
         <div className={styles.commonPadding + " " + styles.wrapper}>
           <div className={styles.textWrapper}>
             <h2 className={styles.titleMd}>
-              Post Familiar is a Portland based wine company focused on unique
-              intersections of process, people and place. Rooted in the pursuit
-              of experimentation, we partner with winemakers to produce distinct
-              natural wines for the curious.
+              Lets talk about some experience. 3-months in{" "}
+              <a
+                href="https://www.facebook.com/icebergtechnology/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Iceberg technology
+              </a>{" "}
+              as an intern. 6-months in{" "}
+              <a
+                href="https://www.facebook.com/icebergtechnology/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Iceberg technology
+              </a>{" "}
+              as a web designer. presently in{" "}
+              <a href="https://thesunbi.com/" target="_blank" rel="noreferrer">
+                sunbi
+              </a>{" "}
+              as a frontend dev since 2020.
             </h2>
           </div>
         </div>

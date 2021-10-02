@@ -33,7 +33,7 @@ const PhotoCycle = () => {
 
     switch (currentImg) {
       case 1:
-        setTitle("wish I could afford a dog loyalty");
+        setTitle("wish I could give a dog loyalty");
         break;
       case 2:
         setTitle("Anyone else love coffee ?");
