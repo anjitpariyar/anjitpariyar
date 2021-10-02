@@ -38,17 +38,18 @@ const Screen = () => {
     <section className={styles.screen}>
       <div className={styles.container + " " + styles.commonPadding}>
         <h1 className={styles.titleLg + " " + styles.textCenter} ref={header}>
-          <span className={styles.thin}>(Wines)</span>
-          <span>For</span>
+          <span className={styles.thin}>(Be Yourself.)</span>
+          <span>I chose</span>
           <br />
-          <span>Expansion </span>
+          <span>the Frontend </span>
         </h1>
         <div className={styles.textWrapper}>
           <h2 className={styles.titleMd}>
-            Post Familiar is a Portland based wine company focused on unique
-            intersections of process, people and place. Rooted in the pursuit of
-            experimentation, we partner with winemakers to produce distinct
-            natural wines for the curious.
+            From a Tech background, I have two years of experience in web
+            design. I can pixel-perfect any website. I love to work more on
+            design-based websites as they are the most beautiful things on the
+            internet. Animating a site is not my cup of tea but coffee. And I am
+            also experienced in e-commerce..
           </h2>
         </div>
       </div>

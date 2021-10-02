@@ -8,8 +8,8 @@ const PhotoGrid = () => {
         <div className={styles.grid}>
           <article className={styles.details}>
             <p className={styles.titleSm + " " + styles.left}>
-              Founded by <br /> sommelier Brent <br /> braun & designer <br />{" "}
-              Jordan Sowers
+              Born in <br /> 2000, Nepal. <br /> Studying BIT in
+              <br /> KCC, Kathmandu.
             </p>
           </article>
           <article className={styles.image}>

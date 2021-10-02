@@ -24,3 +24,21 @@
     transform: translateX(var(--width));
   }
 }
+
+@keyframes timer {
+  0% {
+    background-image: conic-gradient(from 0deg, #f28241, var(--grey));
+  }
+  25% {
+    background-image: conic-gradient(from 90deg, #f28241, var(--grey));
+  }
+  50% {
+    background-image: conic-gradient(from 180deg, #f28241, var(--grey));
+  }
+  75% {
+    background-image: conic-gradient(from 270deg, #f28241, var(--grey));
+  }
+  100% {
+    background-image: conic-gradient(from 360deg, #f28241, var(--grey));
+  }
+}
