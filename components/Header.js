@@ -20,7 +20,7 @@ const Header = () => {
       dataLayer.push(arguments);
     }
     gtag("js", new Date());
-    gtag("config", "G-7KQ8BZH8SV");
+    gtag("config", "G-KHM5XYZNKX");
     (function (h, o, t, j, a, r) {
       h.hj =
         h.hj ||
@@ -144,7 +144,7 @@ Creating a Web."
         ></meta>
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-7KQ8BZH8SV"
+          src="https://www.googletagmanager.com/gtag/js?id=G-KHM5XYZNKX"
         ></script>
       </Head>
       <header className={styles.header}>
