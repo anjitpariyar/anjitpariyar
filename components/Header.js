@@ -7,7 +7,8 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Head from "next/head";
 
-const Header = () => {
+const Header = (data) => {
+  const { description, title, imageSrc, keywords, name, url } = data;
   //trigger point for navigation hide and show
   const [show, setShow] = useState(false);
   const toggleNavigation = (e, state) => {
@@ -38,17 +39,10 @@ const Header = () => {
   return (
     <>
       <Head>
-        <meta
-          name="description"
-          content="Anjit Pariyar is a 2 Years Experience Frontend Developer. And  I enjoy
-Creating a Web."
-        />
-        <meta
-          name="keywords"
-          content="Anjit, Anjit pariyar, Frontend developer, frontend developer nepal, web designer, react developer, react developer nepal, it nepal, nepal, anjit pariyar IT, frontend freelance, frontend freelance nepal"
-        />
-        <meta name="author" content="Anjit pariyar" />
-        <meta name="copyright" content="Anjit pariyar" />
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <meta name="author" content={name} />
+        <meta name="copyright" content={name} />
         <meta name="robots" content="follow" />
         <meta httpEquiv="cache-control" content="no-cache" />
         <link
@@ -124,24 +118,11 @@ Creating a Web."
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#f2ede4" />
         <meta name="msapplication-TileColor" content="#f2ede4" />
-        <meta
-          property="og:title"
-          content="Anjit Pariyar - Frontend Developer"
-        />
-        <meta
-          property="og:description"
-          content="Anjit Pariyar is a 2 Years Experience Frontend Developer. And  I enjoy
-Creating a Web."
-        />
-        <meta
-          property="og:image"
-          content="https://res.cloudinary.com/dem2xvk2e/image/upload/v1632627087/img1_m5v3bc.jpg"
-        />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={imageSrc} />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://anjitpariyar.github.io/"
-        ></meta>
+        <meta property="og:url" content={url}></meta>
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-KHM5XYZNKX"
@@ -210,5 +191,24 @@ Creating a Web."
     </>
   );
 };
+
+export async function getServerSideProps() {
+  // Fetch data from external API
+
+  const data = {
+    description:
+      "Anjit Pariyar is a 2 Years Experience Frontend Developer. And  I enjoy Creating a Web.",
+    keywords:
+      "Anjit, Anjit pariyar, Frontend developer, frontend developer nepal, web designer, react developer, react developer nepal, it nepal, nepal, anjit pariyar IT, frontend freelance, frontend freelance nepal",
+    name: "Anjit pariyar",
+    title: "Anjit Pariyar - Frontend Developer",
+    imageSrc:
+      "https://res.cloudinary.com/dem2xvk2e/image/upload/v1632627087/img1_m5v3bc.jpg",
+    url: "https://anjitpariyar.vercel.app/",
+  };
+
+  // Pass data to the page via props
+  return { props: data };
+}
 
 export default Header;
