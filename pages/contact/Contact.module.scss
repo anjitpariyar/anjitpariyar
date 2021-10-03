@@ -82,6 +82,10 @@
     .container {
       display: flex;
       padding: 1.5em 0;
+      @include sm {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
       span:first-child {
         width: 400px;
         @include sm {
