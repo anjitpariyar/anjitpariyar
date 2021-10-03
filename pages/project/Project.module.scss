@@ -85,7 +85,8 @@
   }
 }
 .projectSingle {
-  .titleMd {
-    text-indent: 0;
+  // display: none;
+  h2 {
+    text-indent: 0 !important;
   }
 }

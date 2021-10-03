@@ -30,12 +30,19 @@ const Post = () => {
           }
         >
           <div className={styles.textWrapper + " " + styles.textCenter}>
-            <motion.div
-              className={styles.imageWrapper}
-              layoutId={pid?.toLowerCase() + "01"}
-            >
-              <Image src={image} alt="404" layout="fill" objectFit="contain" />
-            </motion.div>
+            {image && (
+              <motion.div
+                className={styles.imageWrapper}
+                layoutId={pid?.toLowerCase() + "01"}
+              >
+                <Image
+                  src={image}
+                  alt="404"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </motion.div>
+            )}
             <h2 className={styles.titleSm}>{pid} is launching soon.</h2>
             <Link href="/project">
               <a className={styles.btn}>Back to project</a>
