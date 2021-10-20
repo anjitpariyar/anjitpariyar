@@ -118,11 +118,17 @@ const Header = (data) => {
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#f2ede4" />
         <meta name="msapplication-TileColor" content="#f2ede4" />
+        <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={imageSrc} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={url}></meta>
+        <meta property="og:site_name" content={title} />
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-KHM5XYZNKX"
