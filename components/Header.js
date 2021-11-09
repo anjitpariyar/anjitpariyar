@@ -3,7 +3,7 @@ import Link from "next/link";
 import Logo from "../svg/Logo";
 import Hamburger from "../svg/Hamburger";
 import Navigation from "./Navigation";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Head from "next/head";
 
@@ -15,27 +15,7 @@ const Header = (data) => {
     e.preventDefault();
     setShow(state);
   };
-  useEffect(() => {
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", "G-KHM5XYZNKX");
-    (function (h, o, t, j, a, r) {
-      h.hj =
-        h.hj ||
-        function () {
-          (h.hj.q = h.hj.q || []).push(arguments);
-        };
-      h._hjSettings = { hjid: 1530972, hjsv: 6 };
-      a = o.getElementsByTagName("head")[0];
-      r = o.createElement("script");
-      r.async = 1;
-      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-      a.appendChild(r);
-    })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-  });
+ 
   return (
     <>
       <Head>
