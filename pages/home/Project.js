@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./Home.module.scss";
-import Hb from "/public/projects/hb.png";
+import Fb from "/public/projects/fb.png";
 import Dg from "/public/projects/dg.png";
 import Title from "../../components/Title";
 import ProjectCard from "../../components/ProjectCard";
@@ -24,11 +24,11 @@ const Project = () => {
   };
   const projectList = [
     {
-      link: "/project/hamrobazar",
-      title: "Hamrobazar",
-      image: Hb,
-      bg: "#232323",
-      internal: true,
+      link: "https://fanbucket.com/login",
+      title: "Fanbucket",
+      image: Fb,
+      bg: "#fe4545",
+      // internal: true,
     },
     {
       link: "https://digitalghumti.com/",

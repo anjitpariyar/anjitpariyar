@@ -12,7 +12,7 @@ I'm a FrontEnd developer from Nepal 🇳🇵. Animating a site is my thing .
 
 - 💬 see my chat web app [here](https://chat-25704.web.app/)
 
-- 🖥️ portfolio comming soon [here](https://anjitpariyar.github.io/)
+- 🖥️ portfolio [https://anjitpariyar.vercel.app/](https://anjitpariyar.vercel.app/)
 
 **Languages and Tools:**
 
