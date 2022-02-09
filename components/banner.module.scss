@@ -17,8 +17,9 @@
       width: 100%;
       top: 0;
       left: 0;
-      background-blend-mode: hard-light;
+      // background-blend-mode: hard-light;
       z-index: 1;
+      mix-blend-mode: multiply;
     }
     & > div {
       display: block !important;

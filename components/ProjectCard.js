@@ -39,7 +39,12 @@ const ProjectCard = ({ link, title, image, hoverState, bg, internal }) => {
               className={styles.imageWrapper}
               layoutId={title.toLowerCase() + "01"}
             >
-              <Image src={image} alt="Picture of the author" />
+              <Image
+                src={image}
+                alt={"project " + title + " by anjit pariyar"}
+                layout="fill"
+                objectFit="cover"
+              />
               <div
                 className={styles.reveal}
                 style={{ backgroundColor: bg }}

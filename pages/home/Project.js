@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./Home.module.scss";
 import Fb from "/public/projects/fb.png";
-import Dg from "/public/projects/dg.png";
+import Hb from "/public/projects/hb.png";
 import Title from "../../components/Title";
 import ProjectCard from "../../components/ProjectCard";
 import { motion } from "framer-motion";
@@ -24,17 +24,17 @@ const Project = () => {
   };
   const projectList = [
     {
+      link: "https://beta.hamrobazaar.com/",
+      title: "Hamrobazar",
+      image: Hb,
+      bg: "#333333",
+    },
+    {
       link: "https://fanbucket.com/login",
       title: "Fanbucket",
       image: Fb,
       bg: "#fe4545",
       // internal: true,
-    },
-    {
-      link: "https://digitalghumti.com/",
-      title: "Digital Ghumti",
-      image: Dg,
-      bg: "#00a8e5",
     },
   ];
 

@@ -3,6 +3,9 @@ import styles from "./Project.module.scss";
 // import Hb from "/public/projects/hb.png";
 import Dg from "/public/projects/dg.png";
 import Fb from "/public/projects/fb.png";
+import Hb from "/public/projects/hb.png";
+import Bhomi from "/public/projects/bhumi.png";
+
 import Mentee from "/public/projects/mentee.png";
 
 import Title from "../../components/Title";
@@ -27,6 +30,12 @@ const ProjectList = () => {
   };
   const projectList = [
     {
+      link: "https://beta.hamrobazaar.com/",
+      title: "Hamrobazar",
+      image: Hb,
+      bg: "#333333",
+    },
+    {
       link: "https://digitalghumti.com/",
       title: "Digital Ghumti",
       image: Dg,
@@ -37,6 +46,12 @@ const ProjectList = () => {
       title: "Fanbucket",
       image: Fb,
       bg: "#fe4545",
+    },
+    {
+      link: "https://bhoomi.com.np/",
+      title: "Bhoomi",
+      image: Bhomi,
+      bg: "#4cb848",
     },
     {
       link: "https://gomentee.com/",

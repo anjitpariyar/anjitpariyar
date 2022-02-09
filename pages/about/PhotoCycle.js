@@ -8,6 +8,7 @@ import image5 from "/public/about/PNG/img5.png";
 import image6 from "/public/about/PNG/img6.png";
 
 import { useEffect, useState } from "react";
+import PhotoCard from "./PhotoCard";
 
 const PhotoCycle = () => {
   const [currentImg, setCurrentImg] = useState(1);
@@ -74,15 +75,9 @@ const PhotoCycle = () => {
           styles.paddingBottom
         }
       >
-        <div className={styles.textCenter + " " + styles.textWrapper}>
-          <Image
-            src={eval("tempImg" + currentImg)}
-            alt="who's photo are they"
-            layout="fill"
-            objectFit="contain"
-          />
-        </div>
-        <p className={styles.textCenter}>* {title} *</p>
+        {currentImg && (
+          <PhotoCard currentImg={eval("tempImg" + currentImg)} title={title} />
+        )}
       </div>
     </section>
   );
