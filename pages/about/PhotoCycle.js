@@ -14,13 +14,6 @@ const PhotoCycle = () => {
   const [currentImg, setCurrentImg] = useState(1);
   const [title, setTitle] = useState("loading");
 
-  let tempImg1 = image1;
-  let tempImg2 = image2;
-  let tempImg3 = image3;
-  let tempImg4 = image4;
-  let tempImg5 = image5;
-  let tempImg6 = image6;
-
   useEffect(() => {
     if (currentImg < 6) {
       setTimeout(() => {
@@ -30,33 +23,6 @@ const PhotoCycle = () => {
       setTimeout(() => {
         setCurrentImg(1);
       }, 3000);
-    }
-
-    switch (currentImg) {
-      case 1:
-        setTitle("wish I could give a dog loyalty");
-        break;
-      case 2:
-        setTitle("Anyone else love coffee ?");
-        break;
-      case 3:
-        setTitle("I can do this all day");
-        break;
-      case 4:
-        setTitle("I don't smoke. Coding is enough ");
-        break;
-
-      case 5:
-        setTitle(
-          "why is this crow staring at me? and hey this is my friend Rook."
-        );
-        break;
-      case 6:
-        setTitle("my cat doesn't like her");
-        break;
-      default:
-        setTitle("loading");
-      // code block
     }
 
     return () => {
@@ -75,9 +41,45 @@ const PhotoCycle = () => {
           styles.paddingBottom
         }
       >
-        {currentImg && (
-          <PhotoCard currentImg={eval("tempImg" + currentImg)} title={title} />
-        )}
+        {currentImg &&
+          // <PhotoCard currentImg={eval("tempImg" + currentImg)} title={title} />
+          {
+            1: (
+              <PhotoCard
+                currentImg={image1}
+                title={"wish I could give you a dog loyalty"}
+              />
+            ),
+            2: (
+              <PhotoCard
+                currentImg={image2}
+                title={"Anyone else love coffee ?"}
+              />
+            ),
+            3: (
+              <PhotoCard currentImg={image3} title={"I can do this all day"} />
+            ),
+            4: (
+              <PhotoCard
+                currentImg={image4}
+                title={"I don't smoke. Coding is enough "}
+              />
+            ),
+            5: (
+              <PhotoCard
+                currentImg={image5}
+                title={
+                  "why is this crow staring at me? and hey this is my friend Rook."
+                }
+              />
+            ),
+            6: (
+              <PhotoCard
+                currentImg={image6}
+                title={"my cat doesn't like her"}
+              />
+            ),
+          }[currentImg]}
       </div>
     </section>
   );
