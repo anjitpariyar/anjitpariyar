@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./Home.module.scss";
-import Fb from "/public/projects/fb.png";
+import NDZ from "/public/projects/nodazihome.png";
 import Hb from "/public/projects/hb.png";
 import Title from "../../components/Title";
 import ProjectCard from "../../components/ProjectCard";
@@ -30,10 +30,10 @@ const Project = () => {
       bg: "#333333",
     },
     {
-      link: "https://fanbucket.com/login",
-      title: "Fanbucket",
-      image: Fb,
-      bg: "#fe4545",
+      link: "https://www.nodazidesign.com/",
+      title: "NODAZI",
+      image: NDZ,
+      bg: "#54875f",
       // internal: true,
     },
   ];

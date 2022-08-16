@@ -34,8 +34,8 @@ const ProjectCard = ({ link, title, image, hoverState, bg, internal }) => {
       {internal ? (
         <Link href={link + "?image=" + image.src}>
           <a className={styles.projectCard}>
-            {/* <h2 className={styles.title}>{title}</h2> */}
-            {/* <motion.div
+            <h2 className={styles.title}>{title}</h2>
+            <motion.div
               className={styles.imageWrapper}
               layoutId={title.toLowerCase() + "01"}
             >
@@ -50,7 +50,7 @@ const ProjectCard = ({ link, title, image, hoverState, bg, internal }) => {
                 style={{ backgroundColor: bg }}
                 ref={reveal}
               ></div>
-            </motion.div> */}
+            </motion.div>
             dsada
           </a>
         </Link>
@@ -63,7 +63,7 @@ const ProjectCard = ({ link, title, image, hoverState, bg, internal }) => {
         >
           <h2 className={styles.title}>{title}</h2>
           <div className={styles.imageWrapper}>
-            <Image src={image} alt="Picture of the author" />
+            <Image src={image} alt={"project " + title + " by anjit pariyar"} />
             <div
               className={styles.reveal}
               style={{ backgroundColor: bg }}

@@ -1,7 +1,7 @@
 @use "../styles/spiltter.scss" as *;
 
 .preloader {
-  background-color: var(--dark);
+  background-color: var(--white--grey);
   color: var(--white);
   position: fixed;
   z-index: 999;
@@ -17,14 +17,15 @@
     animation: rotate 2s cubic-bezier(0.55, 0.06, 0.68, 0.19) 0s infinite
       forwards;
     path:first-child {
-      fill: var(--white);
+      fill: var(--dark);
       stroke: var(--dark);
       stroke-dasharray: 50;
       stroke-dashoffset: 70px;
+
       animation: strokeReveal 3s linear 0s 1 forwards alternate;
     }
     path:last-child {
-      fill: var(--dark);
+      // fill: var(--dark);
     }
   }
 }

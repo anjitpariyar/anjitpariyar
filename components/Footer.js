@@ -49,6 +49,7 @@ const Footer = () => {
             <span>d</span>
             <span>e</span>
             <span>a</span>
+            <span>s</span>
             <span>?</span>
           </a>
         </h1>

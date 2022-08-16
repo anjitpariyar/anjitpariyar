@@ -46,7 +46,7 @@ const Screen = () => {
       t1.staggerTo(
         [...header?.current?.children],
         1,
-        { y: 0, opacity: 1, ease: "power4.out", delay: 1.5 },
+        { y: 0, opacity: 1, ease: "power4.out", delay: 1.1 },
         0.2
       );
     }

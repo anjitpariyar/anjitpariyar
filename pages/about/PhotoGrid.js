@@ -8,34 +8,28 @@ const PhotoGrid = () => {
         <div className={styles.grid}>
           <article className={styles.details}>
             <p className={styles.titleSm + " " + styles.left}>
-              Born in <br /> 2000, Nepal. <br /> Studying BIT in
+              Done 20+ projects. <br /> Studying BIT in
               <br /> KCC, Kathmandu.
             </p>
           </article>
           <article className={styles.image}>
-            <Image src={image1} alt="Picture of the author" />
+            <Image src={image1} alt="Image of anjit pariyar" />
           </article>
         </div>
         <div className={styles.commonPadding + " " + styles.wrapper}>
           <div className={styles.textWrapper}>
             <h2 className={styles.titleMd}>
-              Lets talk about some experience. 3-months in{" "}
+              Let&apos;s talk about some experiences. I started as an intern in{" "}
               <a
                 href="https://www.facebook.com/icebergtechnology/"
                 target="_blank"
                 rel="noreferrer"
               >
                 Iceberg technology
-              </a>{" "}
-              as an intern. 6-months in{" "}
-              <a
-                href="https://www.facebook.com/icebergtechnology/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Iceberg technology
-              </a>{" "}
-              as a web designer. presently in{" "}
+              </a>
+              , where I learn designing tools and basic web structure. and later
+              hired by the same company as a web designer for 6 months.
+              presently in{" "}
               <a href="https://thesunbi.com/" target="_blank" rel="noreferrer">
                 sunbi
               </a>{" "}

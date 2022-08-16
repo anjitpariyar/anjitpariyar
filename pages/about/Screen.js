@@ -38,18 +38,21 @@ const Screen = () => {
     <section className={styles.screen}>
       <div className={styles.container + " " + styles.commonPadding}>
         <h1 className={styles.titleLg + " " + styles.textCenter} ref={header}>
-          <span className={styles.thin}>(Be Yourself.)</span>
+          <span className={styles.thin}>(Be Yourself)</span>
           <span>I chose</span>
           <br />
-          <span>the Frontend </span>
+          <span>the </span>
+          <br />
+
+          <span>Web App. </span>
         </h1>
         <div className={styles.textWrapper}>
           <h2 className={styles.titleMd}>
-            From a Tech background, I have two years of experience in web
-            design. I can pixel-perfect any website. I love to work more on
-            design-based websites as they are the most beautiful things on the
-            internet. Animating a site is not my cup of tea but coffee. And I am
-            also experienced in e-commerce..
+            From the Tech background, I have three years of experience in
+            developing Web apps. I can pixel-perfect any website. I love to work
+            more on UIUX-based websites as they are the one that solves user
+            problems. Animating a site is not my cup of tea but coffee. And
+            always keen to upgrade myself.
           </h2>
         </div>
       </div>

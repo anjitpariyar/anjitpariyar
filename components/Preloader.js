@@ -18,7 +18,7 @@ const Preloader = () => {
   }, []);
 
   return (
-    <div className={styles.preloader} ref={pre}>
+    <div className={styles.preloader + " preloader"} ref={pre}>
       <motion.a layoutId="brandId_001">
         <Logo className={styles.brand} />
       </motion.a>
