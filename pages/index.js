@@ -28,7 +28,7 @@ export default function Home() {
     link: "https://chat-25704.web.app/",
     image: ChatImage,
     title:
-      "chat anonymously <br/>  None will know who you are but  don't kill anyone",
+      "chat anonymously, <br/>  None will know who you are but don't kill anyone.",
     white: true,
     description: "Chat Now",
     bgColor: "var(--primary--color)",

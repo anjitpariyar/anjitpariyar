@@ -20,6 +20,7 @@
       // background-blend-mode: hard-light;
       z-index: 1;
       mix-blend-mode: multiply;
+      pointer-events: none;
     }
     & > div {
       display: block !important;
