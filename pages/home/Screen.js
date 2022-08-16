@@ -126,9 +126,9 @@ const Screen = () => {
           <span>Pariyar</span>
 
           <br />
-          <span className={styles.thin}>(2 Yrs Exp)</span>
+          <span className={styles.thin}>(3 Yrs. Exp.)</span>
           <br />
-          <span>Frontend </span>
+          <span>React </span>
           <br />
           <span>Developer</span>
 

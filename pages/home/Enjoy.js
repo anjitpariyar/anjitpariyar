@@ -52,13 +52,12 @@ const Enjoy = () => {
         <div className={styles.lottieWrapper + " " + styles.commonFlex}>
           <aside className={styles.mlAuto}>
             <h1 className={styles.title + " " + styles.textCenter} ref={header}>
-              <span className={styles.thin}>
-                {"{"} IF {"}"}
-              </span>{" "}
-              <br />
+              <span className={styles.thin}>IF {"("}</span> <br />
               <span>I enjoy </span>
               <br />
               <small>Creating a Web. </small>
+              <br />
+              {" )"}
             </h1>
           </aside>
           <aside className={styles.monitor} ref={ref}>
@@ -76,12 +75,12 @@ const Enjoy = () => {
               className={styles.title + " " + styles.textCenter}
               ref={header2}
             >
-              <span className={styles.thin}>
-                {"{"} true {"}"}{" "}
-              </span>
+              <span className={styles.thin}>{"{"} </span>
               <br />
               <span>You will enjoy</span> <br />
-              <small>Using it. </small>
+              <small>surfing it. </small>
+              <br />
+              {"}"}
             </h1>
           </aside>
         </div>
