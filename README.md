@@ -2,15 +2,15 @@
 
 <br />
 
-I'm a FrontEnd developer from Nepal 🇳🇵.
+React developer from Nepal 🇳🇵.
 
 **About me**
 
-- 💼 FrontEnd Developer at [Sunbi](https://thesunbi.com/)
+- 💼 React Developer at [Lukuku](https://www.lukuku.co/)
 
-- ❤️ I am enjoying making it. may be people will enjoy using it.
+- ❤️ I am enjoying creating webs. may be you will enjoy surfing it.
 
-- 💬 see my chat web app [here](https://chat-25704.web.app/)
+- 💬 see my chat web app project [here](https://chat-25704.web.app/)
 
 - 🖥️ portfolio [https://www.anjitpariyar.com.np/](https://www.anjitpariyar.com.np/)
 
@@ -44,4 +44,7 @@ I'm a FrontEnd developer from Nepal 🇳🇵.
 
 <a href="https://www.instagram.com/limbo_anj/" target="\_blank">
 <img align="left" alt="Anjit pariyar | Instagram" width="30px"  src="https://res.cloudinary.com/dem2xvk2e/image/upload/v1633783903/ig_ha7bhx.jpg" /> @limbo_anj
+</a>
+<a href="https://www.linkedin.com/in/anjit-pariyar-b46131178/" target="\_blank">
+<img align="left" alt="Anjit pariyar | LinkedIn" width="30px"  src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" /> @anjit pariyar
 </a>
