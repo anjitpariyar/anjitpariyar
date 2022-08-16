@@ -11,8 +11,8 @@ export default function Custom404() {
     <>
       <Head>
         <title>404 - page Not Found - Anjit Pariyar - Frontend Developer</title>
-        <meta name="theme-color" content="#212f4d" />
-        <meta name="msapplication-TileColor" content="#212f4d" />
+        <meta name="theme-color" content="#232323" />
+        <meta name="msapplication-TileColor" content="#232323" />
       </Head>
       <Header />
       <main className={styles.pageNotFound} ref={containerRef}>
@@ -49,7 +49,7 @@ export default function Custom404() {
       </main>
       <style global jsx>{`
         body {
-          background-color: #212f4d;
+          background-color: var(--dark);
           color: var(--white);
         }
       `}</style>

@@ -40,7 +40,9 @@ const ProjectCard = ({ link, title, image, hoverState, bg, internal }) => {
               layoutId={title.toLowerCase() + "01"}
             >
               <Image
-                src={image}
+                src={
+                  "https://res.cloudinary.com/dem2xvk2e/image/upload/v1660668585/anjit/Screenshot_2022-08-16_at_22-23-54_NODAZI_STUDIO_o7ujpy.png"
+                }
                 alt={"project " + title + " by anjit pariyar"}
                 layout="fill"
                 objectFit="cover"
