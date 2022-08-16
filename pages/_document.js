@@ -119,7 +119,7 @@ export default class MyDocument extends Document {
           <meta property="og:type" content="website" />
           <meta
             property="og:url"
-            content="https://anjitpariyar.vercel.app/"
+            content="https://www.anjitpariyar.com.np/"
           ></meta>
           <meta
             property="og:site_name"

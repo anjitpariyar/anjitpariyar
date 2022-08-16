@@ -15,7 +15,7 @@ const Header = (data) => {
     e.preventDefault();
     setShow(state);
   };
- 
+
   return (
     <>
       <Head>
@@ -190,7 +190,7 @@ export async function getServerSideProps() {
     title: "Anjit Pariyar - Frontend Developer",
     imageSrc:
       "https://res.cloudinary.com/dem2xvk2e/image/upload/v1632627087/img1_m5v3bc.jpg",
-    url: "https://anjitpariyar.vercel.app/",
+    url: "https://www.anjitpariyar.com.np/",
   };
 
   // Pass data to the page via props

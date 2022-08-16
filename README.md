@@ -1,8 +1,8 @@
-<p><a href="https://anjitpariyar.vercel.app/"><img src="https://res.cloudinary.com/dem2xvk2e/image/upload/v1631633660/animation_640_ktk8ht21_l7zm5y.gif" alt="anjit pariyar project" style="width:300px"/></a></p>
+<p><a href="https://www.anjitpariyar.com.np/"><img src="https://res.cloudinary.com/dem2xvk2e/image/upload/v1631633660/animation_640_ktk8ht21_l7zm5y.gif" alt="anjit pariyar project" style="width:300px"/></a></p>
 
 <br />
 
-I'm a FrontEnd developer from Nepal 🇳🇵. 
+I'm a FrontEnd developer from Nepal 🇳🇵.
 
 **About me**
 
@@ -12,7 +12,7 @@ I'm a FrontEnd developer from Nepal 🇳🇵.
 
 - 💬 see my chat web app [here](https://chat-25704.web.app/)
 
-- 🖥️ portfolio [https://anjitpariyar.vercel.app/](https://anjitpariyar.vercel.app/)
+- 🖥️ portfolio [https://www.anjitpariyar.com.np/](https://www.anjitpariyar.com.np/)
 
 **Languages and Tools:**
 
