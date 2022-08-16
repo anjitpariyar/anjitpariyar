@@ -39,14 +39,16 @@ const Footer = () => {
       <div className={styles.container}>
         <h1 className={styles.titleLg}>
           <a ref={reveal} href="mailto:anjitpariyar@gmail.com">
-            <span>P</span>
-            <span>r</span>
-            <span>o</span>
-            <span>j</span>
-            {/* <span className={styles.empty}>{"  "}</span> */}
+            {/* collaboration  */}
+            <span>a</span>
+            <span>n</span>
+            <span>y</span>
+            {/* <span> </span> */}
+            <span className={styles.empty}>{"  "}</span>
+            <span>i</span>
+            <span>d</span>
             <span>e</span>
-            <span>c</span>
-            <span>t</span>
+            <span>a</span>
             <span>?</span>
           </a>
         </h1>
@@ -62,6 +64,15 @@ const Footer = () => {
 
             <li className={styles2.navLink}>
               <a>Anjit Pariyar &copy;{new Date().getFullYear()}</a>
+            </li>
+            <li className={styles2.navLink}>
+              <a
+                href="https://www.linkedin.com/in/anjit-pariyar-b46131178/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
             </li>
             <li className={styles2.navLink}>
               <a

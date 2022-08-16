@@ -30,10 +30,9 @@ const Project = () => {
       bg: "#333333",
     },
     {
-      link: "https://www.nodazidesign.com/",
-      title: "NODAZI",
-      image:
-        "https://res.cloudinary.com/dem2xvk2e/image/upload/v1660668585/anjit/Screenshot_2022-08-16_at_22-23-54_NODAZI_STUDIO_o7ujpy.png",
+      link: "https://fanbucket.com/login",
+      title: "Fanbucket",
+      image: Fb,
       bg: "#fe4545",
       // internal: true,
     },

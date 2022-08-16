@@ -34,15 +34,13 @@ const ProjectCard = ({ link, title, image, hoverState, bg, internal }) => {
       {internal ? (
         <Link href={link + "?image=" + image.src}>
           <a className={styles.projectCard}>
-            <h2 className={styles.title}>{title}</h2>
-            <motion.div
+            {/* <h2 className={styles.title}>{title}</h2> */}
+            {/* <motion.div
               className={styles.imageWrapper}
               layoutId={title.toLowerCase() + "01"}
             >
               <Image
-                src={
-                  "https://res.cloudinary.com/dem2xvk2e/image/upload/v1660668585/anjit/Screenshot_2022-08-16_at_22-23-54_NODAZI_STUDIO_o7ujpy.png"
-                }
+                src={image}
                 alt={"project " + title + " by anjit pariyar"}
                 layout="fill"
                 objectFit="cover"
@@ -52,7 +50,8 @@ const ProjectCard = ({ link, title, image, hoverState, bg, internal }) => {
                 style={{ backgroundColor: bg }}
                 ref={reveal}
               ></div>
-            </motion.div>
+            </motion.div> */}
+            dsada
           </a>
         </Link>
       ) : (

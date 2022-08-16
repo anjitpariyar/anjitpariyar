@@ -14,22 +14,22 @@ const Banner = ({
   bgColor,
   bgImage,
 }) => {
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-  });
+  // const { ref, inView } = useInView({
+  //   threshold: 0.5,
+  // });
 
   const reveal = useRef(null);
   const imageMove = useRef(null);
 
-  useEffect(() => {
-    if (inView && reveal?.current) {
-      let t1 = gsap.timeline();
-      t1.to(reveal?.current, 2, {
-        y: reveal?.current.clientHeight,
-        ease: "power4.out",
-      });
-    }
-  }, [inView]);
+  // useEffect(() => {
+  // if (inView && reveal?.current) {
+  // let t1 = gsap.timeline();
+  // t1.to(reveal?.current, 2, {
+  //   y: reveal?.current.clientHeight,
+  //   ease: "power4.out",
+  // });
+  // }
+  // }, [inView]);
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.fromTo(
@@ -49,7 +49,8 @@ const Banner = ({
     );
   }, []);
   return (
-    <section className={styles.banner} ref={ref}>
+    // ref={ref}
+    <section className={styles.banner}>
       <a
         className={styles.imageWrapper}
         href={link}
