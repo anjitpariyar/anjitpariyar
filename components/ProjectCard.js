@@ -83,7 +83,7 @@ const ProjectCard = ({
               ref={reveal}
             ></div>
           </div>
-          {index && <span className={styles.count}>{index}</span>}
+          {index > 0 && <span className={styles.count}>{index}</span>}
         </a>
       )}
     </article>
