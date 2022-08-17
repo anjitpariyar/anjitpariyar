@@ -14,7 +14,7 @@ const Post = () => {
   return (
     <>
       <Head>
-        <title>{pid} - Anjit Pariyar -React Developer</title>
+        <title>{pid} - Anjit Pariyar - React Developer</title>
         <meta name="theme-color" content="#232323" />
         <meta name="msapplication-TileColor" content="#232323" />
       </Head>

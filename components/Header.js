@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 
 const Header = (data) => {
-  const { description, title, imageSrc, keywords, name, url } = data;
+  const { description, keywords, url } = data;
   //trigger point for navigation hide and show
   const [show, setShow] = useState(false);
   const toggleNavigation = (e, state) => {
@@ -19,10 +19,22 @@ const Header = (data) => {
   return (
     <>
       <Head>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta name="author" content={name} />
-        <meta name="copyright" content={name} />
+        <meta
+          name="description"
+          content={
+            description ||
+            "Anjit Pariyar is a 3 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
+          }
+        />
+        <meta
+          name="keywords"
+          content={
+            keywords ||
+            "anjit, anjit pariyar, React Developer, React Developer nepal, web designer, react developer, react developer nepal, it nepal, nepal, anjit pariyar IT, frontend freelance, frontend freelance nepal,nepal github, anjitpariyar"
+          }
+        />
+        <meta name="author" content={"Anjit pariyar"} />
+        <meta name="copyright" content={"Anjit pariyar"} />
         <meta name="robots" content="follow" />
         <meta httpEquiv="cache-control" content="no-cache" />
         <link
@@ -98,16 +110,48 @@ const Header = (data) => {
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#f2ede4" />
         <meta name="msapplication-TileColor" content="#f2ede4" />
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={imageSrc} />
+        <meta
+          name="description"
+          content={
+            description ||
+            "Anjit Pariyar is a 3 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
+          }
+        />
+        <meta property="og:title" content={"Anjit Pariyar - React Developer"} />
+        <meta
+          property="og:description"
+          content={
+            description ||
+            "Anjit Pariyar is a 3 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
+          }
+        />
+        <meta
+          property="og:image"
+          content={
+            "https://res.cloudinary.com/dem2xvk2e/image/upload/v1632627087/img1_m5v3bc.jpg"
+          }
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={url}></meta>
-        <meta property="og:site_name" content={title} />
+        <meta
+          property="og:url"
+          content={url || "https://www.anjitpariyar.com.np"}
+        ></meta>
+        <meta
+          property="og:site_name"
+          content={"Anjit Pariyar - React Developer"}
+        />
         <meta property="twitter:card" content="summary" />
-        <meta property="twitter:title" content={title} />
-        <meta property="twitter:description" content={description} />
+        <meta
+          property="twitter:title"
+          content={"Anjit Pariyar - React Developer"}
+        />
+        <meta
+          property="twitter:description"
+          content={
+            description ||
+            "Anjit Pariyar is a 3 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
+          }
+        />
 
         <script
           async
@@ -177,24 +221,5 @@ const Header = (data) => {
     </>
   );
 };
-
-export async function getServerSideProps() {
-  // Fetch data from external API
-
-  const data = {
-    description:
-      "Anjit Pariyar is a 2 Years ExperienceReact Developer. And  I enjoy Creating a Web.",
-    keywords:
-      "Anjit, Anjit pariyar,React Developer,React Developer nepal, web designer, react developer, react developer nepal, it nepal, nepal, anjit pariyar IT, frontend freelance, frontend freelance nepal",
-    name: "Anjit pariyar",
-    title: "Anjit Pariyar -React Developer",
-    imageSrc:
-      "https://res.cloudinary.com/dem2xvk2e/image/upload/v1632627087/img1_m5v3bc.jpg",
-    url: "https://www.anjitpariyar.com.np/",
-  };
-
-  // Pass data to the page via props
-  return { props: data };
-}
 
 export default Header;

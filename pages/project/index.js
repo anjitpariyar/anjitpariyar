@@ -10,7 +10,7 @@ import Banner from "../../components/Banner";
 import styles from "./Project.module.scss";
 import Screen from "./Screen";
 
-export default function Project() {
+export default function Project({ description, url }) {
   const butterfly = {
     link: "https://anjitpariyar.github.io/everythingFall/",
     image: FallImage,
@@ -33,12 +33,12 @@ export default function Project() {
   return (
     <>
       <Head>
-        <title>Projects - Anjit Pariyar -React Developer</title>
+        <title>Projects - Anjit Pariyar - React Developer</title>
         <meta name="theme-color" content="#f2913d" />
         <meta name="msapplication-TileColor" content="#f2913d" />
       </Head>
 
-      <Header />
+      <Header description={description} url={url} />
       <Screen />
       <main>
         <ProjectList />
@@ -55,4 +55,17 @@ export default function Project() {
       `}</style>
     </>
   );
+}
+
+export async function getStaticProps() {
+  // Fetch data from external API
+
+  const data = {
+    description:
+      "Anjit pariyar has worked on 20+ projects in these three years. Most of them are built using React JS . some of them are hamrobazar, gyre,  digital ghumti and mentee. And more adding on the list...",
+    url: "https://www.anjitpariyar.com.np/project",
+  };
+
+  // Pass data to the page via props
+  return { props: data };
 }

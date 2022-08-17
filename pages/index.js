@@ -38,10 +38,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Anjit Pariyar -React Developer</title>
+        <title>Anjit Pariyar - React Developer</title>
         <meta name="theme-color" content="#f2ede4" />
         <meta name="msapplication-TileColor" content="#f2ede4" />
-        <meta property="og:title" content="Anjit Pariyar -React Developer" />
+        <meta property="og:title" content="Anjit Pariyar - React Developer" />
         <meta
           property="og:description"
           content="Anjit Pariyar is a 2 Years ExperienceReact Developer. And  I enjoy
