@@ -16,6 +16,10 @@
         text-transform: uppercase;
         padding: 0.6em;
         font-weight: 600;
+        @include sm {
+          padding: 0.6em 0;
+          font-size: 12px;
+        }
       }
     }
   }
@@ -39,7 +43,7 @@
 .footer {
   .nav {
     @include sm {
-      gap: 8px;
+      gap: 6px;
     }
     .navLink {
       @include sm {
