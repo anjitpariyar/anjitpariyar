@@ -34,7 +34,7 @@ const ProjectList = () => {
   };
   const projectList = [
     {
-      link: "https://beta.hamrobazaar.com/",
+      link: "https://hamrobazaar.com/",
       title: "Hamrobazar",
       image: Hb,
       bg: "#333333",
