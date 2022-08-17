@@ -72,7 +72,7 @@ const ProjectList = () => {
     },
     {
       link: "https://www.thesunbi.com/",
-      title: "Sunbi",
+      title: "SunBi Holdings",
       image: Sunbi,
       bg: "#d12828",
     },

@@ -13,7 +13,7 @@ const Screen = () => {
       t1.staggerTo(
         [...header?.current?.querySelectorAll("span")],
         1,
-        { y: 0, opacity: 1, ease: "power4.out", delay: 1.5 },
+        { y: 0, opacity: 1, ease: "power4.out", delay: 0.3 },
         0.2
       );
     }
@@ -52,7 +52,7 @@ const Screen = () => {
             developing Web apps. I can pixel-perfect any website. I love to work
             more on UIUX-based websites as they are the one that solves user
             problems. Animating a site is not my cup of tea but coffee. And
-            always keen to upgrade myself.
+            always keen to upgrade me.
           </h2>
         </div>
       </div>

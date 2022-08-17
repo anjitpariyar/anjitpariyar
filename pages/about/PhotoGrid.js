@@ -31,7 +31,7 @@ const PhotoGrid = () => {
               hired by the same company as a web designer for 6 months.
               presently in{" "}
               <a href="https://thesunbi.com/" target="_blank" rel="noreferrer">
-                sunbi
+                SunBi Holdings
               </a>{" "}
               as a frontend dev since 2020.
             </h2>

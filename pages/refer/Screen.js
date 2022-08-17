@@ -12,7 +12,7 @@ const Screen = () => {
       t1.staggerTo(
         [...header?.current?.querySelectorAll("span")],
         1,
-        { y: 0, opacity: 1, ease: "power4.out", delay: 1.5 },
+        { y: 0, opacity: 1, ease: "power4.out", delay: 0.3 },
         0.2
       );
     }
