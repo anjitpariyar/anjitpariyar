@@ -11,18 +11,25 @@ import { useEffect, useState } from "react";
 import PhotoCard from "./PhotoCard";
 
 const PhotoCycle = () => {
-  const [currentImg, setCurrentImg] = useState(1);
-  const [title, setTitle] = useState("loading");
+  const [currentImg, setCurrentImg] = useState(0);
+  const title = [
+    "wish I could give you a dog loyalty",
+    "Busy schedules Huh?",
+    "I can do this all day",
+    "I don't smoke. Coding is enough ",
+    "why is this crow staring at me? and hey this is my friend Rook.",
+    "my cat doesn't like her",
+  ];
 
   useEffect(() => {
-    if (currentImg < 6) {
+    if (currentImg < 5) {
       setTimeout(() => {
         setCurrentImg((state) => state + 1);
-      }, 3000);
+      }, 4000);
     } else {
       setTimeout(() => {
-        setCurrentImg(1);
-      }, 3000);
+        setCurrentImg(0);
+      }, 4000);
     }
 
     return () => {
@@ -41,7 +48,7 @@ const PhotoCycle = () => {
           styles.paddingBottom
         }
       >
-        {currentImg &&
+        {/* {currentImg &&
           // <PhotoCard currentImg={eval("tempImg" + currentImg)} title={title} />
           {
             1: (
@@ -79,7 +86,27 @@ const PhotoCycle = () => {
                 title={"my cat doesn't like her"}
               />
             ),
-          }[currentImg]}
+          }[currentImg]} */}
+
+        {[...Array(6)].map((_x, index) => {
+          return (
+            <PhotoCard
+              currentImg={
+                {
+                  0: image1,
+                  1: image2,
+                  2: image3,
+                  3: image4,
+                  4: image5,
+                  5: image6,
+                }[index]
+              }
+              title={title[index]}
+              key={index}
+              active={currentImg === index}
+            />
+          );
+        })}
       </div>
     </section>
   );

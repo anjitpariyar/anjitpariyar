@@ -3,7 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const PhotoCard = ({ currentImg, title }) => {
+const PhotoCard = ({ currentImg, title, active }) => {
   const [load, setLoad] = useState(false);
   const variants = {
     hidden: { opacity: 0.4, y: -100 },
@@ -11,7 +11,7 @@ const PhotoCard = ({ currentImg, title }) => {
   };
 
   return (
-    <motion.div layoutid="123">
+    <motion.div layoutid="123" style={{ display: !active && "none" }}>
       <motion.div
         className={styles.textCenter + " " + styles.textWrapper}
         initial="hidden"
@@ -20,20 +20,21 @@ const PhotoCard = ({ currentImg, title }) => {
       >
         <Image
           src={currentImg}
-          alt="who's photo are they"
+          alt="who's photo are they? anjit pariyar"
           layout="fill"
           objectFit="contain"
-          onLoad={() => setLoad(true)}
+          priority
+          placeholder="blur"
+          blurDataURL={currentImg}
         />
-        {!load && <div className={styles.loader}></div>}
+        {/* {!load && <div className={styles.loader}></div>} */}
       </motion.div>
-      {load && (
-        <>
-          <motion.p className={styles.textCenter} layoutid="1235">
-            * {title} *
-          </motion.p>
-        </>
-      )}
+
+      <>
+        <motion.p className={styles.textCenter} layoutid="1235">
+          * {title} *
+        </motion.p>
+      </>
     </motion.div>
   );
 };

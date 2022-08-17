@@ -42,3 +42,18 @@
     background-image: conic-gradient(from 360deg, #f28241, transparent);
   }
 }
+
+@keyframes floating {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  50% {
+    -webkit-transform: translate(-8px, 21px);
+    transform: translate(-8px, 21px);
+  }
+  100% {
+    -webkit-transform: translate(-15px, 21px);
+    transform: translate(-15px, 21px);
+  }
+}

@@ -51,9 +51,11 @@
   .textWrapper {
     height: 600px;
     position: relative;
+
     img {
       object-position: bottom;
       mix-blend-mode: multiply;
+      animation: floating 6s linear 0s infinite alternate;
     }
   }
 }
