@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 const ProjectCard = ({ link, title, image, hoverState, bg, internal }) => {
   const { ref, inView } = useInView({
-    threshold: 0.8,
+    threshold: 0.6,
   });
 
   const reveal = useRef(null);
@@ -62,8 +62,13 @@ const ProjectCard = ({ link, title, image, hoverState, bg, internal }) => {
           rel="noreferrer"
         >
           <h2 className={styles.title}>{title}</h2>
-          <div className={styles.imageWrapper}>
-            <Image src={image} alt={"project " + title + " by anjit pariyar"} />
+
+          <div className={styles.imageWrapper} style={{ backgroundColor: bg }}>
+            <Image
+              src={image}
+              alt={"project " + title + " by anjit pariyar"}
+              objectFit="contain"
+            />
             <div
               className={styles.reveal}
               style={{ backgroundColor: bg }}

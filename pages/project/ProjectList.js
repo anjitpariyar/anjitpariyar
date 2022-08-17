@@ -6,6 +6,7 @@ import Fb from "/public/projects/fb.png";
 import Hb from "/public/projects/hb.png";
 import Bhomi from "/public/projects/bhumi.png";
 import Gyre from "/public/projects/gyre.png";
+import NDZ from "/public/projects/nodazisquare.png";
 
 import Mentee from "/public/projects/mentee.png";
 
@@ -36,17 +37,24 @@ const ProjectList = () => {
       image: Hb,
       bg: "#333333",
     },
-    {
-      link: "https://digitalghumti.com/",
-      title: "Digital Ghumti",
-      image: Dg,
-      bg: "#00a8e5",
-    },
+
     {
       link: "https://withgyre.com/",
       title: "Gyre",
       image: Gyre,
       bg: "#ff8021",
+    },
+    {
+      link: "https://www.nodazidesign.com/",
+      title: "Nodazi",
+      image: NDZ,
+      bg: " #54875f",
+    },
+    {
+      link: "https://digitalghumti.com/",
+      title: "Digital Ghumti",
+      image: Dg,
+      bg: "#00a8e5",
     },
     {
       link: "https://fanbucket.com/login",
