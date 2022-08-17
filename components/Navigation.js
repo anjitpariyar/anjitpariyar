@@ -83,7 +83,7 @@ const Navigation = ({ show, toggleNavigation }) => {
               target="_blank"
               rel="noreferrer"
             >
-              Insatgram
+              Instagram
             </a>
           </li>
         </nav>

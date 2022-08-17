@@ -147,7 +147,7 @@ const Header = (data) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                Insatgram
+                Instagram
               </a>
             </li>
           </nav>

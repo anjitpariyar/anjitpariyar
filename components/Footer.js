@@ -57,16 +57,16 @@ const Footer = () => {
       <div className={styles2.header + " " + styles2.footer}>
         <div className={styles2.container}>
           <nav className={styles2.nav}>
-            <li className={styles2.navLink}>
+            <li className={styles2.navLink + " " + styles.navLink}>
               <Link href="/refer">
                 <a>All Reference</a>
               </Link>
             </li>
 
-            <li className={styles2.navLink}>
+            <li className={styles2.navLink + " " + styles.navLink}>
               <a>Anjit Pariyar &copy;{new Date().getFullYear()}</a>
             </li>
-            <li className={styles2.navLink}>
+            <li className={styles2.navLink + " " + styles.navLink}>
               <a
                 href="https://www.linkedin.com/in/anjit-pariyar-b46131178/"
                 target="_blank"
@@ -75,7 +75,7 @@ const Footer = () => {
                 LinkedIn
               </a>
             </li>
-            <li className={styles2.navLink}>
+            <li className={styles2.navLink + " " + styles.navLink}>
               <a
                 href="https://github.com/anjitpariyar"
                 target="_blank"

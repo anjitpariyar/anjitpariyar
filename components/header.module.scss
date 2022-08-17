@@ -17,8 +17,7 @@
         padding: 0.6em;
         font-weight: 600;
         @include sm {
-          padding: 0.6em 0;
-          font-size: 12px;
+          font-size: 1.2em;
         }
       }
     }
@@ -45,11 +44,11 @@
     @include sm {
       gap: 6px;
     }
-    .navLink {
-      @include sm {
-        font-size: 14px;
-        padding: 0.6em 0px;
-      }
-    }
+    // .navLink {
+    //   @include sm {
+    //     font-size: 14px;
+    //     padding: 0.6em 0px;
+    //   }
+    // }
   }
 }

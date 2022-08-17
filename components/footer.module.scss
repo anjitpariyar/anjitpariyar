@@ -33,4 +33,12 @@
       fill: #211e1d;
     }
   }
+  .navLink {
+    a {
+      @include sm {
+        padding: 0.6em 0 !important;
+        font-size: 12px !important;
+      }
+    }
+  }
 }
