@@ -8,6 +8,7 @@ import wildSea from "/public/banner/wild-sea.png";
 import alchemy from "/public/banner/alchemy.gif";
 import Banner from "../../components/Banner";
 import styles from "./Project.module.scss";
+import Screen from "./Screen";
 
 export default function Project() {
   const butterfly = {
@@ -38,6 +39,7 @@ export default function Project() {
       </Head>
 
       <Header />
+      <Screen />
       <main>
         <ProjectList />
         <Banner {...butterfly} />
