@@ -7,6 +7,8 @@ import Hb from "/public/projects/hb.png";
 import Bhomi from "/public/projects/bhumi.png";
 import Gyre from "/public/projects/gyre.png";
 import NDZ from "/public/projects/nodazisquare.png";
+import Sunbi from "/public/projects/thesunbi.png";
+import Vita from "/public/projects/vita500.png";
 
 import Mentee from "/public/projects/mentee.png";
 
@@ -61,6 +63,18 @@ const ProjectList = () => {
       title: "Fanbucket",
       image: Fb,
       bg: "#fe4545",
+    },
+    {
+      link: "https://www.vita500.com/",
+      title: "Vita 500",
+      image: Vita,
+      bg: "#ff6211",
+    },
+    {
+      link: "https://www.thesunbi.com/",
+      title: "Sunbi",
+      image: Sunbi,
+      bg: "#d12828",
     },
     {
       link: "https://bhoomi.com.np/",
