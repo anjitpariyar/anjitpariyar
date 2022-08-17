@@ -12,12 +12,12 @@ export default class MyDocument extends Document {
           <meta
             name="description"
             content={
-              "Anjit Pariyar is a 2 Years Experience Frontend Developer. And  I enjoy Creating a Web."
+              "Anjit Pariyar is a 3 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
             }
           />
           <meta
             name="keywords"
-            content="Anjit, Anjit pariyar, Frontend developer, frontend developer nepal, web designer, react developer, react developer nepal, it nepal, nepal, anjit pariyar IT, frontend freelance, frontend freelance nepal"
+            content="anjit, anjit pariyar, React Developer, React Developer nepal, web designer, react developer, react developer nepal, it nepal, nepal, anjit pariyar IT, frontend freelance, frontend freelance nepal,nepal github, anjitpariyar"
           />
           <meta name="author" content="Anjit pariyar" />
           <meta name="copyright" content="Anjit pariyar" />
@@ -99,17 +99,14 @@ export default class MyDocument extends Document {
           <meta
             name="description"
             content={
-              "Anjit Pariyar is a 2 Years Experienced Frontend Developer. And  I enjoy Creating a Web."
+              "Anjit Pariyar is a 3 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
             }
           />
-          <meta
-            property="og:title"
-            content="Anjit Pariyar - Frontend Developer"
-          />
+          <meta property="og:title" content="Anjit Pariyar - React Developer" />
           <meta
             property="og:description"
             content={
-              "Anjit Pariyar is a 2 Years Experienced Frontend Developer. And  I enjoy Creating a Web."
+              "Anjit Pariyar is a 3 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
             }
           />
           <meta
@@ -123,18 +120,23 @@ export default class MyDocument extends Document {
           ></meta>
           <meta
             property="og:site_name"
-            content="Anjit Pariyar - Frontend Developer"
+            content="Anjit Pariyar - React Developer"
           />
           <meta property="twitter:card" content="summary" />
           <meta
             property="twitter:title"
-            content="Anjit Pariyar - Frontend Developer"
+            content="Anjit Pariyar - React Developer"
           />
           <meta
             property="twitter:description"
             content={
-              "Anjit Pariyar is a 2 Years Experienced Frontend Developer. And  I enjoy Creating a Web."
+              "Anjit Pariyar is a 3 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
             }
+          />
+          {/* google console */}
+          <meta
+            name="google-site-verification"
+            content="g7ZyMI0si6r_e5yfChQy8lJ_h4PvMtwt3OV-zhMuqzQ"
           />
         </Head>
         <body>
