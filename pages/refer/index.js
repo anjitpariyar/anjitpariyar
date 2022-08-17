@@ -10,7 +10,7 @@ export default function Refer() {
   return (
     <>
       <Head>
-        <title>Reference - Anjit Pariyar - Frontend Developer</title>
+        <title>Reference - Anjit Pariyar -React Developer</title>
         <meta name="theme-color" content="#1d8ff2" />
         <meta name="msapplication-TileColor" content="#1d8ff2" />
       </Head>

@@ -10,7 +10,7 @@ export default function Custom404() {
   return (
     <>
       <Head>
-        <title>404 - page Not Found - Anjit Pariyar - Frontend Developer</title>
+        <title>404 - page Not Found - Anjit Pariyar -React Developer</title>
         <meta name="theme-color" content="#232323" />
         <meta name="msapplication-TileColor" content="#232323" />
       </Head>

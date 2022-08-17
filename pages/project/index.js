@@ -32,7 +32,7 @@ export default function Project() {
   return (
     <>
       <Head>
-        <title>Projects - Anjit Pariyar - Frontend Developer</title>
+        <title>Projects - Anjit Pariyar -React Developer</title>
         <meta name="theme-color" content="#f2913d" />
         <meta name="msapplication-TileColor" content="#f2913d" />
       </Head>

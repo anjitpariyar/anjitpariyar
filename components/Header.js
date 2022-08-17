@@ -183,11 +183,11 @@ export async function getServerSideProps() {
 
   const data = {
     description:
-      "Anjit Pariyar is a 2 Years Experience Frontend Developer. And  I enjoy Creating a Web.",
+      "Anjit Pariyar is a 2 Years ExperienceReact Developer. And  I enjoy Creating a Web.",
     keywords:
-      "Anjit, Anjit pariyar, Frontend developer, frontend developer nepal, web designer, react developer, react developer nepal, it nepal, nepal, anjit pariyar IT, frontend freelance, frontend freelance nepal",
+      "Anjit, Anjit pariyar,React Developer,React Developer nepal, web designer, react developer, react developer nepal, it nepal, nepal, anjit pariyar IT, frontend freelance, frontend freelance nepal",
     name: "Anjit pariyar",
-    title: "Anjit Pariyar - Frontend Developer",
+    title: "Anjit Pariyar -React Developer",
     imageSrc:
       "https://res.cloudinary.com/dem2xvk2e/image/upload/v1632627087/img1_m5v3bc.jpg",
     url: "https://www.anjitpariyar.com.np/",

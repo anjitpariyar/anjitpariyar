@@ -7,7 +7,15 @@ import { gsap } from "gsap";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 
-const ProjectCard = ({ link, title, image, hoverState, bg, internal }) => {
+const ProjectCard = ({
+  link,
+  title,
+  image,
+  hoverState,
+  bg,
+  internal,
+  index = 0,
+}) => {
   const { ref, inView } = useInView({
     threshold: 0.6,
   });
@@ -75,6 +83,7 @@ const ProjectCard = ({ link, title, image, hoverState, bg, internal }) => {
               ref={reveal}
             ></div>
           </div>
+          {index && <span className={styles.count}>{index}</span>}
         </a>
       )}
     </article>

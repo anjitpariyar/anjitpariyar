@@ -104,7 +104,12 @@ const ProjectList = () => {
         <div className={styles.grid}>
           {projectList.map((elem, index) => {
             return (
-              <ProjectCard key={index} {...elem} hoverState={hoverState} />
+              <ProjectCard
+                key={index}
+                {...elem}
+                hoverState={hoverState}
+                index={index + 1}
+              />
             );
           })}
 

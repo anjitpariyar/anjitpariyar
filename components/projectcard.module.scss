@@ -12,6 +12,7 @@
   padding: 3em;
   padding-right: 0;
   justify-content: flex-end;
+  position: relative;
 
   @include sm {
     padding: 1em;
@@ -39,6 +40,21 @@
     @include sm {
       margin-bottom: 2em;
     }
+  }
+  .count {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: var(--dark);
+    text-align: center;
+    line-height: 54px;
+    color: var(--white);
+    font-weight: bolder;
+    font-size: 1.1rem;
+    position: absolute;
+    top: 1em;
+    right: 1em;
   }
   &:hover {
     .title {

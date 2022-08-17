@@ -9,7 +9,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About - Anjit Pariyar - Frontend Developer</title>
+        <title>About - Anjit Pariyar -React Developer</title>
 
         <meta name="theme-color" content="#f28241" />
         <meta name="msapplication-TileColor" content="#f28241" />
