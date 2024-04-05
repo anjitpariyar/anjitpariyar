@@ -176,8 +176,8 @@ const Header = (data) => {
               </Link>
             </li>
             <li className={styles.navLink}>
-              <Link href="/project">
-                <a>Project</a>
+              <Link href="/projects">
+                <a>Projects</a>
               </Link>
             </li>
             <li className={styles.navLink}>

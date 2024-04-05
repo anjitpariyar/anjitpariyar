@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Home.module.scss";
-import NDZ from "/public/projects/nodazihome.png";
-import Hb from "/public/projects/hb.png";
 import Title from "../../components/Title";
 import ProjectCard from "../../components/ProjectCard";
 import { motion } from "framer-motion";
+
+import { supabase } from "utils/supabaseClient";
 
 const Project = () => {
   const [mouse, setMouse] = useState({ x: "", y: "" });
@@ -22,6 +22,19 @@ const Project = () => {
   const hoverState = (state) => {
     setHover(state);
   };
+
+  async function Notes() {
+    const { data: notes } = await supabase.from("projects").select("*");
+
+    console.log(notes);
+  }
+
+  useEffect(() => {
+    Notes();
+
+    return () => {};
+  }, []);
+
   const projectList = [
     {
       link: "https://hamrobazaar.com/",
