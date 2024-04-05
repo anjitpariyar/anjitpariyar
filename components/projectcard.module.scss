@@ -22,12 +22,14 @@
     border-right: 0;
     position: relative;
     overflow: hidden;
+    background-color: var(--black);
     .reveal {
       position: absolute;
       height: 100%;
       width: 100%;
       top: 0;
       left: 0;
+      background-color: var(--black);
     }
     img {
       object-fit: cover;

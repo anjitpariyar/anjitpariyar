@@ -48,11 +48,19 @@ const Screen = () => {
         </h1>
         <div className={styles.textWrapper}>
           <h2 className={styles.titleMd}>
-            From the Tech background, I have three years of experience in
-            developing Web apps. I can pixel-perfect any website. I love to work
-            more on UIUX-based websites as they are the one that solves user
-            problems. Animating a site is not my cup of tea but coffee. And
-            always keen to upgrade me.
+            Thrives on solving problems and creating websites that users love.
+            <br />
+            <br />
+            Has a knack for adding animations to websites, making them more
+            engaging and interactive.
+            <br />
+            <br />
+            Proficient in React.js, adept at handling performance optimization,
+            ensuring responsiveness, and seamlessly integrating APIs to enhance
+            user experiences.
+            <br />
+            <br /> Dedicated to crafting user-friendly interfaces and leveraging
+            technology to bring ideas to life on the web.
           </h2>
         </div>
       </div>

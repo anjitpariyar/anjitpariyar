@@ -5,16 +5,17 @@ import gsap from "gsap";
 
 const Program = () => {
   const texts = [
-    "REACT JS -",
-    "NEXT JS -",
-    "TypeScript -",
-    "Styled Component -",
-    "Redux -",
+    "<REACT JS /> -",
+    "<NEXT JS /> -",
+    "Import Node JS -",
+    "TypeScript.ts -",
+    "<Styled Component />-",
+    "<Redux /> -",
     "JS -",
-    "HTML 5 -",
+    "<HTML 5 />-",
     "CSS 3 -",
-    "REACT JS -",
-    "NEXT JS -",
+    "<REACT JS />-",
+    "<NEXT JS />-",
   ];
 
   const header = useRef(null);

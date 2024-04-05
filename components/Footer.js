@@ -38,20 +38,22 @@ const Footer = () => {
       <Header />
       <div className={styles.container}>
         <h1 className={styles.titleLg}>
-          <a ref={reveal} href="mailto:anjitpariyar@gmail.com">
-            {/* collaboration  */}
-            <span>a</span>
-            <span>n</span>
-            <span>y</span>
-            {/* <span> </span> */}
-            <span className={styles.empty}>{"  "}</span>
-            <span>i</span>
-            <span>d</span>
-            <span>e</span>
-            <span>a</span>
-            <span>s</span>
-            <span>?</span>
-          </a>
+          <Link href="/contact">
+            <a ref={reveal}>
+              {/* collaboration  */}
+              <span>a</span>
+              <span>n</span>
+              <span>y</span>
+              {/* <span> </span> */}
+              <span className={styles.empty}>{"  "}</span>
+              <span>i</span>
+              <span>d</span>
+              <span>e</span>
+              <span>a</span>
+              <span>s</span>
+              <span>?</span>
+            </a>
+          </Link>
         </h1>
       </div>
       <div className={styles2.header + " " + styles2.footer}>

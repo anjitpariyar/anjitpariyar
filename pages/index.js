@@ -8,22 +8,22 @@ import Screen from "./home/Screen";
 import Project from "./home/Project";
 import Enjoy from "./home/Enjoy";
 import Program from "./home/Program";
-import FallImage from "/public/banner/fall.png";
+// import FallImage from "/public/banner/fall.png";
 import ChatImage from "/public/banner/chat.png";
-import wildSea from "/public/banner/wild-sea.png";
+// import wildSea from "/public/banner/wild-sea.png";
 import alchemy from "/public/banner/alchemy.gif";
 
 export default function Home() {
   const containerRef = useRef(null);
-  const butterfly = {
-    link: "https://anjitpariyar.github.io/everythingFall/",
-    image: FallImage,
-    title: "EverythingFall",
-    white: true,
-    description: "Are you Ready for Html Canvas ?",
-    bgColor: "var(--dark)",
-    bgImage: wildSea,
-  };
+  // const butterfly = {
+  //   link: "https://anjitpariyar.github.io/everythingFall/",
+  //   image: FallImage,
+  //   title: "EverythingFall",
+  //   white: true,
+  //   description: "Are you Ready for Html Canvas ?",
+  //   bgColor: "var(--dark)",
+  //   bgImage: wildSea,
+  // };
   const chat = {
     link: "https://chat-25704.web.app/",
     image: ChatImage,
@@ -59,11 +59,12 @@ Creating a Web."
         <Screen />
         <Enjoy />
         <Project />
-        <Banner {...butterfly} />
-        <Program />
+        {/* <Banner {...butterfly} /> */}
+
         <div className={styles.chat}>
           <Banner {...chat} />
         </div>
+        <Program />
       </main>
       <Footer />
     </>

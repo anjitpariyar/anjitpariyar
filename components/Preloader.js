@@ -10,10 +10,10 @@ const Preloader = () => {
   useEffect(() => {
     let t1 = gsap.timeline();
     t1.to(pre?.current, {
-      y: "-100vh",
-      duration: 1.4,
+      opacity: "0",
+      duration: .6,
       ease: "ease",
-      delay: 4,
+      delay: 3,
     });
   }, []);
 

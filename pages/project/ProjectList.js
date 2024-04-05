@@ -34,10 +34,11 @@ const ProjectList = () => {
   };
   const projectList = [
     {
-      link: "https://hamrobazaar.com/",
+      link: "/project/hamrobazar",
       title: "Hamrobazar",
       image: Hb,
       bg: "#333333",
+      id: 1,
     },
 
     {
@@ -45,48 +46,56 @@ const ProjectList = () => {
       title: "Gyre",
       image: Gyre,
       bg: "#ff8021",
+      id: 2,
     },
     {
       link: "https://www.nodazidesign.com/",
       title: "Nodazi",
       image: NDZ,
       bg: " #54875f",
+      id: 3,
     },
     {
       link: "https://digitalghumti.com/",
       title: "Digital Ghumti",
       image: Dg,
       bg: "#00a8e5",
+      id: 4,
     },
     {
       link: "https://fanbucket.com/login",
       title: "Fanbucket",
       image: Fb,
       bg: "#fe4545",
+      id: 5,
     },
     {
       link: "https://www.vita500.com/",
       title: "Vita 500",
       image: Vita,
       bg: "#ff6211",
+      id: 6,
     },
     {
       link: "https://www.thesunbi.com/",
       title: "SunBi Holdings",
       image: Sunbi,
       bg: "#d12828",
+      id: 7,
     },
     {
       link: "https://bhoomi.com.np/",
       title: "Bhoomi",
       image: Bhomi,
       bg: "#4cb848",
+      id: 8,
     },
     {
       link: "https://gomentee.com/",
       title: "Mentee",
       image: Mentee,
       bg: "#f26522",
+      id: 9,
     },
   ];
 

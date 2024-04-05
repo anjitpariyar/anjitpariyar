@@ -8,8 +8,7 @@ const PhotoGrid = () => {
         <div className={styles.grid}>
           <article className={styles.details}>
             <p className={styles.titleSm + " " + styles.left}>
-              Done 20+ projects. <br /> Studying BIT in
-              <br /> KCC, Kathmandu.
+              Done 20+ projects.
             </p>
           </article>
           <article className={styles.image}>
@@ -19,21 +18,36 @@ const PhotoGrid = () => {
         <div className={styles.commonPadding + " " + styles.wrapper}>
           <div className={styles.textWrapper}>
             <h2 className={styles.titleMd}>
-              Let&apos;s talk about some experiences. I started as an intern in{" "}
+              {"4 Y E A R S  O F  "}
+              <br />
+              {"E X P E R I E N C E"}
+            </h2>
+            <h2 className={styles.titleMd}>
+              At{" "}
+              <a href="https://www.lukuku.co/" target="_blank" rel="noreferrer">
+                LUKUKU
+              </a>{" "}
+              Since February 2022 as a React Dev.
+            </h2>
+
+            <h2 className={styles.titleMd}>
+              Worked at{" "}
+              <a href="#!" target="_blank" rel="noreferrer">
+                SunBi Holdings
+              </a>{" "}
+              From April 2020 to May 2022 as a React Dev.
+            </h2>
+
+            <h2 className={styles.titleMd}>
+              Started at{" "}
               <a
                 href="https://www.facebook.com/icebergtechnology/"
                 target="_blank"
                 rel="noreferrer"
               >
-                Iceberg technology
+                ICEBERG TECHNOLOGY
               </a>
-              , where I learn designing tools and basic web structure. and later
-              hired by the same company as a web designer for 6 months.
-              presently in{" "}
-              <a href="https://thesunbi.com/" target="_blank" rel="noreferrer">
-                SunBi Holdings
-              </a>{" "}
-              as a frontend dev since 2020.
+              June 2019 to March 2020 as a Web Designer.
             </h2>
           </div>
         </div>

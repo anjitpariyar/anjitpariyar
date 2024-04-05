@@ -46,7 +46,7 @@ const Screen = () => {
       t1.staggerTo(
         [...header?.current?.children],
         1,
-        { y: 0, opacity: 1, ease: "power4.out", delay: 1.1 },
+        { y: 0, opacity: 1, ease: "power4.out", delay: 0.1 },
         0.2
       );
     }
@@ -128,7 +128,7 @@ const Screen = () => {
           <span>Pariyar</span>
 
           <br />
-          <span className={styles.thin}>(3 Yrs. Exp.)</span>
+          <span className={styles.thin}>(4 Yrs. Exp.)</span>
           <br />
           <span>React </span>
           <br />

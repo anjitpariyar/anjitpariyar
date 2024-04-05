@@ -26,15 +26,19 @@ const Project = () => {
     {
       link: "https://hamrobazaar.com/",
       title: "Hamrobazar",
-      image: Hb,
-      bg: "#333333",
-    },
-    {
-      link: "https://www.nodazidesign.com/",
-      title: "NODAZI",
-      image: NDZ,
-      bg: "#54875f",
-      // internal: true,
+      slug: "hamrobazaar",
+      thumbnail:
+        "https://lvvfmdfnsjekhhjkqeei.supabase.co/storage/v1/object/public/anjitpariyar/hbScreen.png",
+      description:
+        "Hamrobazar is a classified ads site in Nepal. It is a platform where people can buy and sell products and services. It is one of the most popular classified ads sites in Nepal. <br/> <br/> I have contributed to the development of the largest E-commerce site in the country, Hamrobazar, utilized by millions of users, showcasing expertise in designing and optimizing user experiences at scale. <br/> <br/> Easy Listing, Easy Viewing Call, chat, comment instantly. <br/><br/>Easy Listing, Easy Viewing Call, chat, comment instantly.",
+      languages: "REACTJS REDUX REDUX-SAGA REALTIME DB",
+      images: [
+        {
+          thumbnail:
+            "https://lvvfmdfnsjekhhjkqeei.supabase.co/storage/v1/object/public/anjitpariyar/hbScreen.png",
+          title: "Home Page",
+        },
+      ],
     },
   ];
 

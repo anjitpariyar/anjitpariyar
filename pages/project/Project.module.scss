@@ -106,3 +106,73 @@
     text-indent: 0 !important;
   }
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  padding: 20px;
+  z-index: 1;
+  align-items: center;
+  @include sm {
+    padding: 10px;
+    background-color: var(--white--grey);
+    h2 {
+      margin: 0;
+    }
+  }
+  .formBtn {
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid var(--dark);
+    border-radius: 8px;
+    color: var(--white);
+    background-color: var(--dark);
+    padding: 0 1em;
+    width: 100%;
+    outline: none;
+    box-shadow: none;
+    @include transition;
+  }
+
+  .copy {
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid var(--dark);
+    border-radius: 8px;
+    color: var(--dark);
+    background-color: transparent;
+    padding: 0;
+    width: 50px;
+    min-width: 50px;
+    outline: none;
+    box-shadow: none;
+    @include transition;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .buttongroup {
+    display: flex;
+    gap: 12px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  @include sm {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
+  }
+}
+
+.imageWrapper {
+  height: 200px;
+  position: relative;
+  display: block;
+}

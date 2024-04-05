@@ -22,11 +22,11 @@ export default function About() {
         <PhotoCycle />
       </main>
       <Footer />
-      <style global jsx>{`
+      {/* <style global jsx>{`
         body {
           background-color: #f28241;
         }
-      `}</style>
+      `}</style> */}
     </>
   );
 }

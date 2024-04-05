@@ -159,7 +159,7 @@ const Header = (data) => {
         ></script>
       </Head>
       <header className={styles.header}>
-        <div className={styles.container}>
+        <div>
           <nav className={styles.nav + " " + styles.desktopOnly}>
             <li className={styles.navLink + " " + styles.brand}>
               <Link href="/">

@@ -189,7 +189,7 @@
     flex-wrap: nowrap;
     white-space: nowrap;
     gap: 0.6em;
-    animation: ticker 30s linear 2s infinite forwards;
+    animation: ticker 50s linear 2s infinite forwards;
     animation-play-state: paused;
     span {
       position: relative;
@@ -226,6 +226,7 @@
   .imageWrapper {
     height: 400px;
     position: relative;
+    display: block;
   }
   .textWrapper {
     .titleSm {
