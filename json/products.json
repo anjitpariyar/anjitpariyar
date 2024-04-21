@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Signite",
+    "thumbnail": "https://lvvfmdfnsjekhhjkqeei.supabase.co/storage/v1/object/public/anjitpariyar/signite_thum.png",
+    "link": "https://www.signitepartners.com/en",
+    "description": "Welcome to Signite Partners, where innovation meets excellence. Their website showcases a range of services and solutions designed to empower businesses and drive success. With a focus on animation and interactivity, Signite Partners offers a dynamic and engaging experience for visitors, highlighting their commitment to innovation and creativity.<br/><br/>During my time at Lukuku, I played a significant role in building the Signite Partners website. My focus on animation and interactivity brought the website to life, creating a visually engaging experience that aligns with Signite Partners' brand and values. By utilizing Next.js and Framer Motion, I implemented dynamic slider animations and responsive design elements that enhance user engagement and showcase Signite Partners' innovative approach.",
+    "languages": "Next.js, Framer Motion",
+    "images": [
+      {
+        "title": "Responsive Design",
+        "thumbnail": "https://lvvfmdfnsjekhhjkqeei.supabase.co/storage/v1/object/public/anjitpariyar/Signite.png"
+      },
+      {
+        "title": "White And Dark Theme",
+        "thumbnail": "https://lvvfmdfnsjekhhjkqeei.supabase.co/storage/v1/object/public/anjitpariyar/Signite(1).png"
+      }
+    ],
+    "slug": "signite",
+    "is_pinned": false,
+    "thumbnail_video": ""
+  }
+]

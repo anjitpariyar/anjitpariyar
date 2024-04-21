@@ -5,6 +5,8 @@ import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useInView } from "react-intersection-observer";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Banner = ({
   link,
   image,
@@ -31,10 +33,11 @@ const Banner = ({
   // }
   // }, [inView]);
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
     gsap.fromTo(
       imageMove?.current.firstChild,
-      { y: -200, scale: 1 },
+      { y: isMobile ? -300 : -200, scale: 1 },
       {
         scrollTrigger: {
           trigger: imageMove?.current,
@@ -42,8 +45,8 @@ const Banner = ({
           end: "bottom top",
           scrub: true,
         },
-        y: 200,
-        scale: 1.3,
+        y: isMobile ? 0 : 200,
+        scale: isMobile ? 1.2 : 1.4,
         ease: "none",
       }
     );

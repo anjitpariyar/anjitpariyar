@@ -8,19 +8,18 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 
 const ProjectCard = ({
-  link,
   title,
   thumbnail,
   hoverState,
-  bg,
-  internal,
   index = 0,
-  id,
   slug,
+  thumbnail_video,
 }) => {
   const { ref, inView } = useInView({
     threshold: 0.6,
   });
+
+  console.log("project_" + slug);
 
   const reveal = useRef(null);
   useEffect(() => {
@@ -36,28 +35,42 @@ const ProjectCard = ({
   }, [inView]);
 
   return (
-    <article
+    <motion.article
       onMouseEnter={() => hoverState(true)}
       onMouseLeave={() => hoverState(false)}
       ref={ref}
+      layoutId={"project_" + slug}
     >
       <Link href={`/projects/${slug}`}>
         <a className={styles.projectCard}>
           <h2 className={styles.title}>{title}</h2>
 
           <div className={styles.imageWrapper}>
-            <Image
-              src={thumbnail}
-              alt={"project " + title + " by anjit pariyar"}
-              objectFit="contain"
-              layout="fill"
-            />
+            {thumbnail_video ? (
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className={styles.video}
+                src={thumbnail_video}
+              />
+            ) : (
+              <Image
+                src={thumbnail}
+                alt={`project ${title} by anjit pariyar`}
+                layout="responsive"
+                width={564}
+                height={326}
+              />
+            )}
+
             <div className={styles.reveal} ref={reveal}></div>
           </div>
           {index > 0 && <span className={styles.count}>{index}</span>}
         </a>
       </Link>
-    </article>
+    </motion.article>
   );
 };
 

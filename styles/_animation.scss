@@ -27,19 +27,19 @@
 
 @keyframes timer {
   0% {
-    background-image: conic-gradient(from 0deg, #f28241, transparent);
+    background-image: conic-gradient(from 0deg, #fff, transparent);
   }
   25% {
-    background-image: conic-gradient(from 90deg, #f28241, transparent);
+    background-image: conic-gradient(from 90deg, #fff, transparent);
   }
   50% {
-    background-image: conic-gradient(from 180deg, #f28241, transparent);
+    background-image: conic-gradient(from 180deg, #fff, transparent);
   }
   75% {
-    background-image: conic-gradient(from 270deg, #f28241, transparent);
+    background-image: conic-gradient(from 270deg, #fff, transparent);
   }
   100% {
-    background-image: conic-gradient(from 360deg, #f28241, transparent);
+    background-image: conic-gradient(from 360deg, #fff, transparent);
   }
 }
 

@@ -8,22 +8,11 @@ import Screen from "./home/Screen";
 import Project from "./home/Project";
 import Enjoy from "./home/Enjoy";
 import Program from "./home/Program";
-// import FallImage from "/public/banner/fall.png";
 import ChatImage from "/public/banner/chat.png";
-// import wildSea from "/public/banner/wild-sea.png";
 import alchemy from "/public/banner/alchemy.gif";
 
 export default function Home() {
   const containerRef = useRef(null);
-  // const butterfly = {
-  //   link: "https://anjitpariyar.github.io/everythingFall/",
-  //   image: FallImage,
-  //   title: "EverythingFall",
-  //   white: true,
-  //   description: "Are you Ready for Html Canvas ?",
-  //   bgColor: "var(--dark)",
-  //   bgImage: wildSea,
-  // };
   const chat = {
     link: "https://chat-25704.web.app/",
     image: ChatImage,
@@ -44,8 +33,7 @@ export default function Home() {
         <meta property="og:title" content="Anjit Pariyar - React Developer" />
         <meta
           property="og:description"
-          content="Anjit Pariyar is a 2 Years ExperienceReact Developer. And  I enjoy
-Creating a Web."
+          content="Anjit Pariyar is a 4 Years Experience React Developer."
         />
         <meta
           property="og:image"

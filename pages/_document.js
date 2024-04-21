@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
           <meta
             name="description"
             content={
-              "Anjit Pariyar is a 3 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
+              "Anjit Pariyar is a 4 Years Experienced React Developer. He Thrives on solving problems and creating websites that users love. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
             }
           />
           <meta
@@ -99,14 +99,14 @@ export default class MyDocument extends Document {
           <meta
             name="description"
             content={
-              "Anjit Pariyar is a 3 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
+              "Anjit Pariyar is a 4 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
             }
           />
           <meta property="og:title" content="Anjit Pariyar - React Developer" />
           <meta
             property="og:description"
             content={
-              "Anjit Pariyar is a 3 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
+              "Anjit Pariyar is a 4 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
             }
           />
           <meta
@@ -130,7 +130,7 @@ export default class MyDocument extends Document {
           <meta
             property="twitter:description"
             content={
-              "Anjit Pariyar is a 3 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
+              "Anjit Pariyar is a 4 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
             }
           />
           {/* google console */}

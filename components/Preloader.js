@@ -1,6 +1,5 @@
 import styles from "./preloader.module.scss";
 import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
 import Logo from "../svg/Logo";
 import { motion } from "framer-motion";
 
@@ -8,13 +7,11 @@ const Preloader = () => {
   const pre = useRef(null);
 
   useEffect(() => {
-    let t1 = gsap.timeline();
-    t1.to(pre?.current, {
-      opacity: "0",
-      duration: .6,
-      ease: "ease",
-      delay: 3,
-    });
+    pre.current.style.transition = "opacity 0.6s ease";
+    const timer = setTimeout(() => {
+      pre.current.style.opacity = "0";
+    }, 3000);
+    return () => clearTimeout(timer);
   }, []);
 
   return (

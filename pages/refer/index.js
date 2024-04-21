@@ -21,11 +21,6 @@ export default function Refer() {
         <Reference />
       </main>
       <Footer />
-      <style global jsx>{`
-        body {
-          background-color: #1d8ff2;
-        }
-      `}</style>
     </>
   );
 }

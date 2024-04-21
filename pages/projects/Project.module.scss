@@ -3,8 +3,8 @@
   .titleLg {
     span {
       position: relative;
-      transform: translateY(200px);
-      opacity: 0;
+      // transform: translateY(200px);
+      // opacity: 0;
       display: inline-block;
     }
   }
@@ -24,6 +24,9 @@
     }
     article:first-child {
       grid-column: span 2;
+      & > a > div {
+        height: auto;
+      }
       @include sm {
         grid-column: span 1;
       }
@@ -100,6 +103,7 @@
     }
   }
 }
+
 .projectSingle {
   // display: none;
   h2 {
@@ -163,7 +167,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1em;
   @include sm {
     grid-template-columns: repeat(1, 1fr);
@@ -172,7 +176,29 @@
 }
 
 .imageWrapper {
-  height: 200px;
+  height: 550px;
   position: relative;
   display: block;
+}
+
+.bottomScreen {
+  .titleLg {
+    span {
+      position: relative;
+      // transform: translateY(200px);
+      // opacity: 0;
+      display: inline-block;
+    }
+  }
+
+  .link {
+    background-color: #0d1117;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    padding: 5rem 10px;
+    @include sm {
+      padding: 2rem 10px;
+    }
+  }
 }

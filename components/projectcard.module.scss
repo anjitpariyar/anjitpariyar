@@ -23,6 +23,14 @@
     position: relative;
     overflow: hidden;
     background-color: var(--black);
+    height: 330px;
+    background-color: var(--dark);
+    background-image: conic-gradient(var(--white--grey), var(--grey));
+    animation: timer 3s linear 0.3s infinite forwards;
+    @include sm {
+      height: auto;
+    }
+
     .reveal {
       position: absolute;
       height: 100%;
@@ -34,6 +42,12 @@
     img {
       object-fit: cover;
     }
+  }
+
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .title {

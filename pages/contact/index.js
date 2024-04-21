@@ -23,11 +23,6 @@ export default function Contact() {
         <Refer />
       </main>
       <Footer />
-      <style global jsx>{`
-        body {
-          background-color: #f2b366;
-        }
-      `}</style>
     </>
   );
 }

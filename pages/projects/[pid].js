@@ -8,8 +8,10 @@ import Header from "../../components/Header";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { supabase } from "utils/supabaseClient";
+import * as DOMPurify from "dompurify";
 
-const Post = () => {
+const Post = ({ project, error, isLoading }) => {
   const router = useRouter();
   const { pid } = router.query;
 
@@ -26,6 +28,10 @@ const Post = () => {
     }
   };
 
+  const sanitizedData = (rawText) => ({
+    __html: DOMPurify.sanitize(rawText).replaceAll("\n", "<br/>"),
+  });
+
   useEffect(() => {
     if (isCopied) {
       const timer = setTimeout(() => {
@@ -36,173 +42,171 @@ const Post = () => {
     }
   }, [isCopied]);
 
+  console.log("project_" + pid);
+
   return (
     <>
       <Head>
-        <title>{pid} - Anjit Pariyar - React Developer</title>
-        <meta name="theme-color" content="#232323" />
-        <meta name="msapplication-TileColor" content="#232323" />
+        <title>
+          {project?.title ?? "NA"} - Projects - Anjit Pariyar - React Developer
+        </title>
       </Head>
-      <Header />
-      <main className={styles.pageNotFound + " " + styles2.projectSingle}>
-        <div
-          className={
-            styles.container +
-            " " +
-            styles.commonPadding +
-            " " +
-            styles.paddingBottom
-          }
-        >
-          {/* header , title and share */}
-          {/* main image */}
-          {/* description */}
-          {/* three more picture */}
-          {/* stack */}
 
-          <div className={styles2.header}>
-            <h2>HamroBazar</h2>
-            <div className={styles2.buttongroup}>
-              <button onClick={handleCopyClick} className={styles2.copy}>
-                <Image
-                  src={isCopied ? "/icons/checked.svg" : "/icons/copy.svg"}
-                  alt="copy"
-                  objectFit="contain"
-                  height={20}
-                  width={20}
-                />
-              </button>
-
-              <a
-                className={styles.btn + " " + styles2.formBtn}
-                href="http://www.google.com"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Visit Site
-              </a>
-            </div>
-          </div>
-
-          <div className={styles.textWrapper}>
-            {
-              <motion.a
-                className={styles.imageWrapper}
-                layoutId={pid?.toLowerCase() + "01"}
-                href="https://lvvfmdfnsjekhhjkqeei.supabase.co/storage/v1/object/public/anjitpariyar/hbScreen.png"
-                target="_blank"
-                rel="referrer anjitpariyar.com.np"
-              >
-                <Image
-                  src={
-                    "https://lvvfmdfnsjekhhjkqeei.supabase.co/storage/v1/object/public/anjitpariyar/hbScreen.png"
-                  }
-                  alt="404"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </motion.a>
+      <>
+        <Header />
+        <main className={styles.pageNotFound + " " + styles2.projectSingle}>
+          <div
+            className={
+              styles.container +
+              " " +
+              styles.commonPadding +
+              " " +
+              styles.paddingBottom
             }
-            <h2 className={styles.titleSm}>
-              Contributed to the development of the largest E-commerce site in
-              the country, Hamrobazar, utilized by millions of users, showcasing
-              expertise in designing and optimizing user experiences at scale.
-            </h2>
-
-            <h2 className={styles.titleSm}>
-              Easy Listing, Easy Viewing Call, chat, comment instantly.
-            </h2>
-
-            <div className={styles2.grid}>
-              <div>
-                <a
-                  className={styles2.imageWrapper}
-                  href="https://lvvfmdfnsjekhhjkqeei.supabase.co/storage/v1/object/public/anjitpariyar/hbScreen.png"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image
-                    src={
-                      "https://lvvfmdfnsjekhhjkqeei.supabase.co/storage/v1/object/public/anjitpariyar/hbScreen.png"
-                    }
-                    alt="404"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </a>
-                <h2>Home Page</h2>
+          >
+            {error ? (
+              <div className={styles2.header}>
+                <h2>Sorry. Couldn&apos;t found &quot;{pid}&quot; project. </h2>
               </div>
-              <div>
-                <a
-                  className={styles2.imageWrapper}
-                  href="https://lvvfmdfnsjekhhjkqeei.supabase.co/storage/v1/object/public/anjitpariyar/hbScreen.png"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image
-                    src={
-                      "https://lvvfmdfnsjekhhjkqeei.supabase.co/storage/v1/object/public/anjitpariyar/hbScreen.png"
-                    }
-                    alt="404"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </a>
-                <h2>Home Page</h2>
-              </div>
-              <div>
-                <a
-                  className={styles2.imageWrapper}
-                  href="https://lvvfmdfnsjekhhjkqeei.supabase.co/storage/v1/object/public/anjitpariyar/hbScreen.png"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image
-                    src={
-                      "https://lvvfmdfnsjekhhjkqeei.supabase.co/storage/v1/object/public/anjitpariyar/hbScreen.png"
-                    }
-                    alt="404"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </a>
-                <h2>Home Page</h2>
-              </div>
-              <div>
-                <a
-                  className={styles2.imageWrapper}
-                  href="https://lvvfmdfnsjekhhjkqeei.supabase.co/storage/v1/object/public/anjitpariyar/hbScreen.png"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image
-                    src={
-                      "https://lvvfmdfnsjekhhjkqeei.supabase.co/storage/v1/object/public/anjitpariyar/hbScreen.png"
-                    }
-                    alt="404"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </a>
-                <h2>Home Page</h2>
-              </div>
-            </div>
+            ) : null}
 
-            <h2 className={styles.titleSm} style={{ marginBottom: "0" }}>
-              Frontend Tech Stack:
-            </h2>
-            <h2 className={styles.titleSm} style={{ marginTop: "0.5em" }}>
-              REACTJS REDUX REDUX-SAGA REALTIME DB
-            </h2>
+            {isLoading ? (
+              <div className={styles2.header}>
+                <h2>Loading...</h2>
+              </div>
+            ) : null}
 
-            <Link href="/project">
-              <a className={styles.btn}>Back to project</a>
-            </Link>
+            {project?.title ? (
+              <>
+                <div className={styles2.header}>
+                  <h2>{project.title}</h2>
+                  <div className={styles2.buttongroup}>
+                    <button onClick={handleCopyClick} className={styles2.copy}>
+                      <Image
+                        src={
+                          isCopied ? "/icons/checked.svg" : "/icons/copy.svg"
+                        }
+                        alt="copy"
+                        objectFit="contain"
+                        height={20}
+                        width={20}
+                      />
+                    </button>
+
+                    <a
+                      className={styles.btn + " " + styles2.formBtn}
+                      href={project.link}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Visit Site
+                    </a>
+                  </div>
+                </div>
+                <div className={styles.textWrapper}>
+                  <motion.a
+                    className={styles.imageWrapper}
+                    layoutId={"project_" + pid}
+                    href={project.thumbnail}
+                    target="_blank"
+                    rel="referrer anjit pariyar"
+                  >
+                    {project?.thumbnail_video ? (
+                      <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className={styles.video}
+                        src={project?.thumbnail_video}
+                      />
+                    ) : (
+                      <Image
+                        src={project.thumbnail}
+                        alt={
+                          project.title +
+                          " - Projects - Anjit Pariyar - React Developer"
+                        }
+                        layout="fill"
+                        objectFit="contain"
+                      />
+                    )}
+                  </motion.a>
+
+                  <div
+                    className={styles.titleSm}
+                    dangerouslySetInnerHTML={sanitizedData(project.description)}
+                  />
+
+                  <div className={styles2.grid}>
+                    {project.images.map((image, index) => (
+                      <div key={index}>
+                        <a
+                          className={styles2.imageWrapper}
+                          href={image.thumbnail}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Image
+                            src={image.thumbnail}
+                            alt={
+                              image.title +
+                              project.title +
+                              " - Projects - Anjit Pariyar - React Developer"
+                            }
+                            layout="fill"
+                            objectFit="cover"
+                          />
+                        </a>
+                        <h2>{image.title}</h2>
+                      </div>
+                    ))}
+                  </div>
+
+                  <h2 className={styles.titleSm} style={{ marginBottom: "0" }}>
+                    Frontend Tech Stack:
+                  </h2>
+                  <h2 className={styles.titleSm} style={{ marginTop: "0.5em" }}>
+                    {project.languages}
+                  </h2>
+
+                  <Link href="/projects">
+                    <a className={styles.btn}>Back to project</a>
+                  </Link>
+                </div>
+              </>
+            ) : null}
           </div>
-        </div>
-      </main>
+        </main>
+      </>
     </>
   );
 };
 
 export default Post;
+
+export async function getServerSideProps({ params }) {
+  const { pid } = params;
+  let data = null;
+  let error = null;
+  try {
+    const response = await supabase
+      .from("projects")
+      .select("*")
+      .eq("slug", pid)
+      .single();
+
+    if (response.error) throw response.error;
+    data = response.data;
+  } catch (err) {
+    error = err.message;
+  }
+
+  return {
+    props: {
+      project: data,
+      error: error,
+      isLoading: !error && !data,
+    },
+  };
+}

@@ -63,7 +63,7 @@
 .loader {
   mix-blend-mode: luminosity;
   background-color: var(--dark);
-  background-image: conic-gradient(#f28241, var(--grey));
+  background-image: conic-gradient(#fff, var(--grey));
   animation: timer 3s linear 0.3s infinite forwards;
   height: 600px;
   width: 800px;

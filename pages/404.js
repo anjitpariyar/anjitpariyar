@@ -47,12 +47,6 @@ export default function Custom404() {
           </div>
         </div>
       </main>
-      <style global jsx>{`
-        body {
-          background-color: var(--dark);
-          color: var(--white);
-        }
-      `}</style>
     </>
   );
 }

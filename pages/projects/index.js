@@ -7,35 +7,34 @@ import alchemy from "/public/banner/alchemy.gif";
 import Banner from "../../components/Banner";
 import styles from "./Project.module.scss";
 import Screen from "./Screen";
-import Program from "../home/Program";
+import BottomScreen from "./BottomScreen";
+
+const chat = {
+  link: "https://chat-25704.web.app/",
+  image: ChatImage,
+  title:
+    "chat anonymously, <br/>  None will know who you are but  don't kill anyone.",
+  white: true,
+  description: "Chat Now",
+  bgColor: "var(--primary--color)",
+  bgImage: alchemy,
+};
 
 export default function Project({ description, url }) {
-  const chat = {
-    link: "https://chat-25704.web.app/",
-    image: ChatImage,
-    title:
-      "chat anonymously, <br/>  None will know who you are but  don't kill anyone.",
-    white: true,
-    description: "Chat Now",
-    bgColor: "var(--primary--color)",
-    bgImage: alchemy,
-  };
   return (
     <>
       <Head>
         <title>Projects - Anjit Pariyar - React Developer</title>
-        <meta name="theme-color" content="#f2913d" />
-        <meta name="msapplication-TileColor" content="#f2913d" />
       </Head>
 
       <Header description={description} url={url} />
       <Screen />
       <main>
         <ProjectList />
+        <BottomScreen />
         <div className={styles.chat}>
           <Banner {...chat} />
         </div>
-        <Program />
       </main>
       <Footer />
     </>
