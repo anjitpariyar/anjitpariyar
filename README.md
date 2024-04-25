@@ -8,7 +8,7 @@ React developer from Nepal 🇳🇵.
 
 - 💼 React Developer at [Lukuku](https://www.lukuku.co/).
 
-- ⚒️ Experience of 3 years.
+- ⚒️ Experience of 4 years.
 
 - ❤️ I am enjoying creating webs. may be you will enjoy surfing it.
 
