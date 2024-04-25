@@ -24,6 +24,11 @@
           font-size: 1.2em;
         }
       }
+      &.active {
+        a {
+          font-weight: 700;
+        }
+      }
     }
   }
   .brand {

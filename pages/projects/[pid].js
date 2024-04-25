@@ -206,11 +206,28 @@ export async function getServerSideProps({ params }) {
     error = err.message;
   }
 
+  // Set metadata
+  const meta = {
+    title: data
+      ? `${data.title} by - Projects - Anjit Pariyar - React Developer`
+      : "- Projects - Anjit Pariyar - React Developer", // Example: set the page title
+    description: data
+      ? `${data.description.slice(
+          0,
+          30
+        )}... by - Projects - Anjit Pariyar - React Developer`
+      : "Projects Details - Anjit Pariyar - React Developer",
+    image: data
+      ? data.thumbnail
+      : "https://res.cloudinary.com/dem2xvk2e/image/upload/v1632627087/img1_m5v3bc.jpg",
+  };
+
   return {
     props: {
       project: data,
       error: error,
       isLoading: !error && !data,
     },
+    meta: meta,
   };
 }

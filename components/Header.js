@@ -6,6 +6,7 @@ import Navigation from "./Navigation";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const Header = (data) => {
   const { description, keywords, url } = data;
@@ -15,6 +16,8 @@ const Header = (data) => {
     e.preventDefault();
     setShow(state);
   };
+
+  const router = useRouter();
 
   return (
     <>
@@ -170,17 +173,32 @@ const Header = (data) => {
                 </a>
               </Link>
             </li>
-            <li className={styles.navLink}>
+            <li
+              className={
+                styles.navLink +
+                ` ${router.pathname.includes("/about") ? styles.active : ""}`
+              }
+            >
               <Link href="/about">
                 <a>About</a>
               </Link>
             </li>
-            <li className={styles.navLink}>
+            <li
+              className={
+                styles.navLink +
+                ` ${router.pathname.includes("/projects") ? styles.active : ""}`
+              }
+            >
               <Link href="/projects">
                 <a>Projects</a>
               </Link>
             </li>
-            <li className={styles.navLink}>
+            <li
+              className={
+                styles.navLink +
+                ` ${router.pathname.includes("/contact") ? styles.active : ""}`
+              }
+            >
               <Link href="/contact">
                 <a>Contact</a>
               </Link>
