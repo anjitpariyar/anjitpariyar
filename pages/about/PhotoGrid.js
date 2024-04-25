@@ -1,6 +1,6 @@
 import styles from "./About.module.scss";
 import Image from "next/image";
-import image1 from "/public/about/img1.jpg";
+
 const PhotoGrid = () => {
   return (
     <section className={styles.photoGrid}>
@@ -12,7 +12,13 @@ const PhotoGrid = () => {
             </p>
           </article>
           <article className={styles.image}>
-            <Image src={image1} alt="Image of anjit pariyar" />
+            <Image
+              src={"/about/img1.jpg"}
+              alt="Image of anjit pariyar"
+              fill="responsive"
+              height={462}
+              width={346}
+            />
           </article>
         </div>
         <div className={styles.commonPadding + " " + styles.wrapper}>
