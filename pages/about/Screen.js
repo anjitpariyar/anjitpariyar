@@ -48,19 +48,20 @@ const Screen = () => {
         </h1>
         <div className={styles.textWrapper}>
           <h2 className={styles.titleMd}>
-            Thrives on solving problems and creating websites that users love.
+            From the start I have thrives on solving problems and creating
+            websites that users love.
             <br />
             <br />
-            Has a knack for adding animations to websites, making them more
-            engaging and interactive.
+            I develop the knack for adding animations to websites, making them
+            more engaging and interactive.
             <br />
             <br />
-            Proficient in React.js, adept at handling performance optimization,
-            ensuring responsiveness, and seamlessly integrating APIs to enhance
-            user experiences.
+            All these years makes me, proficient in React.js, adept at handling
+            performance optimization, ensuring responsiveness, and seamlessly
+            integrating APIs to enhance user experiences.
             <br />
-            <br /> Dedicated to crafting user-friendly interfaces and leveraging
-            technology to bring ideas to life on the web.
+            <br />I am dedicated to crafting user-friendly interfaces and
+            leveraging technology to bring ideas to life on the web.
           </h2>
         </div>
       </div>
