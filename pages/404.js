@@ -28,10 +28,14 @@ export default function Custom404() {
           <div className={styles.textWrapper + " " + styles.textCenter}>
             <div className={styles.imageWrapper}>
               <Image
-                src={"https://i.imgur.com/QIxIKBH.png"}
+                src={
+                  "https://lvvfmdfnsjekhhjkqeei.supabase.co/storage/v1/object/public/anjitpariyar/QIxIKBH.png"
+                }
                 alt="404"
-                layout="fill"
+                layout="responsive"
                 objectFit="contain"
+                width={400}
+                height={400}
               />
             </div>
             <h2 className={styles.titleSm}>

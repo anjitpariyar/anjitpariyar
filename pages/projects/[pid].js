@@ -127,7 +127,9 @@ const Post = ({ project, error, isLoading }) => {
                           project.title +
                           " - Projects - Anjit Pariyar - React Developer"
                         }
-                        layout="fill"
+                        layout="responsive"
+                        height={460}
+                        width={800}
                         objectFit="contain"
                       />
                     )}
@@ -154,8 +156,10 @@ const Post = ({ project, error, isLoading }) => {
                               project.title +
                               " - Projects - Anjit Pariyar - React Developer"
                             }
-                            layout="fill"
-                            objectFit="cover"
+                            layout="responsive"
+                            objectFit="contain"
+                            height={550}
+                            width={390}
                           />
                         </a>
                         <h2>{image.title}</h2>

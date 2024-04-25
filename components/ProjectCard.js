@@ -62,6 +62,7 @@ const ProjectCard = ({
                 layout="responsive"
                 width={564}
                 height={326}
+                objectFit="contain"
               />
             )}
 

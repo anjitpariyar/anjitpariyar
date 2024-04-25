@@ -32,12 +32,6 @@ const Refer = () => {
             </div>
           </li>
           <li className={styles.titleSm}>
-            <a href="tel:+977 9825131071" className={styles.container}>
-              <span>Ph no</span>
-              <span>+977 98-251-31-071</span>
-            </a>
-          </li>
-          <li className={styles.titleSm}>
             <a
               className={styles.container}
               href="mailto:anjitpariyar@gmail.com"
