@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 import { supabase } from "utils/supabaseClient";
 import * as DOMPurify from "dompurify";
 
-const Post = ({ project, error, isLoading }) => {
+const Post = ({ project, error, isLoading, meta }) => {
   const router = useRouter();
   const { pid } = router.query;
 
@@ -42,14 +42,12 @@ const Post = ({ project, error, isLoading }) => {
     }
   }, [isCopied]);
 
-  console.log("project_" + pid);
-
   return (
     <>
       <Head>
-        <title>
-          {project?.title ?? "NA"} - Projects - Anjit Pariyar - React Developer
-        </title>
+        <title>{meta.title}</title>
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:image" content={meta.image} />
       </Head>
 
       <>
@@ -225,9 +223,9 @@ export async function getServerSideProps({ params }) {
   return {
     props: {
       project: data,
+      meta: meta,
       error: error,
       isLoading: !error && !data,
     },
-    meta: meta,
   };
 }
