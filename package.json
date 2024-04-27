@@ -9,6 +9,7 @@
     "dev": "next dev",
     "build": "next build ",
     "start": "next start",
+    "postbuild": "next-sitemap",
     "create-prettierrc": "echo {\"trailingComma\": \"es5\",\"bracketSpacing\": true,\"printWidth\": 80,\"tabWidth\": 2,\"singleQuote\": false,\"arrowParens\": \"always\"} > .prettierrc",
     "export": "next build && next export",
     "lint": "next lint"
@@ -20,6 +21,7 @@
     "framer-motion": "^4.1.17",
     "gsap": "^3.12.5",
     "next": "^12.0.7",
+    "next-sitemap": "^4.2.3",
     "react": "18.2.0",
     "react-dom": "^17.0.0",
     "react-firebase-hooks": "^3.0.5",
