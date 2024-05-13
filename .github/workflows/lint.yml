@@ -30,7 +30,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "18"
-        run: pnpm install
+      - run: pnpm install
       - name: ESLint
         run: pnpm run lint
 
