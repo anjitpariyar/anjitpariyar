@@ -7,9 +7,13 @@ const useSupabaseData = (tableName) => {
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = async (query = "*") => {
       try {
-        const { data, error } = await supabase.from(tableName).select("*");
+        const { data, error } = await supabase
+          .from(tableName)
+          .select(query)
+          .eq("is_active", true)
+          .order("created_at", { ascending: true });
         if (error) throw error;
         setData(data);
         setIsLoading(false);
