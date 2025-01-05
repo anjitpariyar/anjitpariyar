@@ -30,15 +30,26 @@ const PhotoGrid = () => {
             </h2>
             <h2 className={styles.titleMd}>
               At{" "}
+              <a
+                href="https://www.cubit.com.np/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Cubit
+              </a>{" "}
+              Since April 2024 as a React Dev.
+            </h2>
+            <h2 className={styles.titleMd}>
+              At{" "}
               <a href="https://www.lukuku.co/" target="_blank" rel="noreferrer">
                 LUKUKU
               </a>{" "}
-              Since February 2022 as a React Dev.
+              Since February 2022 to March 2024 as a React Dev.
             </h2>
 
             <h2 className={styles.titleMd}>
               Worked at{" "}
-              <a href="#!" target="_blank" rel="noreferrer">
+              <a href="https://sunbi.com.np/" target="_blank" rel="noreferrer">
                 SunBi Holdings
               </a>{" "}
               From April 2020 to May 2022 as a React Dev.
