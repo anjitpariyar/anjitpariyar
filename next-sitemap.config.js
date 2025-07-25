@@ -12,8 +12,8 @@ module.exports = {
       { userAgent: "*", allow: "/" },
     ],
     additionalSitemaps: [
-      `${process.env.NEXT_PUBLIC_SITE_URL}sitemap.xml`,
-      `${process.env.NEXT_PUBLIC_SITE_URL}server-sitemap.xml`,
+      `${process.env.NEXT_PUBLIC_SITE_URL}/sitemap.xml`,
+      `${process.env.NEXT_PUBLIC_SITE_URL}/server-sitemap.xml`,
     ],
   },
   // ...other options

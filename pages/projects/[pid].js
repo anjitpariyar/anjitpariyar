@@ -9,7 +9,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { supabase } from "utils/supabaseClient";
-import * as DOMPurify from "dompurify";
+import DOMPurify from "dompurify";
 
 const Post = ({ project, error, isLoading, meta }) => {
   const router = useRouter();
@@ -133,10 +133,14 @@ const Post = ({ project, error, isLoading, meta }) => {
                     )}
                   </motion.a>
 
-                  <div
-                    className={styles.titleSm}
-                    dangerouslySetInnerHTML={sanitizedData(project.description)}
-                  />
+                  {project?.description ? (
+                    <div
+                      className={styles.titleSm}
+                      dangerouslySetInnerHTML={sanitizedData(
+                        project.description
+                      )}
+                    />
+                  ) : null}
 
                   <div className={styles2.grid}>
                     {project.images.map((image, index) => (
@@ -187,12 +191,11 @@ const Post = ({ project, error, isLoading, meta }) => {
 
 export default Post;
 
-export async function getServerSideProps({ params }) {
+export async function getServerSideProps({ params, res }) {
   const { pid } = params;
   let data = null;
   let error = null;
   try {
-    // const { data: projects } = await supabase.from("projects").select("slug");
     const response = await supabase
       .from("projects")
       .select("*")
@@ -220,20 +223,6 @@ export async function getServerSideProps({ params }) {
       ? data.thumbnail
       : "https://res.cloudinary.com/dem2xvk2e/image/upload/v1632627087/img1_m5v3bc.jpg",
   };
-
-  const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://www.anjitpariyar.com.np";
-  // const urls = projects
-  //   .map(
-  //     (project) => `
-  // <url>
-  //   <loc>${baseUrl}/projects/${project.slug}</loc>
-  //   <changefreq>daily</changefreq>
-  //   <priority>0.7</priority>
-  // </url>`
-  //   )
-  //   .join("");
-
   return {
     props: {
       project: data,

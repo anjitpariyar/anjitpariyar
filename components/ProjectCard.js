@@ -19,8 +19,6 @@ const ProjectCard = ({
     threshold: 0.6,
   });
 
-  console.log("project_" + slug);
-
   const reveal = useRef(null);
   useEffect(() => {
     if (inView && reveal?.current) {
