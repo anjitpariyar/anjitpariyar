@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import styles from "../home/Home.module.scss";
-import styles2 from "./Project.module.scss";
+import styles from "components/home/Home.module.scss";
+import styles2 from "components/projects/Project.module.scss";
 
 import Header from "../../components/Header";
 import Link from "next/link";
@@ -172,8 +172,8 @@ const Post = ({ project, error, isLoading, meta }) => {
                     {project.languages}
                   </h2>
 
-                  <Link href="/projects">
-                    <a className={styles.btn}>Back to project</a>
+                  <Link href="/projects" className={styles.btn}>
+                    Back to project
                   </Link>
                 </div>
               </>
@@ -192,6 +192,7 @@ export async function getServerSideProps({ params }) {
   let data = null;
   let error = null;
   try {
+    // const { data: projects } = await supabase.from("projects").select("slug");
     const response = await supabase
       .from("projects")
       .select("*")
@@ -219,6 +220,19 @@ export async function getServerSideProps({ params }) {
       ? data.thumbnail
       : "https://res.cloudinary.com/dem2xvk2e/image/upload/v1632627087/img1_m5v3bc.jpg",
   };
+
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://www.anjitpariyar.com.np";
+  const urls = projects
+    .map(
+      (project) => `
+  <url>
+    <loc>${baseUrl}/projects/${project.slug}</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>`
+    )
+    .join("");
 
   return {
     props: {

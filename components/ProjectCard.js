@@ -41,8 +41,8 @@ const ProjectCard = ({
       ref={ref}
       layoutId={"project_" + slug}
     >
-      <Link href={`/projects/${slug}`}>
-        <a className={styles.projectCard}>
+      <Link href={`/projects/${slug}`} className={styles.projectCard}>
+        <>
           <h2 className={styles.title}>{title}</h2>
 
           <div className={styles.imageWrapper}>
@@ -69,7 +69,7 @@ const ProjectCard = ({
             <div className={styles.reveal} ref={reveal}></div>
           </div>
           {index > 0 && <span className={styles.count}>{index}</span>}
-        </a>
+        </>
       </Link>
     </motion.article>
   );

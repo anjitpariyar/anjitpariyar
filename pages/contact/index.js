@@ -1,11 +1,7 @@
 import Header from "../../components/Header";
 import Head from "next/head";
 import Footer from "../../components/Footer";
-
-// importing parts
-import Screen from "./Screen";
-import Form from "./Form";
-import Refer from "./Refer";
+import ContactMain from "components/contact";
 
 export default function Contact() {
   return (
@@ -17,11 +13,8 @@ export default function Contact() {
       </Head>
 
       <Header />
-      <main>
-        <Screen />
-        <Form />
-        <Refer />
-      </main>
+      <ContactMain />
+
       <Footer />
     </>
   );

@@ -1,0 +1,15 @@
+# *
+User-agent: *
+Disallow: /404
+
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.anjitpariyar.com.np
+
+# Sitemaps
+Sitemap: https://www.anjitpariyar.com.np/sitemap.xml
+Sitemap: https://www.anjitpariyar.com.npsitemap.xml
+Sitemap: https://www.anjitpariyar.com.npserver-sitemap.xml

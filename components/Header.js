@@ -166,11 +166,9 @@ const Header = (data) => {
           <nav className={styles.nav + " " + styles.desktopOnly}>
             <li className={styles.navLink + " " + styles.brand}>
               <Link href="/">
-                <a>
-                  <motion.span layoutId="brandId_001">
-                    <Logo />
-                  </motion.span>
-                </a>
+                <motion.span layoutId="brandId_001">
+                  <Logo />
+                </motion.span>
               </Link>
             </li>
             <li
@@ -179,9 +177,7 @@ const Header = (data) => {
                 ` ${router.pathname.includes("/about") ? styles.active : ""}`
               }
             >
-              <Link href="/about">
-                <a>About</a>
-              </Link>
+              <Link href="/about">About</Link>
             </li>
             <li
               className={
@@ -189,9 +185,7 @@ const Header = (data) => {
                 ` ${router.pathname.includes("/projects") ? styles.active : ""}`
               }
             >
-              <Link href="/projects">
-                <a>Projects</a>
-              </Link>
+              <Link href="/projects">Projects</Link>
             </li>
             <li
               className={
@@ -199,9 +193,7 @@ const Header = (data) => {
                 ` ${router.pathname.includes("/contact") ? styles.active : ""}`
               }
             >
-              <Link href="/contact">
-                <a>Contact</a>
-              </Link>
+              <Link href="/contact">Contact</Link>
             </li>
             <li className={styles.navLink}>
               <a
@@ -216,9 +208,7 @@ const Header = (data) => {
           <nav className={styles.nav + " " + styles.mobileOnly}>
             <li className={styles.navLink + " " + styles.brand}>
               <Link href="/">
-                <a>
-                  <Logo />
-                </a>
+                <Logo />
               </Link>
             </li>
 

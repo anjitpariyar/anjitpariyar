@@ -63,19 +63,13 @@ const Navigation = ({ show, toggleNavigation }) => {
             </a>
           </li>
           <li className={styles.navLink + " " + styles2.navLink}>
-            <Link href="/about">
-              <a>About</a>
-            </Link>
+            <Link href="/about">About</Link>
           </li>
           <li className={styles.navLink + " " + styles2.navLink}>
-            <Link href="/project">
-              <a>Project</a>
-            </Link>
+            <Link href="/project">Project</Link>
           </li>
           <li className={styles.navLink + " " + styles2.navLink}>
-            <Link href="/contact">
-              <a>Contact</a>
-            </Link>
+            <Link href="/contact">Contact</Link>
           </li>
           <li className={styles.navLink + " " + styles2.navLink}>
             <a

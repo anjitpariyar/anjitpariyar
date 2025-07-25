@@ -38,8 +38,8 @@ const Footer = () => {
       <Header />
       <div className={styles.container}>
         <h1 className={styles.titleLg}>
-          <Link href="/contact">
-            <a ref={reveal}>
+          <Link href="/contact" ref={reveal}>
+            <>
               {/* collaboration  */}
               <span>a</span>
               <span>n</span>
@@ -52,7 +52,7 @@ const Footer = () => {
               <span>a</span>
               <span>s</span>
               <span>?</span>
-            </a>
+            </>
           </Link>
         </h1>
       </div>
@@ -60,9 +60,7 @@ const Footer = () => {
         <div className={styles2.container}>
           <nav className={styles2.nav}>
             <li className={styles2.navLink + " " + styles.navLink}>
-              <Link href="/refer">
-                <a>All Reference</a>
-              </Link>
+              <Link href="/refer">All Reference</Link>
             </li>
 
             <li className={styles2.navLink + " " + styles.navLink}>

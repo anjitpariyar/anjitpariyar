@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRef } from "react";
-import styles from "./home/Home.module.scss";
+import styles from "components/home/Home.module.scss";
 import Header from "../components/Header";
 import Link from "next/link";
 import Image from "next/image";
@@ -45,8 +45,8 @@ export default function Custom404() {
               never reach its rightful owner, a compassionate school teacher in
               Brooklyn.
             </h2>
-            <Link href="/">
-              <a className={styles.btn}>Back to Home page</a>
+            <Link href="/" className={styles.btn}>
+              Back to Home page
             </Link>
           </div>
         </div>

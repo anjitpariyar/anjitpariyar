@@ -1,10 +1,8 @@
 import Header from "../../components/Header";
 import Head from "next/head";
 import Footer from "../../components/Footer";
-import PhotoGrid from "./PhotoGrid";
-import PhotoCycle from "./PhotoCycle";
 
-import Screen from "./Screen";
+import ReferMain from "components/refer";
 export default function About() {
   return (
     <>
@@ -16,11 +14,7 @@ export default function About() {
       </Head>
 
       <Header />
-      <main>
-        <Screen />
-        <PhotoGrid />
-        <PhotoCycle />
-      </main>
+      <ReferMain />
       <Footer />
       {/* <style global jsx>{`
         body {

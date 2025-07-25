@@ -1,5 +1,6 @@
 module.exports = {
-  siteUrl: process.env.SITE_URL || "https://www.anjitpariyar.com.np",
+  siteUrl:
+    process.env?.NEXT_PUBLIC_SITE_URL || "https://www.anjitpariyar.com.np",
   generateRobotsTxt: true, // (optional)
   exclude: ["/404"],
   robotsTxtOptions: {

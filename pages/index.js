@@ -1,13 +1,13 @@
 import Head from "next/head";
 import { useRef } from "react";
-import styles from "./home/Home.module.scss";
+import styles from "../components/home/Home.module.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner";
-import Screen from "./home/Screen";
-import Project from "./home/Project";
-import Enjoy from "./home/Enjoy";
-import Program from "./home/Program";
+import Screen from "../components/home/Screen";
+import Project from "../components/home/Project";
+import Enjoy from "../components/home/Enjoy";
+import Program from "../components/home/Program";
 import ChatImage from "/public/banner/chat.png";
 import alchemy from "/public/banner/alchemy.gif";
 

@@ -1,10 +1,7 @@
 import Header from "../../components/Header";
 import Head from "next/head";
 import Footer from "../../components/Footer";
-
-// importing parts
-import Screen from "./Screen";
-import Reference from "./Reference";
+import ReferMain from "components/refer";
 
 export default function Refer() {
   return (
@@ -16,10 +13,7 @@ export default function Refer() {
       </Head>
 
       <Header />
-      <main>
-        <Screen />
-        <Reference />
-      </main>
+      <ReferMain />
       <Footer />
     </>
   );
