@@ -223,16 +223,16 @@ export async function getServerSideProps({ params }) {
 
   const baseUrl =
     process.env.NEXT_PUBLIC_SITE_URL || "https://www.anjitpariyar.com.np";
-  const urls = projects
-    .map(
-      (project) => `
-  <url>
-    <loc>${baseUrl}/projects/${project.slug}</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>`
-    )
-    .join("");
+  // const urls = projects
+  //   .map(
+  //     (project) => `
+  // <url>
+  //   <loc>${baseUrl}/projects/${project.slug}</loc>
+  //   <changefreq>daily</changefreq>
+  //   <priority>0.7</priority>
+  // </url>`
+  //   )
+  //   .join("");
 
   return {
     props: {
