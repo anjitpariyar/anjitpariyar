@@ -33,7 +33,7 @@ export default function Home() {
         <meta property="og:title" content="Anjit Pariyar - React Developer" />
         <meta
           property="og:description"
-          content="Anjit Pariyar is a 4 Years Experience React Developer."
+          content="Anjit Pariyar is a 5 Years Experience React Developer."
         />
         <meta
           property="og:image"

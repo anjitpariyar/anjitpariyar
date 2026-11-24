@@ -6,7 +6,7 @@ React developer from Nepal 🇳🇵.
 
 **About me**
 
-- ⚒️ Experience of 4 years.
+- ⚒️ Experience of 5 years.
 
 - ❤️ I am enjoying creating webs. may be you will enjoy surfing it.
 

@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
 import styles from "./Home.module.scss";
-import * as animationData from "../../json/computer.json";
-import * as animationData2 from "../../json/eye.json";
-import Lottie from "react-lottie";
+import animationData from "../../json/computer.json";
+import animationData2 from "../../json/eye.json";
+import { Lottie } from "lottie-react";
 import { gsap } from "gsap";
 
 const Screen = () => {
@@ -11,23 +11,7 @@ const Screen = () => {
   const lottie1 = useRef(null);
   const lottie2 = useRef(null);
 
-  //lottie default options
-  const defaultOptions = {
-    loop: false,
-    autoplay: false,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  const defaultOptions2 = {
-    loop: false,
-    autoplay: false,
-    animationData: animationData2,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  const rendererSettings = { preserveAspectRatio: "xMidYMid slice" };
 
   //playing animation on hover
   const MouseEnter = () => {
@@ -82,19 +66,13 @@ const Screen = () => {
             }}
           >
             <Lottie
-              options={defaultOptions}
-              height={200}
-              width={270}
-              ref={lottie1}
-              isClickToPauseDisabled={true}
-              eventListeners={[
-                {
-                  eventName: "complete",
-                  callback: () => {
-                    lottie1?.current?.stop();
-                  },
-                },
-              ]}
+              src={animationData}
+              loop={false}
+              autoplay={false}
+              rendererSettings={rendererSettings}
+              lottieRef={lottie1}
+              subscriptions={{ complete: () => lottie1?.current?.stop() }}
+              style={{ height: 200, width: 270, margin: "0 auto", overflow: "hidden" }}
             />
           </article>
           <article
@@ -106,19 +84,13 @@ const Screen = () => {
             }}
           >
             <Lottie
-              options={defaultOptions2}
-              height={250}
-              width={250}
-              ref={lottie2}
-              isClickToPauseDisabled={true}
-              eventListeners={[
-                {
-                  eventName: "complete",
-                  callback: () => {
-                    lottie2?.current?.stop();
-                  },
-                },
-              ]}
+              src={animationData2}
+              loop={false}
+              autoplay={false}
+              rendererSettings={rendererSettings}
+              lottieRef={lottie2}
+              subscriptions={{ complete: () => lottie2?.current?.stop() }}
+              style={{ height: 250, width: 250, margin: "0 auto", overflow: "hidden" }}
             />
           </article>
         </div>
@@ -128,7 +100,7 @@ const Screen = () => {
           <span>Pariyar</span>
 
           <br />
-          <span className={styles.thin}>(4 Yrs. Exp.)</span>
+          <span className={styles.thin}>(5 Yrs. Exp.)</span>
           <br />
           <span>React </span>
           <br />

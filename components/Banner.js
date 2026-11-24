@@ -66,8 +66,8 @@ const Banner = ({
             src={image}
             alt="Picture of the author"
             placeholder="blur"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
           />
         )}
         <div

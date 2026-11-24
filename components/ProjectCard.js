@@ -57,10 +57,9 @@ const ProjectCard = ({
               <Image
                 src={thumbnail}
                 alt={`project ${title} by anjit pariyar`}
-                layout="responsive"
                 width={564}
                 height={326}
-                objectFit="contain"
+                style={{ width: "100%", height: "auto", objectFit: "contain" }}
               />
             )}
 

@@ -21,11 +21,10 @@ const PhotoCard = ({ currentImg, title, active }) => {
         <Image
           src={currentImg}
           alt="who's photo are they? anjit pariyar"
-          layout="fill"
-          objectFit="contain"
+          fill
           priority
           placeholder="blur"
-          blurDataURL={currentImg}
+          style={{ objectFit: "contain" }}
         />
         {/* {!load && <div className={styles.loader}></div>} */}
       </motion.div>

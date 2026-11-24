@@ -15,16 +15,17 @@ const PhotoGrid = () => {
             <Image
               src={"/about/img1.jpg"}
               alt="Image of anjit pariyar"
-              fill="responsive"
               height={462}
               width={346}
+              sizes="(max-width: 768px) 100vw, 346px"
+              style={{ width: "100%", height: "auto" }}
             />
           </article>
         </div>
         <div className={styles.commonPadding + " " + styles.wrapper}>
           <div className={styles.textWrapper}>
             <h2 className={styles.titleMd}>
-              {"4 Y E A R S  O F  "}
+              {"5 Y E A R S  O F  "}
               <br />
               {"E X P E R I E N C E"}
             </h2>

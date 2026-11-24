@@ -32,10 +32,9 @@ export default function Custom404() {
                   "https://lvvfmdfnsjekhhjkqeei.supabase.co/storage/v1/object/public/anjitpariyar/QIxIKBH.png"
                 }
                 alt="404"
-                layout="responsive"
-                objectFit="contain"
                 width={400}
                 height={400}
+                style={{ width: "100%", height: "auto", objectFit: "contain" }}
               />
             </div>
             <h2 className={styles.titleSm}>

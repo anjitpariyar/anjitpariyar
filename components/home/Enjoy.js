@@ -1,19 +1,11 @@
 import styles from "./Home.module.scss";
-import * as animationData from "../../json/robot.json";
-import Lottie from "react-lottie";
+import animationData from "../../json/robot.json";
+import { Lottie } from "lottie-react";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { useInView } from "react-intersection-observer";
 
 const Enjoy = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
   const header = useRef(null);
   const header2 = useRef(null);
 
@@ -63,10 +55,11 @@ const Enjoy = () => {
           <aside className={styles.monitor} ref={ref}>
             <div className={styles.lottieWrapper}>
               <Lottie
-                options={defaultOptions}
-                height={600}
-                width={400}
-                isClickToPauseDisabled={true}
+                src={animationData}
+                loop
+                autoplay
+                rendererSettings={{ preserveAspectRatio: "xMidYMid slice" }}
+                style={{ height: 600, width: 400, margin: "0 auto", overflow: "hidden" }}
               />
             </div>
           </aside>

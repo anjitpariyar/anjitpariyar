@@ -26,7 +26,7 @@ const Header = (data) => {
           name="description"
           content={
             description ||
-            "Anjit Pariyar is a 4 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
+            "Anjit Pariyar is a 5 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
           }
         />
         <meta
@@ -117,7 +117,7 @@ const Header = (data) => {
           name="description"
           content={
             description ||
-            "Anjit Pariyar is a 4 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
+            "Anjit Pariyar is a 5 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
           }
         />
         <meta property="og:title" content={"Anjit Pariyar - React Developer"} />
@@ -125,7 +125,7 @@ const Header = (data) => {
           property="og:description"
           content={
             description ||
-            "Anjit Pariyar is a 4 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
+            "Anjit Pariyar is a 5 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
           }
         />
         <meta
@@ -152,7 +152,7 @@ const Header = (data) => {
           property="twitter:description"
           content={
             description ||
-            "Anjit Pariyar is a 4 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
+            "Anjit Pariyar is a 5 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
           }
         />
 

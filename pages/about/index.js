@@ -2,7 +2,7 @@ import Header from "../../components/Header";
 import Head from "next/head";
 import Footer from "../../components/Footer";
 
-import ReferMain from "components/refer";
+import AboutMain from "components/about";
 export default function About() {
   return (
     <>
@@ -14,7 +14,7 @@ export default function About() {
       </Head>
 
       <Header />
-      <ReferMain />
+      <AboutMain />
       <Footer />
       {/* <style global jsx>{`
         body {

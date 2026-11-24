@@ -85,9 +85,9 @@ const Post = ({ project, error, isLoading, meta }) => {
                           isCopied ? "/icons/checked.svg" : "/icons/copy.svg"
                         }
                         alt="copy"
-                        objectFit="contain"
                         height={20}
                         width={20}
+                        style={{ objectFit: "contain" }}
                       />
                     </button>
 
@@ -125,10 +125,9 @@ const Post = ({ project, error, isLoading, meta }) => {
                           project.title +
                           " - Projects - Anjit Pariyar - React Developer"
                         }
-                        layout="responsive"
                         height={460}
                         width={800}
-                        objectFit="contain"
+                        style={{ width: "100%", height: "auto", objectFit: "contain" }}
                       />
                     )}
                   </motion.a>
@@ -158,10 +157,9 @@ const Post = ({ project, error, isLoading, meta }) => {
                               project.title +
                               " - Projects - Anjit Pariyar - React Developer"
                             }
-                            layout="responsive"
-                            objectFit="contain"
                             height={550}
                             width={390}
+                            style={{ width: "100%", height: "auto", objectFit: "contain" }}
                           />
                         </a>
                         <h2>{image.title}</h2>
