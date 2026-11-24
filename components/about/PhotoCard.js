@@ -22,6 +22,7 @@ const PhotoCard = ({ currentImg, title, active }) => {
           src={currentImg}
           alt="who's photo are they? anjit pariyar"
           fill
+          sizes="(max-width: 768px) 100vw, 50vw"
           priority
           placeholder="blur"
           style={{ objectFit: "contain" }}

@@ -1,28 +1,57 @@
 import Document, { Html, Main, Head, NextScript } from "next/document";
 
 /**
- * This will help to render the styled component css in Server side
+ * Site-wide tags only. Per-page title, description, canonical and social
+ * tags are rendered by components/Seo.js.
  */
+
+const SITE_URL = "https://www.anjitpariyar.com.np";
+
+// Structured data: tells Google and AI assistants who this site is about.
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#person`,
+      name: "Anjit Pariyar",
+      url: SITE_URL,
+      image:
+        "https://res.cloudinary.com/dem2xvk2e/image/upload/v1632627087/img1_m5v3bc.jpg",
+      jobTitle: "React Developer",
+      description:
+        "React developer from Nepal with 5 years of experience building web apps with React and Next.js. He has built 20+ projects.",
+      address: { "@type": "PostalAddress", addressCountry: "NP" },
+      knowsAbout: [
+        "React",
+        "Next.js",
+        "JavaScript",
+        "Frontend development",
+        "Web design",
+      ],
+      sameAs: [
+        "https://github.com/anjitpariyar",
+        "https://www.linkedin.com/in/anjit-pariyar-b46131178/",
+        "https://dribbble.com/limbo_anj",
+        "https://www.instagram.com/limbo_anj/",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: "Anjit Pariyar - React Developer",
+      inLanguage: "en",
+      publisher: { "@id": `${SITE_URL}/#person` },
+    },
+  ],
+};
 
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
-          <meta
-            name="description"
-            content={
-              "Anjit Pariyar is a 5 Years Experienced React Developer. He Thrives on solving problems and creating websites that users love. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
-            }
-          />
-          <meta
-            name="keywords"
-            content="anjit, anjit pariyar, React Developer, React Developer nepal, web designer, react developer, react developer nepal, it nepal, nepal, anjit pariyar IT, frontend freelance, frontend freelance nepal,nepal github, anjitpariyar"
-          />
-          <meta name="author" content="Anjit pariyar" />
-          <meta name="copyright" content="Anjit pariyar" />
-          <meta name="robots" content="follow" />
-          <meta httpEquiv="cache-control" content="no-cache" />
           <link
             rel="apple-touch-icon"
             sizes="57x57"
@@ -94,59 +123,19 @@ export default class MyDocument extends Document {
           />
           <link rel="manifest" href="/manifest.json" />
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-          <meta name="theme-color" content="#f2ede4" />
-          <meta name="msapplication-TileColor" content="#f2ede4" />
-          <meta
-            name="description"
-            content={
-              "Anjit Pariyar is a 5 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
-            }
-          />
-          <meta property="og:title" content="Anjit Pariyar - React Developer" />
-          <meta
-            property="og:description"
-            content={
-              "Anjit Pariyar is a 5 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
-            }
-          />
-          <meta
-            property="og:image"
-            content="https://res.cloudinary.com/dem2xvk2e/image/upload/v1632627087/img1_m5v3bc.jpg"
-          />
-          <meta property="og:type" content="website" />
-          <meta
-            property="og:url"
-            content="https://www.anjitpariyar.com.np/"
-          ></meta>
-          <meta
-            property="og:site_name"
-            content="Anjit Pariyar - React Developer"
-          />
-          <meta property="twitter:card" content="summary" />
-          <meta
-            property="twitter:title"
-            content="Anjit Pariyar - React Developer"
-          />
-          <meta
-            property="twitter:description"
-            content={
-              "Anjit Pariyar is a 5 Years Experienced React Developer. He had done more than 20+ projects. He is a professional developer from Nepal who loves to play around with web apps."
-            }
-          />
           {/* google console */}
           <meta
             name="google-site-verification"
             content="g7ZyMI0si6r_e5yfChQy8lJ_h4PvMtwt3OV-zhMuqzQ"
           />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          />
         </Head>
         <body>
           <Main />
-          <NextScript>
-            <script
-              async
-              src="https://www.googletagmanager.com/gtag/js?id=G-KHM5XYZNKX"
-            ></script>
-          </NextScript>
+          <NextScript />
         </body>
       </Html>
     );

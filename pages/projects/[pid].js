@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import Head from "next/head";
+import Seo from "components/Seo";
 import { useEffect, useState } from "react";
 import styles from "components/home/Home.module.scss";
 import styles2 from "components/projects/Project.module.scss";
@@ -28,8 +28,20 @@ const Post = ({ project, error, isLoading, meta }) => {
     }
   };
 
+  // DOMPurify needs a browser DOM. On the server, escape the text instead so
+  // crawlers still get the description without any unsanitized HTML.
+  const escapeHtml = (text) =>
+    text
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
   const sanitizedData = (rawText) => ({
-    __html: DOMPurify.sanitize(rawText).replaceAll("\n", "<br/>"),
+    __html: (typeof window === "undefined"
+      ? escapeHtml(rawText)
+      : DOMPurify.sanitize(rawText)
+    ).replaceAll("\n", "<br/>"),
   });
 
   useEffect(() => {
@@ -44,11 +56,12 @@ const Post = ({ project, error, isLoading, meta }) => {
 
   return (
     <>
-      <Head>
-        <title>{meta.title}</title>
-        <meta property="og:description" content={meta.description} />
-        <meta property="og:image" content={meta.image} />
-      </Head>
+      <Seo
+        title={meta.title}
+        description={meta.description}
+        image={meta.image}
+        noindex={!project}
+      />
 
       <>
         <Header />
@@ -135,6 +148,7 @@ const Post = ({ project, error, isLoading, meta }) => {
                   {project?.description ? (
                     <div
                       className={styles.titleSm}
+                      suppressHydrationWarning
                       dangerouslySetInnerHTML={sanitizedData(
                         project.description
                       )}
@@ -207,19 +221,24 @@ export async function getServerSideProps({ params, res }) {
   }
 
   // Set metadata
+  const plainDescription = data?.description
+    ? data.description
+        .replace(/<[^>]*>/g, " ")
+        .replace(/\s+/g, " ")
+        .trim()
+    : "";
   const meta = {
     title: data
-      ? `${data.title} by - Projects - Anjit Pariyar - React Developer`
-      : "- Projects - Anjit Pariyar - React Developer", // Example: set the page title
-    description: data
-      ? `${data.description.slice(
-          0,
-          30
-        )}... by - Projects - Anjit Pariyar - React Developer`
-      : "Projects Details - Anjit Pariyar - React Developer",
-    image: data
-      ? data.thumbnail
-      : "https://res.cloudinary.com/dem2xvk2e/image/upload/v1632627087/img1_m5v3bc.jpg",
+      ? `${data.title} - Projects - Anjit Pariyar - React Developer`
+      : "Project Not Found - Anjit Pariyar - React Developer",
+    description: plainDescription
+      ? plainDescription.length > 155
+        ? `${plainDescription.slice(0, 152).trimEnd()}...`
+        : plainDescription
+      : "Project details - Anjit Pariyar - React Developer",
+    image:
+      data?.thumbnail ||
+      "https://res.cloudinary.com/dem2xvk2e/image/upload/v1632627087/img1_m5v3bc.jpg",
   };
   return {
     props: {

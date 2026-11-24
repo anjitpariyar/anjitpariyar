@@ -1,16 +1,16 @@
 import Header from "../../components/Header";
-import Head from "next/head";
+import Seo from "components/Seo";
 import Footer from "../../components/Footer";
 import ProjectMain from "components/projects";
 
-export default function Project({ description, url }) {
+export default function Project({ description }) {
   return (
     <>
-      <Head>
-        <title>Projects - Anjit Pariyar - React Developer</title>
-      </Head>
-
-      <Header description={description} url={url} />
+      <Seo
+        title="Projects - Anjit Pariyar - React Developer"
+        description={description}
+      />
+      <Header />
       <ProjectMain />
       <Footer />
     </>
@@ -22,8 +22,7 @@ export async function getStaticProps() {
 
   const data = {
     description:
-      "Anjit pariyar has worked on 20+ projects in these three years. Most of them are built using React JS . some of them are hamrobazar, gyre,  digital ghumti and mentee. And more adding on the list...",
-    url: "https://www.anjitpariyar.com.np/project",
+      "Anjit Pariyar has built 20+ projects over 5 years, mostly with React and Next.js, including Hamrobazaar, Gyre, Digital Ghumti and Mentee.",
   };
 
   // Pass data to the page via props

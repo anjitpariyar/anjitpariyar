@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Seo from "../components/Seo";
 import { useRef } from "react";
 import styles from "../components/home/Home.module.scss";
 import Header from "../components/Header";
@@ -26,22 +26,7 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Anjit Pariyar - React Developer</title>
-        <meta name="theme-color" content="#f2ede4" />
-        <meta name="msapplication-TileColor" content="#f2ede4" />
-        <meta property="og:title" content="Anjit Pariyar - React Developer" />
-        <meta
-          property="og:description"
-          content="Anjit Pariyar is a 5 Years Experience React Developer."
-        />
-        <meta
-          property="og:image"
-          content="https://res.cloudinary.com/dem2xvk2e/image/upload/v1632627087/img1_m5v3bc.jpg"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://anjitpariyar.com.np/"></meta>
-      </Head>
+      <Seo />
       <Header />
       <main className={styles.main} ref={containerRef}>
         <Screen />

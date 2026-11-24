@@ -1,17 +1,12 @@
 import Header from "../../components/Header";
-import Head from "next/head";
+import Seo from "components/Seo";
 import Footer from "../../components/Footer";
 
 import AboutMain from "components/about";
 export default function About() {
   return (
     <>
-      <Head>
-        <title>About - Anjit Pariyar - React Developer</title>
-
-        <meta name="theme-color" content="#f28241" />
-        <meta name="msapplication-TileColor" content="#f28241" />
-      </Head>
+      <Seo title="About - Anjit Pariyar - React Developer" themeColor="#f28241" />
 
       <Header />
       <AboutMain />

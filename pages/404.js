@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Seo from "components/Seo";
 import { useRef } from "react";
 import styles from "components/home/Home.module.scss";
 import Header from "../components/Header";
@@ -9,11 +9,11 @@ export default function Custom404() {
   const containerRef = useRef(null);
   return (
     <>
-      <Head>
-        <title>404 - page Not Found - Anjit Pariyar - React Developer</title>
-        <meta name="theme-color" content="#232323" />
-        <meta name="msapplication-TileColor" content="#232323" />
-      </Head>
+      <Seo
+        title="404 - Page Not Found - Anjit Pariyar - React Developer"
+        themeColor="#232323"
+        noindex
+      />
       <Header />
       <main className={styles.pageNotFound} ref={containerRef}>
         <div

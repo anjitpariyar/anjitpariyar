@@ -1,0 +1,27 @@
+# Anjit Pariyar
+
+> Anjit Pariyar is a React developer from Nepal with 5 years of experience. He builds web apps with React and Next.js, has delivered 20+ projects, and focuses on interactive, animated frontends that users enjoy.
+
+## About
+
+- [About](https://www.anjitpariyar.com.np/about): Background and experience
+- [Contact](https://www.anjitpariyar.com.np/contact): Get in touch for work or collaboration
+- [References](https://www.anjitpariyar.com.np/refer): What people he has worked with say
+
+## Projects
+
+- [All projects](https://www.anjitpariyar.com.np/projects): Overview of his work
+- [Hamrobazaar](https://www.anjitpariyar.com.np/projects/hamrobazaar)
+- [Digital Ghumti](https://www.anjitpariyar.com.np/projects/digitalghumti)
+- [Mentee](https://www.anjitpariyar.com.np/projects/mentee)
+- [Signite](https://www.anjitpariyar.com.np/projects/signite)
+- [Healing Trauma](https://www.anjitpariyar.com.np/projects/healing_trauma)
+- [Hamro Mortgage](https://www.anjitpariyar.com.np/projects/hamro_mortage)
+- [Life of CBRN](https://www.anjitpariyar.com.np/projects/life_of_cbrn)
+- [Prisma](https://www.anjitpariyar.com.np/projects/prisma)
+
+## Elsewhere
+
+- [GitHub](https://github.com/anjitpariyar)
+- [LinkedIn](https://www.linkedin.com/in/anjit-pariyar-b46131178/)
+- [Dribbble](https://dribbble.com/limbo_anj)
