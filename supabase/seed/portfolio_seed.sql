@@ -6,7 +6,7 @@
 -- public/llms.txt, the About page). Nothing here is new information.
 --
 -- Deliberately left empty because the site doesn't state them:
---   email, cv_url, availability_status, employment history
+--   cv_url, availability_status, employment history
 --   (portfolio_experiences), proficiency levels.
 -- Fill those in the Supabase Table Editor when you're ready.
 --
@@ -17,7 +17,7 @@
 -- Profile ---------------------------------------------------------------------
 insert into public.portfolio_profile (
   full_name, professional_title, short_bio, detailed_bio, location,
-  website, github_url, linkedin_url, other_links, years_experience,
+  email, website, github_url, linkedin_url, other_links, years_experience,
   additional_information, is_published
 )
 select
@@ -26,6 +26,7 @@ select
   'Anjit Pariyar is a React developer from Nepal with 5 years of experience. He has built 20+ web apps and loves solving problems and creating websites that users love.',
   E'From the start Anjit has thrived on solving problems and creating websites that users love.\n\nHe developed a knack for adding animations to websites, making them more engaging and interactive.\n\nOver the years he has become proficient in React.js, adept at handling performance optimization, ensuring responsiveness, and seamlessly integrating APIs to enhance user experiences.\n\nHe is dedicated to crafting user-friendly interfaces and leveraging technology to bring ideas to life on the web.',
   'Nepal',
+  'anjitcoder@gmail.com',
   'https://www.anjitpariyar.com.np',
   'https://github.com/anjitpariyar',
   'https://www.linkedin.com/in/anjit-pariyar-b46131178/',
@@ -35,6 +36,17 @@ select
   'He builds web apps with React and Next.js, has delivered 20+ projects, and focuses on interactive, animated frontends that users enjoy.',
   true
 where not exists (select 1 from public.portfolio_profile);
+
+-- Sets the email on a profile row that already exists (the insert above skips then).
+-- Leaves an email you've already filled in untouched.
+update public.portfolio_profile
+set email = 'anjitcoder@gmail.com'
+where email is null or btrim(email) = '';
+
+-- Same for years of experience, so the chatbot can state it.
+update public.portfolio_profile
+set years_experience = 5
+where years_experience is null;
 
 -- Skills ----------------------------------------------------------------------
 -- No proficiency_label / years_experience: the site doesn't state them per skill.

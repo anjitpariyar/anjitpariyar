@@ -49,16 +49,18 @@ export default function ChatInput({ onSend, disabled, maxLength, autoFocus }: Pr
         rows={1}
         value={value}
         maxLength={maxLength}
-        placeholder="Ask about projects, skills, experience…"
+        placeholder="Ask anything about Anjit…"
         onChange={(e) => setValue(e.target.value)}
         onKeyDown={onKeyDown}
         aria-describedby="chat-input-hint"
       />
-      <button type="submit" disabled={empty || disabled} className={styles.sendButton}>
-        Send
+      <button type="submit" disabled={empty || disabled} className={styles.sendButton} aria-label="Send message">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
       </button>
       <p id="chat-input-hint" className={styles.inputHint}>
-        Enter to send · Shift + Enter for a new line
+        Answers come from Anjit&apos;s portfolio. Enter to send, Shift + Enter for a new line.
       </p>
     </form>
   );

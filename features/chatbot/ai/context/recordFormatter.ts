@@ -28,7 +28,7 @@ export function profileRecord(p: Profile) {
       website: p.website ?? "not listed",
       cv: p.cvUrl ?? "not listed",
       otherLinks: p.otherLinks.length ? p.otherLinks : undefined,
-      contactForm: "/contact",
+      sendMessage: "you can collect and send the visitor's message in this chat",
     },
   };
 }

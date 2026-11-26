@@ -72,7 +72,7 @@ const Navigation = ({ show, toggleNavigation }) => {
             <Link href="/contact">Contact</Link>
           </li>
           <li className={styles.navLink + " " + styles2.navLink}>
-            <Link href="/chat">Chat</Link>
+            <Link href="/chat">Ask AI</Link>
           </li>
           <li className={styles.navLink + " " + styles2.navLink}>
             <a

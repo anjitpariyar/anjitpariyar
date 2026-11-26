@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { ChatBlock, ContactHighlight } from "../../engine/types";
 import { useChatContext } from "../ChatContext";
 import styles from "../Chat.module.scss";
@@ -21,6 +20,9 @@ export default function ContactCard({ block }: { block: Extract<ChatBlock, { typ
     rows.push({ key: `other-${l.label}`, label: l.label, value: pretty(l.url), href: l.url, external: true });
   }
 
+  // No profile or contact details loaded: render nothing rather than an empty card.
+  if (!rows.length) return null;
+
   const highlight: ContactHighlight | null = block.highlight;
   return (
     <section className={styles.contactCard} aria-label="Contact details">
@@ -41,12 +43,6 @@ export default function ContactCard({ block }: { block: Extract<ChatBlock, { typ
             </dd>
           </div>
         ))}
-        <div>
-          <dt>Message</dt>
-          <dd>
-            <Link href="/contact">Use the contact form</Link>
-          </dd>
-        </div>
       </dl>
     </section>
   );

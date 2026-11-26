@@ -14,7 +14,7 @@ const MAX_STORED_MESSAGES = 60;
 const MAX_INPUT = 500;
 const REQUEST_TIMEOUT_MS = 35_000;
 
-type Stored = { messages: ChatMessage[]; context: ChatContextState };
+type Stored = { messages: ChatMessage[]; context: ChatContextState; sessionId?: string };
 
 type ApiSuccess = {
   reply: {
@@ -50,7 +50,8 @@ function load(): Stored | null {
     const messages = Array.isArray(parsed.messages) ? parsed.messages.filter(isMessage) : [];
     // Context is re-validated by the server on every request.
     const context = parsed.context && typeof parsed.context === "object" ? parsed.context : createChatContext();
-    return { messages, context: context as ChatContextState };
+    const sessionId = typeof parsed.sessionId === "string" ? parsed.sessionId : undefined;
+    return { messages, context: context as ChatContextState, sessionId };
   } catch {
     return null;
   }
@@ -82,12 +83,14 @@ async function errorText(res: Response): Promise<string> {
 /**
  * Conversation state for the portfolio assistant. Each message goes to
  * POST /api/chat (Gemini + portfolio data, with a rule-based fallback on the
- * server). History and context live only in this browser's localStorage.
+ * server). History and context live in this browser's localStorage; the
+ * server also logs each message under a random per-conversation sessionId.
  */
 export function useChat(knowledgeBase: KnowledgeBase) {
   const index = useMemo(() => buildEngineIndex(knowledgeBase), [knowledgeBase]);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [context, setContext] = useState<ChatContextState>(createChatContext);
+  const [sessionId, setSessionId] = useState<string>(newId);
   const [isTyping, setIsTyping] = useState(false);
   const [hydrated, setHydrated] = useState(false);
 
@@ -96,6 +99,8 @@ export function useChat(knowledgeBase: KnowledgeBase) {
   messagesRef.current = messages;
   const contextRef = useRef(context);
   contextRef.current = context;
+  const sessionRef = useRef(sessionId);
+  sessionRef.current = sessionId;
   const inFlight = useRef<AbortController | null>(null);
 
   useEffect(() => {
@@ -103,14 +108,15 @@ export function useChat(knowledgeBase: KnowledgeBase) {
     if (stored) {
       setMessages(stored.messages);
       setContext(stored.context);
+      if (stored.sessionId) setSessionId(stored.sessionId);
     }
     setHydrated(true);
     return () => inFlight.current?.abort();
   }, []);
 
   useEffect(() => {
-    if (hydrated) save({ messages, context });
-  }, [messages, context, hydrated]);
+    if (hydrated) save({ messages, context, sessionId });
+  }, [messages, context, sessionId, hydrated]);
 
   const send = useCallback(
     async (raw: string) => {
@@ -136,8 +142,13 @@ export function useChat(knowledgeBase: KnowledgeBase) {
       try {
         const res = await fetch("/api/chat", {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message: text, history: history.slice(-16), context: contextRef.current }),
+          headers: { "Content-Type": "application/json", "X-Chat-Client": "web" },
+          body: JSON.stringify({
+            message: text,
+            sessionId: sessionRef.current,
+            history: history.slice(-16),
+            context: contextRef.current,
+          }),
           signal: controller.signal,
         });
         if (!res.ok) throw new Error(await errorText(res));
@@ -193,12 +204,22 @@ export function useChat(knowledgeBase: KnowledgeBase) {
     [send]
   );
 
+  /**
+   * Soft clear: wipes the conversation from this browser (state and
+   * localStorage) and starts a new sessionId. Server-side chat logs are kept.
+   */
   const clear = useCallback(() => {
     inFlight.current?.abort();
     inFlight.current = null;
+    try {
+      window.localStorage.removeItem(STORAGE_KEY);
+    } catch {
+      // Storage unavailable: clearing the state below is enough.
+    }
     setIsTyping(false);
     setMessages([]);
     setContext(createChatContext());
+    setSessionId(newId()); // a cleared chat starts a new conversation in the logs
   }, []);
 
   return { index, messages, isTyping, hydrated, send, retry, clear, maxLength: MAX_INPUT };

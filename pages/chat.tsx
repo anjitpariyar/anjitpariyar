@@ -14,13 +14,10 @@ const REVALIDATE_ON_ERROR = 30;
 export default function ChatPage({ knowledgeBase }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      {/* A conversational view of content that already lives on indexable
-          pages, so it stays out of search results but passes link equity. */}
       <Seo
-        title="Ask about Anjit's work - Portfolio assistant - Anjit Pariyar"
-        description="Chat with Anjit Pariyar's portfolio assistant to explore his projects, skills, experience and contact details."
+        title="Ask AI about Anjit Pariyar – React Developer Portfolio Assistant"
+        description="Ask an AI assistant about Anjit Pariyar, a React and Next.js developer from Nepal: his projects, skills, experience and how to get in touch."
         path="/chat"
-        noindex
       />
       <ChatApp knowledgeBase={knowledgeBase} />
     </>

@@ -52,5 +52,16 @@ export function getAiConfig() {
       perMinute: num(env.CHAT_RATE_LIMIT_PER_MINUTE, 10),
       perHour: num(env.CHAT_RATE_LIMIT_PER_HOUR, 60),
     },
+
+    botGuard: {
+      siteUrl: env.NEXT_PUBLIC_SITE_URL || "https://www.anjitpariyar.com.np",
+      /** Extra origins allowed to call /api/chat, comma-separated (e.g. a staging domain). */
+      allowedOrigins: (env.CHAT_ALLOWED_ORIGINS ?? "")
+        .split(",")
+        .map((o) => o.trim())
+        .filter(Boolean),
+      /** Gemini calls per UTC day per server instance; past it, replies use the rule-based engine. */
+      aiDailyLimit: num(env.CHAT_AI_DAILY_LIMIT, 1_000),
+    },
   };
 }

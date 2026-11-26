@@ -12,6 +12,8 @@ export type ChatContextState = {
   lastIntent: Intent | null;
   /** Projects shown or discussed in the last answer, in display order. */
   lastProjectIds: number[];
+  /** Every project shown or cited so far in this conversation (oldest first). */
+  shownProjectIds: number[];
   lastTechnology: string | null;
   /** Records cited last turn ("project:1", ...), for follow-ups like "compare it". */
   lastSourceKeys: string[];
@@ -23,9 +25,10 @@ export type HistoryItem = { role: "user" | "assistant"; text: string };
 
 export const HISTORY_MAX_TURNS = 8;
 export const HISTORY_MAX_CHARS = 700;
+const SHOWN_MAX = 30;
 
 export function createChatContext(): ChatContextState {
-  return { lastIntent: null, lastProjectIds: [], lastTechnology: null, lastSourceKeys: [], rule: createInitialContext() };
+  return { lastIntent: null, lastProjectIds: [], shownProjectIds: [], lastTechnology: null, lastSourceKeys: [], rule: createInitialContext() };
 }
 
 /** Validate untrusted context: drop unknown ids, cap lengths. */
@@ -33,6 +36,11 @@ export function sanitizeChatContext(raw: unknown, index: EngineIndex): ChatConte
   const base = createChatContext();
   if (!raw || typeof raw !== "object") return base;
   const r = raw as Record<string, unknown>;
+  const validIds = (v: unknown, max: number) =>
+    (Array.isArray(v) ? v : [])
+      .map(Number)
+      .filter((id) => Number.isInteger(id) && index.projectById.has(id))
+      .slice(-max);
   const ids = Array.isArray(r.lastProjectIds) ? r.lastProjectIds : [];
   return {
     lastIntent: typeof r.lastIntent === "string" ? (r.lastIntent as Intent) : null,
@@ -40,6 +48,7 @@ export function sanitizeChatContext(raw: unknown, index: EngineIndex): ChatConte
       .map(Number)
       .filter((id) => Number.isInteger(id) && index.projectById.has(id))
       .slice(0, 8),
+    shownProjectIds: [...new Set(validIds(r.shownProjectIds, SHOWN_MAX))],
     lastTechnology: typeof r.lastTechnology === "string" && index.tech.has(r.lastTechnology) ? r.lastTechnology : null,
     lastSourceKeys: Array.isArray(r.lastSourceKeys)
       ? r.lastSourceKeys.filter((k): k is string => typeof k === "string" && k.length < 120).slice(0, 12)
@@ -90,6 +99,7 @@ export function nextChatContext(
   return {
     lastIntent: turn.intent === "unknown" ? prev.lastIntent : turn.intent,
     lastProjectIds: projectIds,
+    shownProjectIds: [...new Set([...prev.shownProjectIds, ...turn.projectIds])].slice(-SHOWN_MAX),
     lastTechnology: turn.technology ?? prev.lastTechnology,
     lastSourceKeys: turn.sourceKeys.length ? turn.sourceKeys.slice(0, 12) : prev.lastSourceKeys,
     rule,

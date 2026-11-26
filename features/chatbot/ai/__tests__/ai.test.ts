@@ -257,7 +257,7 @@ describe("chat orchestration", () => {
       context = out.context;
       history.push({ role: "user", text: message }, { role: "assistant", text: `ok\n[Cards shown: ${out.context.lastProjectIds.join(", ")}]` });
     }
-    expect(seen[1]).toContain("Projects shown or discussed in the previous answer, in order: Hamrobazar (id 1), Digital Ghumti (id 2), Life of Canberran (id 15), PRISM NEURO (id 16)");
+    expect(seen[1]).toContain("Projects shown or discussed in the previous answer, in order: Digital Ghumti (id 2), Life of Canberran (id 15), PRISM NEURO (id 16), Hamrobazar (id 1)"); // display order: minor project last
     expect(seen[2]).toContain("in order: Digital Ghumti (id 2)");
     expect(context.lastProjectIds).toEqual([DIGITAL_GHUMTI]);
   });

@@ -59,7 +59,7 @@ const Header = () => {
                 ` ${router.pathname.includes("/chat") ? styles.active : ""}`
               }
             >
-              <Link href="/chat">Chat</Link>
+              <Link href="/chat">Ask AI</Link>
             </li>
             <li className={styles.navLink}>
               <a

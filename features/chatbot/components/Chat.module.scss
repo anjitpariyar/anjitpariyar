@@ -1,15 +1,27 @@
 @use "../../../styles/spiltter.scss" as *;
 
-// Uses the site's palette from styles/globals.css:
-// --dark, --grey, --white--grey, --white, --primary--color.
+// Dark, full-screen chat. The site header above it keeps the site's own
+// light look; everything below it uses this palette.
 
-$sidebar: 300px;
-$border: 2px solid var(--dark);
+$bg: #212121;
+$surface: #2f2f2f; // user bubble, composer
+$card: #262626;
+$card-hover: #2c2c2c;
+$border: #3a3a3a;
+$text: #ececec;
+$muted: #a3a3a3;
+$faint: #737373;
+$accent: #ececec; // send button, primary actions (white on dark, like most AI chats)
+$link: #8ab4f8;
+$danger: #f28b82;
+
+$thread: 768px;
+$radius: 14px;
 $ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 
 @mixin focus-ring {
   &:focus-visible {
-    outline: 2px solid var(--primary--color);
+    outline: 2px solid $link;
     outline-offset: 2px;
   }
 }
@@ -18,6 +30,19 @@ $ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+@mixin icon($size: 18px) {
+  svg {
+    width: $size;
+    height: $size;
+    flex: none;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
 }
 
 .srOnly {
@@ -32,13 +57,8 @@ $ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   border: 0;
 }
 
-.thin {
-  font-weight: lighter;
-  font-style: italic;
-}
-
 .meta {
-  color: var(--grey);
+  color: $muted;
   font-size: 0.8rem;
   margin: 0.25rem 0 0;
 }
@@ -48,12 +68,10 @@ $ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 // ---------------------------------------------------------------------------
 
 .app {
-  display: grid;
-  grid-template-columns: $sidebar minmax(0, 1fr);
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   height: 100dvh;
-  background: var(--white--grey);
-  color: var(--dark);
   overflow: hidden;
 
   button,
@@ -61,230 +79,182 @@ $ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   textarea {
     @include focus-ring;
   }
+}
 
-  @include lg {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: auto minmax(0, 1fr);
+// The site header, recoloured for this page only (Header.js is untouched).
+.siteHeader {
+  flex: none;
+  background: $bg;
+  color: $text;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  :global(header) a {
+    color: $text;
+    transition: color 0.15s;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  // Logo: dark diamond + light circle becomes light diamond + dark circle.
+  :global(header) a[href="/"] svg path {
+    &:first-of-type {
+      fill: $text;
+    }
+
+    &:nth-of-type(2) {
+      fill: $bg;
+      stroke: $text;
+    }
   }
 }
 
 .main {
+  flex: 1;
   display: flex;
   min-height: 0;
-  min-width: 0;
+  background: $bg;
+  color: $text;
+  color-scheme: dark;
 }
 
-.mobileBar {
-  display: none;
+.window {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
 
-  @include lg {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-    padding: 0.5rem 0.75rem;
-    border-bottom: $border;
-    background: var(--white--grey);
+.topBar {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.topTitle {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1rem;
+  color: $text;
+
+  span {
+    font-weight: 400;
+    color: $muted;
+  }
+
+  @include sm {
+    span {
+      display: none;
+    }
   }
 }
 
-.mobileTitle {
-  margin: 0;
-  font-weight: 700;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.menuButton {
-  background: none;
-  border: 0;
+.newChat {
+  @include icon(16px);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid $border;
+  border-radius: 999px;
+  background: transparent;
+  color: $text;
   font: inherit;
-  font-weight: 700;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  padding: 0.5rem;
-  min-height: 44px;
+  font-size: 0.85rem;
   cursor: pointer;
-  color: var(--dark);
+  transition: background 0.15s;
+
+  &:hover:not(:disabled) {
+    background: $surface;
+  }
 
   &:disabled {
-    opacity: 0.35;
+    opacity: 0.4;
     cursor: default;
   }
 }
 
-// ---------------------------------------------------------------------------
-// Sidebar / drawer
-// ---------------------------------------------------------------------------
-
-.sidebar {
-  border-right: $border;
+.scroller {
+  flex: 1;
   overflow-y: auto;
-  background: var(--white--grey);
+  overscroll-behavior: contain;
+  scrollbar-color: #4a4a4a transparent;
+}
 
-  @include lg {
-    position: fixed;
-    inset: 0 auto 0 0;
-    width: min(320px, 86vw);
-    z-index: 40;
-    border-right: $border;
-    transform: translateX(-100%);
-    visibility: hidden; // keeps the closed drawer out of the tab order
-    transition: transform 0.3s $ease, visibility 0s linear 0.3s;
+.thread {
+  max-width: $thread;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 2rem;
+
+  @include sm {
+    padding: 1rem 0.9rem 1.5rem;
   }
 }
 
-.sidebarOpen {
-  @include lg {
-    transform: none;
-    visibility: visible;
-    transition: transform 0.3s $ease, visibility 0s;
-  }
-}
+// ---------------------------------------------------------------------------
+// Welcome
+// ---------------------------------------------------------------------------
 
-.backdrop {
-  display: none;
-
-  @include lg {
-    display: block;
-    position: fixed;
-    inset: 0;
-    z-index: 30;
-    background: rgba(35, 35, 35, 0.4);
-  }
-}
-
-.drawerClose {
-  display: none;
-
-  @include lg {
-    display: block;
-    margin: 0.5rem 0.5rem 0 auto;
-    background: none;
-    border: 0;
-    font: inherit;
-    font-weight: 700;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    padding: 0.5rem;
-    min-height: 44px;
-    cursor: pointer;
-    color: var(--dark);
-  }
-}
-
-.sidebarInner {
+.welcome {
+  min-height: 55vh;
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
-  min-height: 100%;
-  padding: 1.5rem 1.25rem;
-}
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: rise 0.4s $ease both;
 
-.brand {
-  display: inline-block;
-  width: 3rem;
-
-  svg {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-}
-
-.profile {
-  h2 {
-    font-size: 1.5rem;
-    line-height: 1.1;
-    margin: 0;
-  }
-}
-
-.profileTitle {
-  margin: 0.3rem 0 0;
-  font-style: italic;
-  font-weight: lighter;
-  font-size: 1.05rem;
-}
-
-.availability {
-  display: inline-block;
-  margin: 0.75rem 0 0;
-  padding: 0.2rem 0.6rem;
-  border: 1.5px solid var(--dark);
-  border-radius: 999px;
-  font-size: 0.75rem;
-}
-
-.sideNav ul {
-  @include reset-list;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 1rem;
-
-  a {
-    display: inline-block;
-    padding: 0.25rem 0;
+  h1 {
+    margin: 0 0 0.6rem;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
     font-weight: 600;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.2s;
-
-    &:hover {
-      border-color: var(--dark);
-    }
+    line-height: 1.25;
+    color: $text;
   }
 }
 
-.sideHeading {
-  margin: 0 0 0.6rem;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--grey);
+.welcomeText {
+  margin: 0 0 1.75rem;
+  max-width: 34rem;
+  color: $muted;
+  line-height: 1.6;
 }
 
+// Starter questions: a grid of cards.
 .suggestionList {
   @include reset-list;
-  border-top: $border;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+  width: 100%;
+  max-width: 40rem;
+
+  @include sm {
+    grid-template-columns: minmax(0, 1fr);
+  }
 
   button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 100%;
-    padding: 0.7rem 0;
-    background: none;
-    border: 0;
-    border-bottom: 1px solid rgba(35, 35, 35, 0.25);
+    height: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid $border;
+    border-radius: $radius;
+    background: transparent;
+    color: $text;
     font: inherit;
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     text-align: left;
-    color: var(--dark);
     cursor: pointer;
-    transition: padding 0.2s $ease;
-
-    &::after {
-      content: "→";
-      opacity: 0;
-      transition: opacity 0.2s;
-    }
+    transition: background 0.15s;
 
     &:hover:not(:disabled) {
-      padding-left: 0.35rem;
-      font-style: italic;
-
-      &::after {
-        opacity: 1;
-      }
+      background: $surface;
     }
 
     &:disabled {
@@ -294,260 +264,183 @@ $ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   }
 }
 
-.sideFooter {
-  margin-top: auto;
-}
-
-.clearButton {
-  width: 100%;
-  padding: 0.6rem;
-  background: none;
-  border: $border;
-  font: inherit;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  cursor: pointer;
-  color: var(--dark);
-  transition: background 0.2s, color 0.2s;
-
-  &:hover:not(:disabled) {
-    background: var(--dark);
-    color: var(--white);
-  }
-
-  &:disabled {
-    opacity: 0.35;
-    cursor: default;
-  }
-}
-
-.disclaimer {
-  margin: 0.75rem 0 0;
-  font-size: 0.7rem;
-  line-height: 1.5;
-  color: var(--grey);
-}
-
-// ---------------------------------------------------------------------------
-// Conversation
-// ---------------------------------------------------------------------------
-
-.window {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  min-height: 0;
-  min-width: 0;
-}
-
-.scroller {
-  position: relative; // offsetParent for scroll anchoring
-  flex: 1;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-}
-
-.thread {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 2.5rem 1.5rem 1.5rem;
-
-  @include sm {
-    padding: 1.25rem 0.85rem 1rem;
-  }
-}
-
-.welcome {
-  padding: 2rem 0 1rem;
-  animation: rise 0.5s $ease both;
-
-  h1 {
-    font-size: clamp(2rem, 5vw, 3.4rem);
-    line-height: 1.05;
-    margin: 0;
-    max-width: 14em;
-  }
-}
-
-.eyebrow {
-  margin: 0 0 1rem;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--primary--color);
-}
-
-.welcomeWho {
-  margin: 1rem 0 0;
-  font-weight: 700;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.welcomeText {
-  max-width: 36em;
-  margin: 0.75rem 0 1.5rem;
-  line-height: 1.6;
-}
-
-.messages {
-  @include reset-list;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.userRow {
-  display: flex;
-  justify-content: flex-end;
-  animation: rise 0.3s $ease both;
-}
-
-.userBubble {
-  max-width: min(80%, 34em);
-  margin: 0;
-  padding: 0.65rem 1rem;
-  background: var(--dark);
-  color: var(--white);
-  border-radius: 18px 18px 4px 18px;
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
-  font-size: 0.95rem;
-  line-height: 1.45;
-}
-
-.botRow {
-  animation: rise 0.35s $ease both;
-}
-
-.botBody {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-  min-width: 0;
-}
-
-.text {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  overflow-wrap: anywhere;
-
-  p {
-    margin: 0;
-    white-space: pre-line;
-
-    & + p {
-      margin-top: 0.75em;
-    }
-  }
-}
-
-.messageFooter {
-  display: flex;
-  gap: 0.5rem;
-  min-height: 0;
-
-  &:empty {
-    display: none;
-  }
-}
-
-.copyButton,
-.inlineButton,
-.moreButton {
-  background: none;
-  border: 0;
-  padding: 0.25rem 0;
-  font: inherit;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--grey);
-  cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-
-  &:hover {
-    color: var(--dark);
-  }
-}
-
-.inlineButton {
-  margin-top: 0.5rem;
-}
-
-.moreButton {
-  margin-top: 0.75rem;
-  color: var(--dark);
-}
-
+// Follow-up questions: small pills.
 .chips {
   @include reset-list;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.45rem;
+  margin-top: 0.9rem;
 
   button {
-    padding: 0.45rem 0.9rem;
-    min-height: 40px;
-    background: transparent;
-    border: 1.5px solid var(--dark);
+    padding: 0.45rem 0.85rem;
+    border: 1px solid $border;
     border-radius: 999px;
+    background: transparent;
+    color: $text;
     font: inherit;
-    font-size: 0.82rem;
-    color: var(--dark);
+    font-size: 0.85rem;
     cursor: pointer;
-    transition: background 0.2s, color 0.2s;
+    transition: background 0.15s;
 
     &:hover:not(:disabled) {
-      background: var(--dark);
-      color: var(--white);
+      background: $surface;
     }
 
     &:disabled {
-      opacity: 0.45;
+      opacity: 0.5;
       cursor: default;
     }
   }
 }
 
+// ---------------------------------------------------------------------------
+// Messages
+// ---------------------------------------------------------------------------
+
+.messages {
+  @include reset-list;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.userRow {
+  display: flex;
+  justify-content: flex-end;
+  animation: rise 0.25s $ease both;
+}
+
+.userBubble {
+  margin: 0;
+  max-width: min(80%, 34rem);
+  padding: 0.7rem 1.1rem;
+  border-radius: 22px;
+  background: $surface;
+  color: $text;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.botRow {
+  animation: rise 0.3s $ease both;
+}
+
+.botBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  min-width: 0;
+}
+
+.text {
+  line-height: 1.75;
+  font-size: 1rem;
+  color: $text;
+
+  p {
+    margin: 0;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+
+    & + p {
+      margin-top: 0.9em;
+    }
+  }
+}
+
+.sources {
+  margin: 0;
+  font-size: 0.78rem;
+  color: $faint;
+
+  a {
+    color: $muted;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+}
+
+.messageFooter {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 1.75rem;
+}
+
+.modeNote {
+  font-size: 0.75rem;
+  color: $faint;
+  border: 1px solid $border;
+  border-radius: 999px;
+  padding: 0.1rem 0.55rem;
+}
+
+.errorRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(242, 139, 130, 0.35);
+  border-radius: $radius;
+  background: rgba(242, 139, 130, 0.08);
+  color: $danger;
+
+  p {
+    margin: 0;
+  }
+
+  button {
+    flex: none;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}
+
 .typing {
-  display: inline-flex;
-  gap: 5px;
-  margin-top: 1.25rem;
-  padding: 0.75rem 0;
+  display: flex;
+  gap: 0.3rem;
+  padding: 1.5rem 0 0.5rem;
 
   span[aria-hidden] {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: var(--dark);
-    animation: blink 1.2s infinite both;
+    background: $muted;
+    animation: blink 1.2s infinite ease-in-out both;
 
-    &:nth-child(3) {
-      animation-delay: 0.2s;
+    &:nth-of-type(2) {
+      animation-delay: 0.15s;
     }
-    &:nth-child(4) {
-      animation-delay: 0.4s;
+    &:nth-of-type(3) {
+      animation-delay: 0.3s;
     }
   }
 }
 
 // ---------------------------------------------------------------------------
-// Input
+// Composer
 // ---------------------------------------------------------------------------
 
 .inputWrap {
-  border-top: $border;
-  background: var(--white--grey);
-  padding: 0.85rem 1.5rem calc(0.85rem + env(safe-area-inset-bottom));
+  flex: none;
+  padding: 0 1.25rem calc(0.75rem + env(safe-area-inset-bottom));
+  background: $bg;
 
   @include sm {
-    padding: 0.6rem 0.6rem calc(0.6rem + env(safe-area-inset-bottom));
+    padding: 0 0.6rem calc(0.5rem + env(safe-area-inset-bottom));
   }
 }
 
@@ -556,156 +449,117 @@ $ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: end;
   gap: 0.5rem;
-  max-width: 860px;
+  max-width: $thread;
   margin: 0 auto;
+  padding: 0.5rem 0.5rem 0.5rem 1.1rem;
+  border: 1px solid $border;
+  border-radius: 28px;
+  background: $surface;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.25);
+
+  &:focus-within {
+    border-color: #555;
+  }
 
   textarea {
     width: 100%;
-    min-height: 48px;
+    min-height: 40px;
     max-height: 160px;
-    padding: 0.75rem 0.9rem;
-    border: $border;
-    background: var(--white);
+    padding: 0.55rem 0;
+    border: 0;
+    background: transparent;
     font: inherit;
     font-size: 16px; // avoids iOS zoom-on-focus
-    line-height: 1.4;
-    color: var(--dark);
+    line-height: 1.5;
+    color: $text;
     resize: none;
+    outline: none;
 
     &::placeholder {
-      color: var(--grey);
+      color: $faint;
     }
   }
 }
 
 .sendButton {
-  min-height: 48px;
-  padding: 0 1.3rem;
-  background: var(--dark);
-  color: var(--white);
-  border: $border;
-  font: inherit;
-  font-weight: 700;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  @include icon(18px);
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: $accent;
+  color: $bg;
   cursor: pointer;
-  transition: background 0.2s, border-color 0.2s;
+  transition: opacity 0.15s;
 
-  &:hover:not(:disabled) {
-    background: var(--primary--color);
-    border-color: var(--primary--color);
+  svg {
+    stroke-width: 2.5;
   }
 
   &:disabled {
-    opacity: 0.35;
+    opacity: 0.3;
     cursor: default;
   }
 }
 
-.inputHint {
-  grid-column: 1 / -1;
-  margin: 0;
-  font-size: 0.68rem;
-  color: var(--grey);
+// The hint sits centred just below the composer.
+.inputBar {
+  position: relative;
+  margin-bottom: 1.6rem;
 
-  @media (pointer: coarse) {
-    display: none;
+  @include sm {
+    margin-bottom: 1.4rem;
   }
 }
 
+.inputHint {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  transform: translateY(calc(100% + 0.45rem));
+  text-align: center;
+  font-size: 0.72rem;
+  color: $faint;
+}
+
 // ---------------------------------------------------------------------------
-// Cards
+// Cards (shared)
 // ---------------------------------------------------------------------------
 
 @mixin card {
-  background: var(--white);
-  border: $border;
-  transition: transform 0.2s $ease, box-shadow 0.2s $ease;
-}
-
-@mixin card-hover {
-  &:hover {
-    transform: translate(-3px, -3px);
-    box-shadow: 3px 3px 0 var(--dark);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    &:hover {
-      transform: none;
-    }
-  }
+  border: 1px solid $border;
+  border-radius: $radius;
+  background: $card;
+  overflow: hidden;
 }
 
 .cardBody {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  padding: 1rem;
+  padding: 1rem 1.1rem 1.1rem;
 
   h3 {
-    margin: 0;
-    font-size: 1.1rem;
-    line-height: 1.2;
+    margin: 0 0 0.4rem;
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: $text;
   }
 
   p {
-    margin: 0;
-    font-size: 0.85rem;
+    margin: 0 0 0.6rem;
+    color: $muted;
+    font-size: 0.9rem;
     line-height: 1.55;
   }
 }
 
 .clamp {
-  @include lineclamp(3);
-}
-
-.projectGrid {
-  @include reset-list;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1rem;
-
-  > li {
-    display: flex;
-  }
-}
-
-.projectCard {
-  @include card;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  @include card-hover;
-}
-
-.thumb,
-.detailThumb {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  border-bottom: $border;
-  background: conic-gradient(var(--white--grey), var(--grey));
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  display: grid;
-  place-items: center;
-
-  img {
-    object-fit: cover;
-  }
-
-  > span {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--white);
-  }
-}
-
-.detailCard {
-  @include card;
-}
-
-.detailThumb {
-  aspect-ratio: 16 / 8;
 }
 
 .tags {
@@ -713,48 +567,55 @@ $ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
+  margin: 0.4rem 0 0.2rem;
 
   li {
-    padding: 0.15rem 0.55rem;
-    border: 1.5px solid var(--dark);
-    border-radius: 999px;
-    font-size: 0.65rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    white-space: nowrap;
+    padding: 0.18rem 0.55rem;
+    border-radius: 6px;
+    background: #353535;
+    color: #cfcfcf;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
   }
 }
 
 .tagMore {
-  border-style: dashed !important;
+  background: transparent !important;
+  border: 1px dashed $border;
+  color: $muted !important;
 }
 
 .actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem 1rem;
-  margin-top: auto;
-  padding-top: 0.35rem;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+}
+
+.actionPrimary,
+.actionLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
 }
 
 .actionPrimary {
-  display: inline-block;
-  padding: 0.5rem 0.9rem;
-  background: var(--dark);
-  color: var(--white);
   border: 0;
-  font: inherit;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  cursor: pointer;
-  transition: background 0.2s;
+  background: $accent;
+  color: $bg;
 
   &:hover:not(:disabled) {
-    background: var(--primary--color);
+    opacity: 0.88;
   }
 
   &:disabled {
@@ -764,32 +625,125 @@ $ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 .actionLink {
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border-bottom: 2px solid var(--dark);
-  padding: 0.2rem 0;
+  border: 1px solid $border;
+  background: transparent;
+  color: $text;
+
+  &:hover {
+    background: $surface;
+  }
+}
+
+.inlineButton,
+.moreButton {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: $link;
+  font: inherit;
+  font-size: 0.88rem;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.inlineButton {
+  margin-top: 0.5rem;
+}
+
+.moreButton {
+  margin-top: 0.75rem;
+}
+
+// Projects
+.projectGrid {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.projectCard {
+  @include card;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: border-color 0.15s, background 0.15s;
+
+  &:hover {
+    border-color: #4a4a4a;
+    background: $card-hover;
+  }
+
+  .cardBody {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .actions {
+    margin-top: auto;
+    padding-top: 0.9rem;
+  }
+}
+
+.thumb,
+.detailThumb {
+  position: relative;
+  background: #1a1a1a;
+  border-bottom: 1px solid $border;
+
+  img {
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+.thumb {
+  aspect-ratio: 16 / 9;
+
+  > span {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $faint;
+  }
+}
+
+.detailCard {
+  @include card;
+
+  .text {
+    font-size: 0.95rem;
+    margin-top: 0.75rem;
+  }
+}
+
+.detailThumb {
+  aspect-ratio: 16 / 8;
 }
 
 // Skills
 .skillGrid {
+  @include card;
+  padding: 1rem 1.1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1rem;
 }
 
 .skillGroup {
-  @include card;
-  padding: 1rem;
-
   h3 {
-    margin: 0 0 0.75rem;
+    margin: 0 0 0.5rem;
     font-size: 0.72rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--primary--color);
+    color: $muted;
   }
 
   ul {
@@ -801,81 +755,87 @@ $ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 
   li {
     display: inline-flex;
-    flex-direction: column;
+    align-items: baseline;
+    gap: 0.35rem;
     padding: 0.35rem 0.7rem;
-    border: 1.5px solid var(--dark);
+    border: 1px solid $border;
+    border-radius: 999px;
     font-size: 0.85rem;
+    color: $text;
+  }
+
+  li.featured {
+    border-color: #6b6b6b;
+    background: $surface;
+    font-weight: 600;
   }
 }
 
-.featured {
-  background: var(--dark);
-  color: var(--white);
-}
-
 .skillName {
-  font-weight: 600;
+  white-space: nowrap;
 }
 
 .skillMeta {
-  font-size: 0.68rem;
-  opacity: 0.75;
+  font-size: 0.72rem;
+  color: $muted;
 }
 
 // Experience
 .experienceList {
   @include reset-list;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  display: grid;
+  gap: 0.75rem;
 }
 
 .experienceCard {
   @include card;
   padding: 1rem 1.1rem;
-  font-size: 0.88rem;
-  line-height: 1.55;
 
   h3 {
     margin: 0;
-    font-size: 1.05rem;
+    font-size: 1rem;
+    font-weight: 600;
   }
 
   > p {
-    margin: 0.75rem 0 0;
-  }
-
-  .tags {
-    margin-top: 0.75rem;
+    margin: 0.6rem 0 0;
+    color: $muted;
+    font-size: 0.9rem;
+    line-height: 1.55;
   }
 }
 
 .company {
-  margin: 0.15rem 0 0;
-  font-weight: 600;
+  margin: 0.2rem 0 0;
+  color: $text;
+  font-size: 0.9rem;
 
   a {
-    border-bottom: 1.5px solid var(--dark);
+    color: $link;
+  }
+
+  span {
+    color: $muted;
   }
 }
 
 .bullets {
-  margin: 0.75rem 0 0;
+  margin: 0.6rem 0 0.4rem;
   padding-left: 1.1rem;
-
-  li + li {
-    margin-top: 0.3rem;
-  }
+  color: $muted;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 // Contact
 .contactCard {
   @include card;
-  padding: 1.1rem;
+  padding: 1rem 1.1rem;
 
   h3 {
-    margin: 0 0 0.75rem;
-    font-size: 1.05rem;
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
   }
 
   dl {
@@ -884,23 +844,23 @@ $ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 
   dl > div {
     display: grid;
-    grid-template-columns: 7rem minmax(0, 1fr);
+    grid-template-columns: 6.5rem minmax(0, 1fr);
     gap: 0.75rem;
     padding: 0.55rem 0;
-    border-top: 1px solid rgba(35, 35, 35, 0.2);
-    font-size: 0.88rem;
+    border-top: 1px solid $border;
+    font-size: 0.9rem;
 
     @include sm {
-      grid-template-columns: 5.5rem minmax(0, 1fr);
+      grid-template-columns: 5.25rem minmax(0, 1fr);
     }
   }
 
   dt {
-    font-size: 0.7rem;
+    font-size: 0.72rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    color: var(--grey);
+    color: $muted;
     padding-top: 0.15rem;
   }
 
@@ -909,19 +869,26 @@ $ease: cubic-bezier(0.2, 0.7, 0.2, 1);
     overflow-wrap: anywhere;
 
     a {
-      border-bottom: 1.5px solid var(--dark);
+      color: $link;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
 
 .highlight {
-  background: var(--white--grey);
-  margin: 0 -0.5rem;
-  padding-left: 0.5rem !important;
-  padding-right: 0.5rem !important;
+  background: $surface;
+  margin: 0 -0.6rem;
+  padding-left: 0.6rem !important;
+  padding-right: 0.6rem !important;
+  border-radius: 8px;
+  border-top-color: transparent !important;
 
   dt {
-    color: var(--primary--color) !important;
+    color: $text !important;
   }
 }
 
@@ -929,17 +896,18 @@ $ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 .faqCard {
   @include card;
   padding: 1rem 1.1rem;
-  border-left-width: 6px;
 
   h3 {
-    margin: 0 0 0.5rem;
-    font-size: 1rem;
+    margin: 0 0 0.45rem;
+    font-size: 0.98rem;
+    font-weight: 600;
   }
 
   p {
     margin: 0;
     font-size: 0.92rem;
     line-height: 1.6;
+    color: $muted;
     white-space: pre-line;
 
     & + p {
@@ -953,7 +921,7 @@ $ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 @keyframes rise {
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(6px);
   }
   to {
     opacity: 1;
@@ -965,93 +933,20 @@ $ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   0%,
   80%,
   100% {
-    opacity: 0.2;
+    opacity: 0.25;
+    transform: scale(0.85);
   }
   40% {
     opacity: 1;
+    transform: scale(1);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .welcome,
   .userRow,
-  .botRow {
-    animation: none;
-  }
-
+  .botRow,
   .typing span[aria-hidden] {
-    animation-duration: 2.4s;
-  }
-
-  .sidebar {
-    transition: none !important;
-  }
-}
-
-// ---------------------------------------------------------------------------
-// AI extras: sources, mode note, errors
-// ---------------------------------------------------------------------------
-
-.sources {
-  margin: 0;
-  font-size: 0.72rem;
-  line-height: 1.5;
-  color: var(--grey);
-
-  > span:first-child {
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  a {
-    color: var(--dark);
-    border-bottom: 1px solid var(--grey);
-  }
-}
-
-.modeNote {
-  align-self: center;
-  padding: 0.1rem 0.5rem;
-  border: 1px dashed var(--grey);
-  border-radius: 999px;
-  font-size: 0.65rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--grey);
-}
-
-.errorRow {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem 1rem;
-  border: 2px dashed var(--primary--color);
-  font-size: 0.88rem;
-  animation: rise 0.3s $ease both;
-
-  p {
-    margin: 0;
-    flex: 1;
-    min-width: 12rem;
-  }
-
-  button {
-    padding: 0.45rem 0.9rem;
-    background: var(--dark);
-    color: var(--white);
-    border: 0;
-    font: inherit;
-    font-size: 0.72rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    cursor: pointer;
-
-    &:disabled {
-      opacity: 0.45;
-    }
+    animation: none;
   }
 }

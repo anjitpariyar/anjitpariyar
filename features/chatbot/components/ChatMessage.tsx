@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { memo, useEffect, useState } from "react";
-import { blocksToPlainText } from "../engine/plainText";
+import { memo } from "react";
 import type { ChatMessage as Message } from "../engine/types";
 import BlockRenderer from "./BlockRenderer";
 import { useChatContext } from "./ChatContext";
@@ -9,36 +8,8 @@ import styles from "./Chat.module.scss";
 
 type Props = { message: Message; isLatest: boolean; onRetry: (id: string) => void };
 
-function CopyButton({ text }: { text: string }) {
-  const [copied, setCopied] = useState(false);
-  useEffect(() => {
-    if (!copied) return;
-    const t = setTimeout(() => setCopied(false), 2000);
-    return () => clearTimeout(t);
-  }, [copied]);
-  return (
-    <button
-      type="button"
-      className={styles.copyButton}
-      onClick={async () => {
-        try {
-          await navigator.clipboard.writeText(text);
-          setCopied(true);
-        } catch {
-          // clipboard unavailable (insecure context / permissions)
-        }
-      }}
-    >
-      {copied ? "Copied" : "Copy"}
-      <span className={styles.srOnly} aria-live="polite">
-        {copied ? " response copied to clipboard" : ""}
-      </span>
-    </button>
-  );
-}
-
 function ChatMessage({ message, isLatest, onRetry }: Props) {
-  const { index, send, busy } = useChatContext();
+  const { send, busy } = useChatContext();
 
   if (message.role === "error") {
     return (
@@ -60,7 +31,6 @@ function ChatMessage({ message, isLatest, onRetry }: Props) {
     );
   }
 
-  const hasCards = message.blocks.some((b) => b.type !== "text");
   return (
     <li className={styles.botRow}>
       <span className={styles.srOnly}>Assistant:</span>
@@ -79,16 +49,13 @@ function ChatMessage({ message, isLatest, onRetry }: Props) {
             ))}
           </p>
         )}
-        <div className={styles.messageFooter}>
-          {(hasCards || message.blocks.length > 1 || message.intent !== "greeting") && (
-            <CopyButton text={blocksToPlainText(message.blocks, index)} />
-          )}
-          {message.mode === "fallback" && (
+        {message.mode === "fallback" && (
+          <div className={styles.messageFooter}>
             <span className={styles.modeNote} title="The AI assistant was unavailable, so this answer came from the basic keyword matcher.">
               Basic mode
             </span>
-          )}
-        </div>
+          </div>
+        )}
         {isLatest && message.suggestions.length > 0 && (
           <ChatSuggestions
             label="Suggested follow-up questions"

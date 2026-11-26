@@ -17,14 +17,14 @@ export type EvalCase = {
 
 export const EVAL_CASES: EvalCase[] = [
   // Natural-language understanding (wording differs from the stored text)
-  { id: "marketplace", turns: ["Have you built an online marketplace?"], expectSlugs: ["hamrobazaar"], note: "stored text says 'classified ads' / 'buy and sell'" },
-  { id: "buy-sell", turns: ["Has he made a site where people sell second-hand stuff?"], expectSlugs: ["hamrobazaar"] },
+  // Hamrobazar is a minor contribution (config/projectNotes.ts): no expectations that it's pitched.
+  { id: "marketplace", turns: ["Have you built an online marketplace?"], note: "may mention Hamrobazar only with his limited initial-phase role" },
   { id: "dashboards", turns: ["Do you know how to create interactive dashboards?"], expectSlugs: ["hamro_mortage", "mentee"] },
   { id: "forms", turns: ["Have you worked with complex forms?"], expectSlugs: ["hamro_mortage"], note: "description mentions dynamic form functionality" },
   { id: "animation", turns: ["Show me your animation work."], expectSlugs: ["digitalghumti", "signite", "life_of_cbrn"] },
-  { id: "react", turns: ["What projects involved React?"], expectSlugs: ["hamrobazaar", "digitalghumti", "life_of_cbrn", "prisma"], expectBlocks: ["project_list"] },
+  { id: "react", turns: ["What projects involved React?"], expectSlugs: ["digitalghumti", "life_of_cbrn", "prisma"], expectBlocks: ["project_list"] },
   { id: "nextjs", turns: ["Which project demonstrates his Next.js experience?"], expectSlugs: ["signite", "healing_trauma", "hamro_mortage", "life_of_cbrn"] },
-  { id: "large-scale", turns: ["Has he worked on apps with a lot of users?"], expectSlugs: ["hamrobazaar"], note: "'utilized by millions of users'" },
+  { id: "large-scale", turns: ["Has he worked on apps with a lot of users?"], note: "must NOT cite Hamrobazar's user numbers as his work" },
   { id: "health", turns: ["Anything in healthcare or therapy?"], expectSlugs: ["healing_trauma", "prisma"] },
   { id: "loans", turns: ["Has he built something for a loan or mortgage business?"], expectSlugs: ["hamro_mortage"] },
 

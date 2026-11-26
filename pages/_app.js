@@ -3,6 +3,7 @@ import "../styles/normalize.css";
 // import "locomotive-scroll/dist/locomotive-scroll.css";
 import Script from "next/script";
 import Preloader from "../components/Preloader";
+import AskAiPopup from "../components/AskAiPopup";
 import { useState, useEffect } from "react";
 
 const GA_ID = "G-KHM5XYZNKX";
@@ -54,6 +55,7 @@ gtag("config", "${GA_ID}");`}
         </div>
       )}
       {phase === "ready" && <Component {...pageProps} />}
+      {phase === "ready" && <AskAiPopup />}
       <Preloader />
     </>
   );
