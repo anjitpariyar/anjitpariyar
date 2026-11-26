@@ -72,6 +72,9 @@ const Navigation = ({ show, toggleNavigation }) => {
             <Link href="/contact">Contact</Link>
           </li>
           <li className={styles.navLink + " " + styles2.navLink}>
+            <Link href="/chat">Ask AI</Link>
+          </li>
+          <li className={styles.navLink + " " + styles2.navLink}>
             <a
               href="https://www.instagram.com/limbo_anj/"
               target="_blank"
