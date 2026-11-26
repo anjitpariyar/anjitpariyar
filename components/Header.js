@@ -53,6 +53,14 @@ const Header = () => {
             >
               <Link href="/contact">Contact</Link>
             </li>
+            <li
+              className={
+                styles.navLink +
+                ` ${router.pathname.includes("/chat") ? styles.active : ""}`
+              }
+            >
+              <Link href="/chat">Chat</Link>
+            </li>
             <li className={styles.navLink}>
               <a
                 href="https://www.instagram.com/limbo_anj/"
