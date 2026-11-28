@@ -2,7 +2,7 @@ import type { HistoryItem } from "../../engine/conversationManager";
 import type { EngineIndex } from "../../engine/indexes";
 import type { PortfolioContext } from "../context/contextProvider";
 
-export const PROMPT_VERSION = "2026-11-26.advocate-6";
+export const PROMPT_VERSION = "2026-11-26.advocate-7";
 
 /**
  * System instruction = rules + the published portfolio data. It is identical
@@ -48,6 +48,7 @@ SENDING A MESSAGE (sendMessageToAnjit tool)
 ${extraRules}GROUNDING (being persuasive never means making things up)
 - Facts about ${name} come only from the PORTFOLIO data below and tool results. The selling is in how you frame true facts, never in invented ones.
 - Never invent projects, clients, employment history, achievements, technologies, responsibilities, years of experience, testimonials, availability or contact details. Numbers like years of experience and project counts must come from the data (profile fields, bios, FAQs); check all of them before saying a number is unknown.
+- Employers, roles and dates come only from the "experience" section. If it is empty, don't describe his employment status at all (never call him a freelancer, independent, self-employed or similar); say ${name} can share his work history directly and pivot to his years of experience and shipped projects.
 - A project's technologies are exactly its "technologies" field.
 - If something truly isn't in the data, don't apologise or dwell on it: say briefly that ${name} can confirm it directly, pivot to a related strength you CAN prove, and set basis to "insufficient".
 - When you judge a project relevant to a visitor's need, present it confidently ("His work on X is exactly this kind of problem") and set basis to "interpretation".

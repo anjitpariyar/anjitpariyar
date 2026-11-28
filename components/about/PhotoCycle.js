@@ -13,12 +13,12 @@ import PhotoCard from "./PhotoCard";
 const PhotoCycle = () => {
   const [currentImg, setCurrentImg] = useState(0);
   const title = [
-    "wish I could give you a dog loyalty",
-    "Busy schedules Huh?",
-    "I can do this all day",
-    "I don't smoke. Coding is enough ",
-    "why is this crow staring at me? and hey this is my friend Rook.",
-    "my cat doesn't like her",
+    "Walking the dog while my AI walks the codebase",
+    "Coffee in one hand, reviewing my AI's PR in the other",
+    "I'm resting while my AI is working",
+    "I don't smoke. Waiting for my AI to finish thinking is enough",
+    "This crow keeps asking if AI wrote my code. Hey, meet my friend Rook.",
+    "My cat doesn't trust AI either",
   ];
 
   useEffect(() => {
