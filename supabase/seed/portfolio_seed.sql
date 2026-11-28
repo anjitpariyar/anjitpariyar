@@ -6,8 +6,7 @@
 -- public/llms.txt, the About page). Nothing here is new information.
 --
 -- Deliberately left empty because the site doesn't state them:
---   cv_url, availability_status, employment history
---   (portfolio_experiences), proficiency levels.
+--   cv_url, availability_status, proficiency levels.
 -- Fill those in the Supabase Table Editor when you're ready.
 --
 -- Safe to re-run: skills use ON CONFLICT (slug), and profile / FAQ /
@@ -113,12 +112,13 @@ select * from (values
 where not exists (select 1 from public.portfolio_chat_suggestions);
 
 -- Work experience ---------------------------------------------------------------
--- Intentionally empty: the site doesn't list employers. Template:
---
--- insert into public.portfolio_experiences
---   (company, position, employment_type, description, responsibilities,
---    start_date, end_date, is_current, technologies, company_url, sort_order, is_published)
--- values
---   ('Company name', 'Frontend Developer', 'Full-time', 'One-line summary',
---    '{"Built ...","Led ..."}', '2022-01-01', null, true,
---    '{React,Next.js}', 'https://company.example', 10, true);
+-- From the About page (components/about/PhotoGrid.js). Only runs while empty.
+insert into public.portfolio_experiences
+  (company, position, start_date, end_date, is_current, company_url, sort_order, is_published)
+select * from (values
+  ('Cubit',              'React Developer', date '2024-04-01', null::date,        true,  'https://www.cubit.com.np/',                   10, true),
+  ('LUKUKU',             'React Developer', date '2022-02-01', date '2024-03-31', false, 'https://www.lukuku.co/',                     20, true),
+  ('SunBi Holdings',     'React Developer', date '2020-04-01', date '2022-05-31', false, 'https://sunbi.com.np/',                      30, true),
+  ('Iceberg Technology', 'Web Designer',    date '2019-06-01', date '2020-03-31', false, 'https://www.facebook.com/icebergtechnology/', 40, true)
+) as v(company, position, start_date, end_date, is_current, company_url, sort_order, is_published)
+where not exists (select 1 from public.portfolio_experiences);
